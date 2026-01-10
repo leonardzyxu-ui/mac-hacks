@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Hacks: Tahoe Edition</title>
+    
+    <!-- Tailwind CSS (CDN for zero-build setup) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        tahoe: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            400: '#38bdf8',
+                            500: '#0ea5e9', // Sky Blue
+                            600: '#0284c7',
+                            800: '#075985',
+                            900: '#0c4a6e', // Deep Lake
+                            950: '#082f49',
+                        },
+                        glass: {
+                            100: 'rgba(255, 255, 255, 0.1)',
+                            200: 'rgba(255, 255, 255, 0.05)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Firebase SDKs (v10 compatible) -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getFirestore, doc, setDoc, getDoc, updateDoc, arrayUnion, arrayRemove, onSnapshot } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+        // ==========================================
+        // 1. CONFIGURATION (PASTE YOUR KEYS HERE)
+        // ==========================================
+        const firebaseConfig = {
+        apiKey: "AIzaSyAC132xazKGMeM3IDFml5ODdJJBXN4JW-Y",
+        authDomain: "mac-hacks-tahoe.firebaseapp.com",
+        projectId: "mac-hacks-tahoe",
+        storageBucket: "mac-hacks-tahoe.firebasestorage.app",
+        messagingSenderId: "752380504420",
+        appId: "1:752380504420:web:c4ccb6e4ffc1447b63b271"
+    };
+
+        // Initialize Firebase
+        let db, auth, userRef;
+        let isFirebaseActive = false;
+
+        try {
+            if (firebaseConfig.apiKey !== "YOUR_API_KEY_HERE") {
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                isFirebaseActive = true;
+            } else {
+                console.warn("Firebase config missing. Running in LocalStorage-only mode.");
+            }
+        } catch (e) {
+            console.error("Firebase init failed:", e);
+        }
+
+        // ==========================================
+        // 2. MASTER DATA (SOURCE OF TRUTH)
+        // ==========================================
+        const HACKS = [
+            { title: "Spotlight Workflow Predictor", app: ["Spotlight"], level: "High", type: "Keyboard Commands", tahoe: true, desc: "Type context words like 'Work' or 'Relax' into Spotlight for AI suggestions." },
+            { title: "The 'Siri' Typing Mode", app: ["Siri"], level: "Simple", type: "Keyboard Commands", tahoe: true, desc: "Double-tap Command to type to Siri with Apple Intelligence UI." },
+            { title: "Quick Look", app: ["Finder"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Select file > Spacebar to instantly preview." },
+            { title: "Force Quit", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Opt + Esc to close frozen apps." },
+            { title: "Spotlight Math", app: ["Spotlight"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Space for instant conversions/math." },
+            { title: "Emoji Picker", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Ctrl + Cmd + Space." },
+            { title: "Paste Without Formatting", app: ["System"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Opt + Shift + V (Essential!)." },
+            { title: "Screenshot (Selection)", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Shift + 4." },
+            { title: "Screenshot (Window)", app: ["System"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Shift + 4 then Spacebar." },
+            { title: "Screen Recording HUD", app: ["System"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Shift + 5." },
+            { title: "Delete Next Word", app: ["Text"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Opt + Delete." },
+            { title: "Delete Previous Word", app: ["Text"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Fn + Delete or Ctrl + D." },
+            { title: "Navigate by Word", app: ["Text"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Opt + Left/Right Arrow." },
+            { title: "Navigate to Start/End", app: ["Text"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Left/Right Arrow." },
+            { title: "Scroll to Top/Bottom", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Up/Down Arrow." },
+            { title: "Go to Folder", app: ["Finder"], level: "High", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Shift + G." },
+            { title: "Show/Hide Hidden Files", app: ["Finder"], level: "Professional", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Shift + . (Period)." },
+            { title: "Quick Dictionary", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Ctrl + D." },
+            { title: "Cycle Windows (Same App)", app: ["System"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Cmd + ~ (Tilde)." },
+            { title: "Minimize All", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Opt + M." },
+            { title: "Access Menu Bar via Keyboard", app: ["System"], level: "Professional", type: "Keyboard Commands", tahoe: false, desc: "Ctrl + F2 and arrows." },
+            { title: "Volume Fine Tuning", app: ["System"], level: "High", type: "Keyboard Commands", tahoe: false, desc: "Opt + Shift + Volume keys." },
+            { title: "Brightness Fine Tuning", app: ["System"], level: "High", type: "Keyboard Commands", tahoe: false, desc: "Opt + Shift + Brightness keys." },
+            { title: "Search Current Folder", app: ["Finder"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Cmd + F > Select 'Current Folder'." },
+            { title: "App Expose", app: ["System"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Ctrl + Down Arrow." },
+            { title: "Lock Screen", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Ctrl + Q." },
+            { title: "Log Out", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Shift + Q." },
+            { title: "Force Restart", app: ["System"], level: "Professional", type: "Keyboard Commands", tahoe: false, desc: "Cmd + Ctrl + Power." },
+            { title: "Notification Center", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "Two-finger swipe left from right edge." },
+            { title: "Dictation", app: ["System"], level: "Simple", type: "Keyboard Commands", tahoe: false, desc: "F5 shortcut." },
+            { title: "Slow Motion Animation", app: ["System"], level: "High", type: "Keyboard Commands", tahoe: false, desc: "Shift + Yellow Minimize button." },
+            { title: "Clear Terminal", app: ["Terminal"], level: "Medium", type: "Keyboard Commands", tahoe: false, desc: "Cmd + K." },
+            { title: "\"Liquid Glass\" Transparency", app: ["System"], level: "High", type: "Settings Hacks", tahoe: true, desc: "Appearance > Transparency toggles depth effect." },
+            { title: "iPhone Menu Bar Actions", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: true, desc: "Active iPhone tasks appear in Mac Menu Bar via Continuity." },
+            { title: "Vehicle Motion Cues", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: true, desc: "Accessibility > Motion > Floating dots." },
+            { title: "Captive Wi-Fi Sync", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: true, desc: "Auto-connects to hotel Wi-Fi via iPhone." },
+            { title: "Hot Corners", app: ["System"], level: "Medium", type: "Settings Hacks", tahoe: false, desc: "Desktop & Dock > Hot Corners." },
+            { title: "Three Finger Drag", app: ["System"], level: "High", type: "Settings Hacks", tahoe: false, desc: "Accessibility > Pointer Control > Enable 3-finger drag." },
+            { title: "Text Replacements", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Keyboard > Text Replacements (e.g., '@@' to email)." },
+            { title: "Silent Click", app: ["System"], level: "Medium", type: "Settings Hacks", tahoe: false, desc: "Trackpad Settings > Turn off Force Click." },
+            { title: "Hide Menu Bar", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Control Center > Automatically hide menu bar." },
+            { title: "Keep Folders on Top", app: ["Finder"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Finder Settings > Advanced > Keep folders on top." },
+            { title: "Path Bar", app: ["Finder"], level: "Medium", type: "Settings Hacks", tahoe: false, desc: "View > Show Path Bar." },
+            { title: "Status Bar", app: ["Finder"], level: "Medium", type: "Settings Hacks", tahoe: false, desc: "View > Show Status Bar." },
+            { title: "Summarize Text", app: ["System"], level: "Professional", type: "Settings Hacks", tahoe: false, desc: "Keyboard > Services > Summarize." },
+            { title: "Background Sounds", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Accessibility > Audio > Background Sounds." },
+            { title: "Unlock with Apple Watch", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Login Password > Use Apple Watch." },
+            { title: "Mic Mode (Voice Isolation)", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Control Center > Mic Mode > Voice Isolation." },
+            { title: "Portrait Mode (Webcam)", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Control Center > Video Effects > Portrait." },
+            { title: "Quick Note", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Bottom Right Hot Corner." },
+            { title: "Universal Control", app: ["System"], level: "High", type: "Settings Hacks", tahoe: false, desc: "Displays > Seamless Mac/iPad control." },
+            { title: "AirPlay Receiver", app: ["System"], level: "Medium", type: "Settings Hacks", tahoe: false, desc: "AirDrop & Handoff > Beam iPhone to Mac." },
+            { title: "Function Keys", app: ["System"], level: "Medium", type: "Settings Hacks", tahoe: false, desc: "Keyboard > Press Fn to show F1, F2, etc." },
+            { title: "Night Shift", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Displays > Night Shift." },
+            { title: "True Tone", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "Displays > Match ambient light." },
+            { title: "Live Speech", app: ["System"], level: "Medium", type: "Settings Hacks", tahoe: false, desc: "Accessibility > Type to speak during calls." },
+            { title: "Personal Voice", app: ["System"], level: "High", type: "Settings Hacks", tahoe: true, desc: "Record voice for AI generation." },
+            { title: "Folder Stamping", app: ["Finder"], level: "Medium", type: "Other", tahoe: true, desc: "Right-click folder > Stamp with emojis/icons." },
+            { title: "Math Notes (Inline)", app: ["Notes"], level: "Simple", type: "Other", tahoe: false, desc: "Type math in Notes (e.g., '5012=') to auto-solve.*" },
+            { title: "Window Tiling (Drag)", app: ["System"], level: "Simple", type: "Other", tahoe: false, desc: "Drag to edge to snap." },
+            { title: "Window Tiling (Hover)", app: ["System"], level: "Simple", type: "Other", tahoe: false, desc: "Hover green button for presets." },
+            { title: "Distraction Control", app: ["Safari"], level: "Simple", type: "Other", tahoe: false, desc: "Address Bar > Hide Distracting Items." },
+            { title: "iPhone Mirroring", app: ["System"], level: "Simple", type: "Other", tahoe: false, desc: "Control locked iPhone from Mac." },
+            { title: "Prevent Sleep (Caffeinate)", app: ["Terminal"], level: "Medium", type: "Terminal Hacks", tahoe: false, desc: "caffeinate -d" },
+            { title: "Reset Dock", app: ["Terminal"], level: "Medium", type: "Terminal Hacks", tahoe: false, desc: "killall Dock" },
+            { title: "Change Screenshot Type", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "defaults write com.apple.screencapture type jpg" },
+            { title: "Remove Screenshot Shadow", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "defaults write com.apple.screencapture disable-shadow -bool TRUE" },
+            { title: "Add Dock Spacers", app: ["Terminal"], level: "Professional", type: "Terminal Hacks", tahoe: false, desc: "defaults write com.apple.dock persistent-apps -array-add..." },
+            { title: "Talk to Me", app: ["Terminal"], level: "Simple", type: "Terminal Hacks", tahoe: false, desc: "say 'text'" },
+            { title: "Download File via CLI", app: ["Terminal"], level: "Medium", type: "Terminal Hacks", tahoe: false, desc: "curl -O [URL]" },
+            { title: "Matrix Screen Saver", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "cmatrix" },
+            { title: "Check Uptime", app: ["Terminal"], level: "Medium", type: "Terminal Hacks", tahoe: false, desc: "uptime" },
+            { title: "Network Quality Test", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "networkQuality" },
+            { title: "Purge RAM", app: ["Terminal"], level: "Professional", type: "Terminal Hacks", tahoe: false, desc: "sudo purge" },
+            { title: "Hide Desktop Icons", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "defaults write com.apple.finder CreateDesktop false" },
+            { title: "Re-Show Desktop Icons", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "defaults write com.apple.finder CreateDesktop true" },
+            { title: "Batch Rename", app: ["Finder"], level: "Medium", type: "Other", tahoe: false, desc: "Select files > Right Click > Rename." },
+            { title: "WiFi Password View", app: ["System"], level: "Simple", type: "Settings Hacks", tahoe: false, desc: "System Settings > Wi-Fi > Copy Password." },
+            { title: "Split View (Long Click)", app: ["System"], level: "Simple", type: "Other", tahoe: false, desc: "Long click green button > Tile Left/Right." },
+            { title: "Picture in Picture (YouTube)", app: ["Safari"], level: "Simple", type: "Other", tahoe: false, desc: "Double right-click YouTube video." },
+            { title: "Merge All Windows", app: ["Finder", "Safari"], level: "Medium", type: "Other", tahoe: false, desc: "Window > Merge All Windows." },
+            { title: "Extract Image from PDF", app: ["Preview"], level: "Medium", type: "Other", tahoe: false, desc: "Cmd+C > Cmd+N in Preview." },
+            { title: "Sign PDF", app: ["Preview"], level: "Simple", type: "Other", tahoe: false, desc: "Markup > Signature." },
+            { title: "Crop to Circle", app: ["Preview"], level: "Medium", type: "Other", tahoe: false, desc: "Elliptical Selection + Shift." },
+            { title: "Show Clipboard", app: ["Finder"], level: "Simple", type: "Other", tahoe: false, desc: "Finder > Edit > Show Clipboard." },
+            { title: "Tags", app: ["Finder"], level: "Simple", type: "Other", tahoe: false, desc: "Colored tags for grouping files." },
+            { title: "Smart Folders", app: ["Finder"], level: "High", type: "Other", tahoe: false, desc: "File > New Smart Folder." },
+            { title: "Interactive Widgets", app: ["System"], level: "Simple", type: "Other", tahoe: false, desc: "Place widgets on Desktop." },
+            { title: "Game Mode", app: ["System"], level: "Simple", type: "Other", tahoe: false, desc: "Auto-enables on full-screen games." },
+            { title: "Web Apps in Dock", app: ["Safari"], level: "Simple", type: "Other", tahoe: false, desc: "File > Add to Dock." },
+            { title: "Hardware Info", app: ["System"], level: "Medium", type: "Other", tahoe: false, desc: "Opt + Click Apple Menu." },
+            { title: "WiFi Details", app: ["System"], level: "High", type: "Other", tahoe: false, desc: "Opt + Click WiFi Icon." },
+            { title: "Bluetooth Details", app: ["System"], level: "High", type: "Other", tahoe: false, desc: "Shift + Opt + Click Bluetooth Icon." },
+            { title: "Sound Output Select", app: ["System"], level: "Simple", type: "Other", tahoe: false, desc: "Opt + Click Sound Icon." },
+            { title: "Check File Size", app: ["Terminal"], level: "Medium", type: "Terminal Hacks", tahoe: false, desc: "du -sh [folder]" },
+            { title: "List Processes (Top)", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "top -o cpu" },
+            { title: "Kill Process by Name", app: ["Terminal"], level: "Medium", type: "Terminal Hacks", tahoe: false, desc: "pkill [App Name]" },
+            { title: "Open from Terminal", app: ["Terminal"], level: "Simple", type: "Terminal Hacks", tahoe: false, desc: "open . (Current folder)" },
+            { title: "History", app: ["Terminal"], level: "Simple", type: "Terminal Hacks", tahoe: false, desc: "history" },
+            { title: "Secure Empty Trash", app: ["Terminal"], level: "Professional", type: "Terminal Hacks", tahoe: false, desc: "srm -v [file]" },
+            { title: "Make Password Protected Zip", app: ["Terminal"], level: "High", type: "Terminal Hacks", tahoe: false, desc: "zip -er [archive] [folder]" },
+            { title: "Text to Audio File", app: ["Terminal"], level: "Medium", type: "Terminal Hacks", tahoe: false, desc: "say -o audio.aiff -f text.txt" },
+            { title: "Disable Startup Chime", app: ["Terminal"], level: "Professional", type: "Terminal Hacks", tahoe: false, desc: "sudo nvram SystemAudioVolume=%80" },
+            { title: "Enable Startup Chime", app: ["Terminal"], level: "Professional", type: "Terminal Hacks", tahoe: false, desc: "sudo nvram -d SystemAudioVolume" },
+            { title: "View Hidden iCloud Drive", app: ["Terminal"], level: "Professional", type: "Terminal Hacks", tahoe: false, desc: "cd ~/Library/Mobile\\ Documents" },
+            { title: "Watch Star Wars", app: ["Terminal"], level: "Simple", type: "Terminal Hacks", tahoe: false, desc: "nc towel.blinkenlights.nl 23" }
+        ].map((h, i) => ({ id: i, ...h })); // Add ID for persistence
+
+        // ==========================================
+        // 3. APPLICATION LOGIC
+        // ==========================================
+        
+        let state = {
+            level: localStorage.getItem('mac_hacks_level') || null,
+            favorites: JSON.parse(localStorage.getItem('mac_hacks_favorites')) || [],
+            filterApp: 'All',
+            filterType: 'All',
+            search: ''
+        };
+
+        const LEVELS = ["Simple", "Medium", "High", "Professional"];
+        
+        // --- Onboarding ---
+        function checkOnboarding() {
+            if (!state.level) {
+                document.getElementById('onboarding-modal').classList.remove('hidden');
+            } else {
+                initApp();
+            }
+        }
+
+        function setLevel(level) {
+            state.level = level;
+            localStorage.setItem('mac_hacks_level', level);
+            document.getElementById('onboarding-modal').classList.add('hidden');
+            initApp();
+        }
+
+        // --- Core Functions ---
+        function initApp() {
+            initAuth();
+            renderHackOfTheDay();
+            renderHacks();
+            updateStats();
+        }
+
+        async function initAuth() {
+            if (!isFirebaseActive) return;
+
+            onAuthStateChanged(auth, async (user) => {
+                if (user) {
+                    // Sync Favorites
+                    const docRef = doc(db, "users", user.uid);
+                    const docSnap = await getDoc(docRef);
+                    if (docSnap.exists()) {
+                        // Merge server favs with local
+                        const serverFavs = docSnap.data().favorites || [];
+                        const merged = [...new Set([...state.favorites, ...serverFavs])];
+                        state.favorites = merged;
+                        localStorage.setItem('mac_hacks_favorites', JSON.stringify(merged));
+                        renderHacks(); // Re-render to show hearts
+                    } else {
+                        // Create user doc
+                        await setDoc(docRef, { favorites: state.favorites });
+                    }
+                } else {
+                    signInAnonymously(auth).catch((error) => console.error("Auth Error", error));
+                }
+            });
+        }
+
+        async function toggleFavorite(id) {
+            const index = state.favorites.indexOf(id);
+            if (index === -1) {
+                state.favorites.push(id);
+            } else {
+                state.favorites.splice(index, 1);
+            }
+            
+            // UI Update Immediate (Optimistic)
+            localStorage.setItem('mac_hacks_favorites', JSON.stringify(state.favorites));
+            renderHacks();
+
+            // Firebase Sync
+            if (isFirebaseActive && auth.currentUser) {
+                const docRef = doc(db, "users", auth.currentUser.uid);
+                await setDoc(docRef, { favorites: state.favorites }, { merge: true });
+            }
+        }
+
+        function getHackOfTheDay() {
+            // Seeded random based on Day + Level
+            const today = new Date().toDateString();
+            const seed = today + state.level;
+            
+            // Simple hash
+            let hash = 0;
+            for (let i = 0; i < seed.length; i++) {
+                hash = ((hash << 5) - hash) + seed.charCodeAt(i);
+                hash |= 0; 
+            }
+            
+            const eligible = HACKS.filter(h => h.level === state.level);
+            if (eligible.length === 0) return HACKS[0];
+            
+            const index = Math.abs(hash) % eligible.length;
+            return eligible[index];
+        }
+
+        function renderHackOfTheDay() {
+            const hack = getHackOfTheDay();
+            const container = document.getElementById('hotd-container');
+            container.innerHTML = `
+                <div class="bg-gradient-to-r from-tahoe-900 to-tahoe-800 border border-tahoe-600 rounded-xl p-6 shadow-lg relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 20 20"><path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4.932z"/></svg>
+                    </div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="bg-yellow-500 text-black text-xs font-bold px-2 py-0.5 rounded uppercase tracking-wider">Daily Pick</span>
+                            <span class="text-tahoe-400 text-sm font-mono">${hack.app.join(", ")}</span>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white mb-2">${hack.title}</h2>
+                        <p class="text-tahoe-100 text-lg mb-4">${hack.desc}</p>
+                        <div class="flex gap-2">
+                            <span class="px-2 py-1 bg-black/30 rounded text-xs text-tahoe-400 border border-tahoe-600/50">${hack.level}</span>
+                            <span class="px-2 py-1 bg-black/30 rounded text-xs text-tahoe-400 border border-tahoe-600/50">${hack.type}</span>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderHacks() {
+            const grid = document.getElementById('hacks-grid');
+            grid.innerHTML = '';
+            
+            const filtered = HACKS.filter(h => {
+                const matchesSearch = (h.title.toLowerCase().includes(state.search.toLowerCase()) || 
+                                     h.desc.toLowerCase().includes(state.search.toLowerCase()));
+                const matchesApp = state.filterApp === 'All' || h.app.includes(state.filterApp);
+                const matchesType = state.filterType === 'All' || h.type === state.filterType;
+                
+                // If searching, ignore level. If browsing, respect level unless "All" is selected in future
+                const matchesLevel = (state.search.length > 0) ? true : (h.level === state.level || state.level === 'Professional'); 
+                // Note: Professionals see everything. Others see their level.
+                // Let's adjust: Show hacks <= user level? Or just strict match?
+                // Requirements said: "Selection Logic: Must match the user's chosen level."
+                // I will interpret this as: Show Hacks matching level primarily, but Search overrides.
+                
+                if (state.search.length > 0) return matchesSearch;
+                return matchesApp && matchesType && h.level === state.level;
+            });
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `<div class="col-span-full text-center py-20 text-slate-500">No hacks found for this criteria. Try changing filters.</div>`;
+                return;
+            }
+
+            filtered.forEach(hack => {
+                const isFav = state.favorites.includes(hack.id);
+                const isTahoe = hack.tahoe;
+                
+                const card = document.createElement('div');
+                card.className = `bg-slate-800/50 backdrop-blur-md border ${isTahoe ? 'border-tahoe-500/50 shadow-[0_0_15px_rgba(14,165,233,0.15)]' : 'border-white/10'} rounded-lg p-5 hover:bg-slate-800 transition-all group`;
+                
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-3">
+                        <div class="flex flex-wrap gap-2">
+                            ${hack.app.map(a => `<span class="text-xs font-medium text-slate-400 bg-slate-900/50 px-2 py-1 rounded">${a}</span>`).join('')}
+                            ${isTahoe ? `<span class="text-xs font-bold text-tahoe-950 bg-tahoe-400 px-2 py-1 rounded flex items-center gap-1"><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>Tahoe</span>` : ''}
+                        </div>
+                        <button onclick="toggleFavorite(${hack.id})" class="text-slate-500 hover:text-red-500 transition-colors ${isFav ? 'text-red-500' : ''}">
+                            <svg class="w-6 h-6" fill="${isFav ? 'currentColor' : 'none'}" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                        </button>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-tahoe-400 transition-colors">${hack.title}</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-4">${hack.desc}</p>
+                    <div class="flex justify-between items-center mt-auto border-t border-white/5 pt-3">
+                        <span class="text-xs text-slate-500 font-mono uppercase">${hack.type}</span>
+                        ${hack.title.includes("Terminal") ? '<span class="text-xs text-green-400 font-mono">>_</span>' : ''}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+            
+            document.getElementById('count-display').innerText = `${filtered.length} Hacks`;
+        }
+
+        function updateStats() {
+            // Populate Dropdowns dynamically based on data
+            const apps = [...new Set(HACKS.flat().flatMap(h => h.app))].sort();
+            const types = [...new Set(HACKS.map(h => h.type))].sort();
+            
+            const appSelect = document.getElementById('filter-app');
+            apps.forEach(app => {
+                const opt = document.createElement('option');
+                opt.value = app;
+                opt.innerText = app;
+                appSelect.appendChild(opt);
+            });
+
+            const typeSelect = document.getElementById('filter-type');
+            types.forEach(type => {
+                const opt = document.createElement('option');
+                opt.value = type;
+                opt.innerText = type;
+                typeSelect.appendChild(opt);
+            });
+        }
+
+        // --- Event Listeners ---
+        window.addEventListener('DOMContentLoaded', () => {
+            checkOnboarding();
+            
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                state.search = e.target.value;
+                renderHacks();
+            });
+            
+            document.getElementById('filter-app').addEventListener('change', (e) => {
+                state.filterApp = e.target.value;
+                renderHacks();
+            });
+
+            document.getElementById('filter-type').addEventListener('change', (e) => {
+                state.filterType = e.target.value;
+                renderHacks();
+            });
+
+            // Re-open onboarding manually
+            document.getElementById('change-level-btn').addEventListener('click', () => {
+                document.getElementById('onboarding-modal').classList.remove('hidden');
+            });
+        });
+
+        // Expose functions to window for onclick handlers
+        window.setLevel = setLevel;
+        window.toggleFavorite = toggleFavorite;
+
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-200 min-h-screen font-sans bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-900 via-slate-950 to-black">
+
+    <!-- Onboarding Modal -->
+    <div id="onboarding-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-slate-900 border border-tahoe-900 p-8 rounded-2xl max-w-2xl w-full mx-4 shadow-2xl">
+            <h1 class="text-3xl font-bold text-white mb-2 text-center">Welcome to Mac Hacks <span class="text-tahoe-400">Tahoe</span></h1>
+            <p class="text-slate-400 text-center mb-8">Select your proficiency to personalize the dictionary.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button onclick="setLevel('Simple')" class="p-4 border border-slate-700 rounded-xl hover:border-tahoe-500 hover:bg-slate-800 text-left group transition-all">
+                    <div class="text-tahoe-400 font-bold mb-1 group-hover:text-tahoe-300">Simple</div>
+                    <div class="text-sm text-slate-500">Basics every Mac user should know.</div>
+                </button>
+                <button onclick="setLevel('Medium')" class="p-4 border border-tahoe-600 bg-tahoe-900/20 rounded-xl hover:bg-tahoe-900/40 text-left relative overflow-hidden group transition-all">
+                    <div class="absolute top-2 right-2 text-[10px] bg-tahoe-500 text-black px-1.5 rounded font-bold">REC</div>
+                    <div class="text-white font-bold mb-1">Medium</div>
+                    <div class="text-sm text-slate-300">For students with some OS experience.</div>
+                </button>
+                <button onclick="setLevel('High')" class="p-4 border border-slate-700 rounded-xl hover:border-tahoe-500 hover:bg-slate-800 text-left group transition-all">
+                    <div class="text-purple-400 font-bold mb-1 group-hover:text-purple-300">High</div>
+                    <div class="text-sm text-slate-500">Advanced workflows and terminal basics.</div>
+                </button>
+                <button onclick="setLevel('Professional')" class="p-4 border border-slate-700 rounded-xl hover:border-red-500 hover:bg-slate-800 text-left group transition-all">
+                    <div class="text-red-400 font-bold mb-1 group-hover:text-red-300">Professional</div>
+                    <div class="text-sm text-slate-500">Deep system overrides and hidden features.</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        
+        <!-- Header -->
+        <header class="flex flex-col md:flex-row justify-between items-center mb-10 gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-tahoe-400 to-tahoe-600 flex items-center justify-center shadow-[0_0_15px_rgba(14,165,233,0.3)]">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                </div>
+                <div>
+                    <h1 class="text-2xl font-bold text-white tracking-tight">Mac Hacks <span class="text-tahoe-500">Tahoe</span></h1>
+                    <p class="text-xs text-slate-500 font-mono">YK PAO SCHOOL • DICTIONARY v2.0</p>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <button id="change-level-btn" class="text-xs font-medium text-slate-400 hover:text-white underline underline-offset-4">Change Level</button>
+                <div class="h-8 w-px bg-slate-800"></div>
+                <div class="text-right">
+                    <div class="text-xs text-slate-500">USER MODE</div>
+                    <div id="user-level-display" class="text-sm font-bold text-tahoe-400">Student</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hack of the Day -->
+        <section id="hotd-container" class="mb-12"></section>
+
+        <!-- Filters & Search -->
+        <section class="mb-8 space-y-4 md:space-y-0 md:flex gap-4 sticky top-4 z-40">
+            <div class="relative flex-1">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                    <svg class="h-5 w-5 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <input type="text" id="search-input" class="block w-full pl-10 pr-3 py-3 border border-slate-700 rounded-xl leading-5 bg-slate-900/80 backdrop-blur text-slate-300 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-tahoe-500 focus:border-tahoe-500 sm:text-sm shadow-xl" placeholder="Search hacks, commands, or descriptions...">
+            </div>
+            
+            <div class="flex gap-2">
+                <select id="filter-app" class="block w-32 md:w-40 pl-3 pr-8 py-3 text-base border-slate-700 focus:outline-none focus:ring-tahoe-500 focus:border-tahoe-500 sm:text-sm rounded-xl bg-slate-900/80 backdrop-blur text-slate-300">
+                    <option value="All">All Apps</option>
+                </select>
+                
+                <select id="filter-type" class="block w-32 md:w-40 pl-3 pr-8 py-3 text-base border-slate-700 focus:outline-none focus:ring-tahoe-500 focus:border-tahoe-500 sm:text-sm rounded-xl bg-slate-900/80 backdrop-blur text-slate-300">
+                    <option value="All">All Types</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Status Bar -->
+        <div class="flex justify-between items-center mb-4 px-1">
+            <h2 class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Library</h2>
+            <span id="count-display" class="text-xs font-mono text-slate-600 bg-slate-900 px-2 py-1 rounded border border-slate-800">Loading...</span>
+        </div>
+
+        <!-- Grid -->
+        <div id="hacks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-20">
+            <!-- Cards injected here -->
+        </div>
+
+    </div>
+
+    <footer class="border-t border-slate-900 bg-black py-8 mt-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-slate-600 text-sm">© 2026 YK Pao School. Built for the students.</p>
+            <p class="text-slate-700 text-xs mt-2">macOS and Tahoe are trademarks of Apple Inc.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

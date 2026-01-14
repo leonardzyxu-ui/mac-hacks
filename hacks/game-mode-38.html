@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Mode — Mac Hacks Dictionary</title>
+  <meta name="description" content="Auto-triggers in full-screen games. Prioritizes CPU/GPU for the game and reduces background usage." />
+
+  <script>
+    try {
+      const pref = localStorage.getItem('mac_hacks_theme');
+      if (pref === 'light') document.documentElement.classList.remove('dark');
+      if (pref === 'dark') document.documentElement.classList.add('dark');
+    } catch {}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          borderRadius: { '4xl': '2rem' },
+          colors: { tahoe: { 500: '#0ea5e9', 900: '#0c4a6e' } },
+          fontFamily: {
+            sans: ['SF Pro Display', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body data-hack-id="38" data-hack-command="" class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
+  <div class="max-w-5xl mx-auto px-6 pt-10">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-10">
+      <div class="flex items-center gap-2">
+        <a href="../index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+          <span aria-hidden="true">←</span>
+          All hacks
+        </a>
+        <button id="copy-link" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+          Copy link
+        </button>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+          Toggle theme
+        </button>
+        <button id="fav-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white/80 dark:bg-slate-900/60 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 shadow-lg hover:opacity-90 transition-opacity">
+          <span class="text-lg" aria-hidden="true">🤍</span>
+          Save
+        </button>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-sm text-slate-500 dark:text-slate-400 font-mono mb-3">Mac Hacks Dictionary</div>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Game Mode</h1>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Auto-triggers in full-screen games. Prioritizes CPU/GPU for the game and reduces background usage.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-10"><a href="../index.html?app=System" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">System</a><a href="../index.html?type=Other" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">Other</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Level: Medium</span><a href="../index.html?method=UI" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Method: UI</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Risk: Low</span></div>
+
+    <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl mb-6">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Overview</h2>
+      <div class="space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed">
+        <p>This hack is a workflow tip for System.</p><p>Prioritizes CPU/GPU for the game and reduces background usage.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Common uses</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Reduce slowdowns during heavy workloads</li><li>Inspect or reset misbehaving processes</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Troubleshooting</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>If you can’t find the UI, try searching the app’s menu bar.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white">Quick reference</h2>
+          <button id="copy-command" class="hidden text-sm px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">Copy</button>
+        </div>
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Reference</div>
+        <div class="bg-slate-100 dark:bg-slate-950 rounded-2xl p-4 border border-slate-200 dark:border-slate-800 font-mono text-sm text-slate-700 dark:text-slate-200">Auto-triggers in full-screen games</div>
+      </div>
+
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">How to use</h2>
+        <ol class="list-decimal ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>Auto-triggers in full-screen games</li><li>Prioritizes CPU/GPU for the game and reduces background usage.</li><li>Look for the same action in the menu bar if you prefer clicking.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Classifications</h2>
+        <div class="space-y-4">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Topics</div>
+            <div class="mt-2 flex flex-wrap gap-2"><a href="../index.html?topic=Performance" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Performance</a></div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Keywords</div>
+            <div class="mt-2 flex flex-wrap gap-2"><a href="../index.html?q=performance" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">performance</a><a href="../index.html?q=cpu" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">cpu</a><a href="../index.html?q=gpu" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">gpu</a><a href="../index.html?q=play" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">play</a></div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Undo / revert</div>
+            <div class="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span class="text-slate-600 dark:text-slate-300">Return to the same place and switch the setting back, or use the inverse action if available.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Tips</h2>
+        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>Many UI actions have a keyboard equivalent—try searching the menu bar for it.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Related hacks</h2>
+      <div class="space-y-3">
+          <a href="./prevent-app-nap-111.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Prevent App Nap</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Right-click App &gt; Get Info &gt; Prevent App Nap. Stops macOS from slowing the app when in background.</div>
+          </a>
+        
+          <a href="./sound-output-select-37.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Sound Output Select</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Option + Click the Sound icon in the menu bar. Allows you to quickly switch between Speakers/Headphones.</div>
+          </a>
+        
+          <a href="./rearrange-menu-bar-40.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Rearrange Menu Bar</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Hold Cmd + Drag icons in the top menu bar. You can rearrange them or drag them out to remove them.</div>
+          </a>
+        
+          <a href="./hardware-info-64.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Hardware Info</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Hold Option + Click Apple Menu. &#39;About This Mac&#39; becomes &#39;System Information&#39;, showing deep hardware specs.</div>
+          </a>
+        
+          <a href="./interactive-widgets-26.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Interactive Widgets</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Right-click Desktop &gt; Edit Widgets. You can check off reminders or play podcasts directly from the desktop.</div>
+          </a>
+        
+          <a href="./window-tiling-hover-27.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Window Tiling (Hover)</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Hover over the green maximize button (top left). Choose &#39;Tile Window to Left/Right&#39; for split screen.</div>
+          </a>
+        
+          <a href="./wifi-details-88.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">WiFi Details</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Hold Option + Click WiFi Icon. Shows advanced stats like IP Address, Noise Level, and Router Channel.</div>
+          </a>
+        
+          <a href="./bluetooth-details-89.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Bluetooth Details</div>
+              <div class="text-xs font-mono text-slate-400">Other</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Hold Shift + Option + Click Bluetooth Icon. Shows technical details like Codec and signal strength.</div>
+          </a>
+        </div>
+    </div>
+
+    
+  </div>
+
+  <script src="../assets/hack-page.js"></script>
+</body>
+</html>

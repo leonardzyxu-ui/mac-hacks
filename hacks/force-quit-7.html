@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Force Quit — Mac Hacks Dictionary</title>
+  <meta name="description" content="Cmd + Option + Esc. Opens the Force Quit menu to kill apps that are frozen or not responding." />
+
+  <script>
+    try {
+      const pref = localStorage.getItem('mac_hacks_theme');
+      if (pref === 'light') document.documentElement.classList.remove('dark');
+      if (pref === 'dark') document.documentElement.classList.add('dark');
+    } catch {}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          borderRadius: { '4xl': '2rem' },
+          colors: { tahoe: { 500: '#0ea5e9', 900: '#0c4a6e' } },
+          fontFamily: {
+            sans: ['SF Pro Display', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="../assets/site.css" />
+</head>
+<body data-hack-id="7" data-hack-command="" class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
+  <div class="max-w-5xl mx-auto px-6 pt-10">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-10">
+      <div class="flex items-center gap-2">
+        <a href="../index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+          <span aria-hidden="true">←</span>
+          All hacks
+        </a>
+        <button id="copy-link" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+          Copy link
+        </button>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+          Toggle theme
+        </button>
+        <button id="fav-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white/80 dark:bg-slate-900/60 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 shadow-lg hover:opacity-90 transition-opacity">
+          <span class="text-lg" aria-hidden="true">🤍</span>
+          Save
+        </button>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-sm text-slate-500 dark:text-slate-400 font-mono mb-3">Mac Hacks Dictionary</div>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Force Quit</h1>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Cmd + Option + Esc. Opens the Force Quit menu to kill apps that are frozen or not responding.</p>
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-10"><a href="../index.html?app=System" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">System</a><a href="../index.html?type=Keyboard%20Commands" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">Keyboard Commands</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Level: Simple</span><a href="../index.html?method=Shortcut" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Method: Shortcut</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Risk: Low</span></div>
+
+    <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl mb-6">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Overview</h2>
+      <div class="space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed">
+        <p>This hack is a keyboard shortcut for System.</p><p>Opens the Force Quit menu to kill apps that are frozen or not responding.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Common uses</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>A handy trick to speed up everyday work</li>
+          </ul>
+        </div>
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Troubleshooting</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Make sure the correct app/window is focused.</li><li>Check the menu bar for the command and its shortcut (apps can override defaults).</li><li>Try the shortcut in a different app to confirm your keyboard is working.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white">Quick reference</h2>
+          <button id="copy-command" class="hidden text-sm px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">Copy</button>
+        </div>
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Shortcut</div>
+        <div class="flex flex-wrap items-center gap-2"><kbd class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 font-mono text-sm text-slate-700 dark:text-slate-200 shadow-sm">⌘</kbd><span class="text-slate-400 dark:text-slate-500 font-mono">+</span><kbd class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 font-mono text-sm text-slate-700 dark:text-slate-200 shadow-sm">⌥</kbd><span class="text-slate-400 dark:text-slate-500 font-mono">+</span><kbd class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 font-mono text-sm text-slate-700 dark:text-slate-200 shadow-sm">Esc</kbd></div>
+      </div>
+
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">How to use</h2>
+        <ol class="list-decimal ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>Focus the relevant app or window.</li><li>Press Cmd + Option + Esc.</li><li>Opens the Force Quit menu to kill apps that are frozen or not responding.</li><li>Repeat whenever you need it—most shortcuts work everywhere.</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Classifications</h2>
+        <div class="space-y-4">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Topics</div>
+            <div class="mt-2 flex flex-wrap gap-2"><a href="../index.html?topic=General" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">General</a></div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Keywords</div>
+            <div class="mt-2 flex flex-wrap gap-2"><a href="../index.html?q=frozen" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">frozen</a><a href="../index.html?q=stuck" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">stuck</a><a href="../index.html?q=close" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">close</a><a href="../index.html?q=kill" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">kill</a><a href="../index.html?q=stop" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">stop</a></div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Undo / revert</div>
+            <div class="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span class="text-slate-600 dark:text-slate-300">Return to the same place and switch the setting back, or use the inverse action if available.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Tips</h2>
+        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>If it doesn’t work, check the app’s menu bar—shortcuts are listed next to commands.</li><li>Some shortcuts differ across keyboard layouts; try the menu-bar command to confirm.</li><li>You can customize many shortcuts in System Settings → Keyboard → Keyboard Shortcuts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Related hacks</h2>
+      <div class="space-y-3">
+          <a href="./undo-3.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Undo</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + Z. Instantly undoes your last action. Press multiple times to go further back.</div>
+          </a>
+        
+          <a href="./redo-4.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Redo</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + Shift + Z. Re-applies an action you just Undid.</div>
+          </a>
+        
+          <a href="./select-all-5.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Select All</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + A. Highlights every item in a folder or every word in a document.</div>
+          </a>
+        
+          <a href="./print-save-pdf-31.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Print / Save PDF</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + P. Opens print dialog. Click the small &#39;PDF&#39; arrow at the bottom to save as a file.</div>
+          </a>
+        
+          <a href="./volume-fine-tuning-73.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Volume Fine Tuning</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Option + Shift + Volume Keys. Adjusts volume in tiny 1/4 increments for perfect audio control.</div>
+          </a>
+        
+          <a href="./brightness-fine-tuning-74.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Brightness Fine Tuning</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Option + Shift + Brightness Keys. Adjusts screen brightness in tiny 1/4 increments.</div>
+          </a>
+        
+          <a href="./slow-motion-animation-76.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Slow Motion Animation</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Hold Shift while clicking the yellow Minimize button. Plays the Genie effect in super slow motion.</div>
+          </a>
+        
+          <a href="./access-menu-bar-95.html" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Access Menu Bar</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Ctrl + F2. Focuses the Apple Menu so you can navigate menus using only arrow keys.</div>
+          </a>
+        </div>
+    </div>
+
+    
+  </div>
+
+  <script src="../assets/hack-page.js"></script>
+</body>
+</html>

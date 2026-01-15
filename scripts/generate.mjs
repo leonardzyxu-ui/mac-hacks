@@ -223,7 +223,6 @@ function findUndoHack(hacks, hack) {
     if (candidates.length) return candidates[0];
   }
 
-  // Fallback: best match that flips enable/disable and shares keywords/apps.
   const flip =
     title.toLowerCase().includes('disable')
       ? 'enable'
@@ -240,13 +239,119 @@ function findUndoHack(hacks, hack) {
   return candidates[0]?.h || null;
 }
 
+// Build prerequisites from hack data
+function buildPrerequisites(hack) {
+  if (Array.isArray(hack.wiki?.prerequisites) && hack.wiki.prerequisites.length > 0) {
+    return hack.wiki.prerequisites;
+  }
+  
+  const prereqs = [];
+  
+  // Add macOS version if specified
+  if (hack.compatibility?.macosMin) {
+    prereqs.push(`macOS ${hack.compatibility.macosMin} or later`);
+  }
+  
+  // Check for admin requirements
+  if (hack.method === 'Terminal' && (hack.command?.includes('sudo') || hack.desc?.includes('sudo'))) {
+    prereqs.push('Administrator password required');
+  }
+  
+  // Check for permissions
+  if (hack.permissions?.length > 0) {
+    prereqs.push(`Required permissions: ${hack.permissions.join(', ')}`);
+  }
+  
+  // Add app requirements
+  if (hack.app?.includes('Terminal')) {
+    prereqs.push('Terminal app (built into macOS)');
+  }
+  
+  // Default minimal prereqs
+  if (prereqs.length === 0) {
+    if (hack.method === 'Settings') {
+      prereqs.push('Access to System Settings');
+    } else if (hack.method === 'Terminal') {
+      prereqs.push('Terminal app');
+      prereqs.push('Basic familiarity with command line');
+    }
+  }
+  
+  return prereqs;
+}
+
+// Build verification steps
+function buildVerify(hack) {
+  if (Array.isArray(hack.wiki?.verify) && hack.wiki.verify.length > 0) {
+    return hack.wiki.verify;
+  }
+  
+  const verify = [];
+  
+  if (hack.method === 'Terminal') {
+    verify.push('The command should complete without error messages');
+    if (hack.desc?.includes('killall') || hack.desc?.includes('restart')) {
+      verify.push('The affected app/service should restart automatically');
+    }
+  } else if (hack.method === 'Settings') {
+    verify.push('The setting toggle should reflect your new choice');
+    verify.push('Changes may take effect immediately or after closing System Settings');
+  } else if (hack.method === 'Shortcut') {
+    verify.push('The expected action should occur immediately');
+    verify.push('If nothing happens, check if the correct window/app is focused');
+  }
+  
+  return verify.length > 0 ? verify : ['Verify the change took effect as described above'];
+}
+
+// Build undo steps
+function buildUndoSteps(hack, undoHack) {
+  if (Array.isArray(hack.wiki?.undo) && hack.wiki.undo.length > 0) {
+    return hack.wiki.undo;
+  }
+  
+  // Use explicit undoCommand if available
+  if (hack.undoCommand) {
+    return [`Run: ${hack.undoCommand}`];
+  }
+  
+  const undo = [];
+  
+  if (hack.method === 'Settings') {
+    undo.push('Return to the same System Settings panel');
+    undo.push('Toggle the setting back to its original state');
+  } else if (hack.method === 'Terminal' && hack.desc?.includes('defaults write')) {
+    undo.push('To revert, use `defaults delete` with the same domain and key');
+    undo.push('Then restart the affected app or run `killall` command');
+  }
+  
+  return undo.length > 0 ? undo : ['Reverse the steps above or use the linked undo hack if available'];
+}
+
+// Build compatibility info
+function buildCompatibility(hack) {
+  if (hack.compatibility) {
+    return hack.compatibility;
+  }
+  
+  // Default compatibility based on tahoe flag
+  if (hack.tahoe) {
+    return {
+      macosMin: '26.0',
+      notes: 'Requires macOS Tahoe (26.0) or later'
+    };
+  }
+  
+  return null;
+}
+
 function buildSteps(hack) {
   const { lead, rest } = splitLeadSentence(hack.desc);
   const steps = [];
 
   if (hack.method === 'Terminal') {
     steps.push('Open Terminal.');
-    const cmd = extractTerminalCommand(hack.desc);
+    const cmd = hack.command || extractTerminalCommand(hack.desc);
     if (cmd) steps.push(`Run: ${cmd}`);
     else if (lead) steps.push(lead);
     if (rest) steps.push(rest);
@@ -255,10 +360,12 @@ function buildSteps(hack) {
   }
 
   if (hack.method === 'Settings') {
-    if (lead && !lead.toLowerCase().includes('system settings')) {
+    if (hack.settingsPath) {
+      steps.push(`Open System Settings → ${hack.settingsPath}`);
+    } else if (lead && !lead.toLowerCase().includes('system settings')) {
       steps.push('Open System Settings (or the relevant app).');
     }
-    if (lead) steps.push(lead);
+    if (lead && !hack.settingsPath) steps.push(lead);
     if (rest) steps.push(rest);
     steps.push('If you want to undo it later, return to the same setting and switch it back.');
     return steps.filter(Boolean).slice(0, 6);
@@ -266,7 +373,7 @@ function buildSteps(hack) {
 
   if (hack.method === 'Shortcut') {
     steps.push('Focus the relevant app or window.');
-    const combo = extractKeyCombo(hack.desc) || extractKeyCombo(lead);
+    const combo = hack.shortcut || extractKeyCombo(hack.desc) || extractKeyCombo(lead);
     if (combo) steps.push(`Press ${combo}.`);
     if (rest) steps.push(rest);
     else if (lead && !combo) steps.push(lead);
@@ -283,7 +390,7 @@ function buildSteps(hack) {
 function buildTips(hack) {
   const tips = [];
   if (hack.method === 'Shortcut') {
-    tips.push('If it doesn’t work, check the app’s menu bar—shortcuts are listed next to commands.');
+    tips.push("If it doesn't work, check the app's menu bar—shortcuts are listed next to commands.");
     tips.push('Some shortcuts differ across keyboard layouts; try the menu-bar command to confirm.');
     tips.push(
       'You can customize many shortcuts in System Settings → Keyboard → Keyboard Shortcuts.',
@@ -299,7 +406,7 @@ function buildTips(hack) {
     tips.push('Many UI actions have a keyboard equivalent—try searching the menu bar for it.');
   }
 
-  if ((hack.topics || []).includes('Troubleshooting')) tips.push('If the system looks “stuck”, try logging out/in or rebooting.');
+  if ((hack.topics || []).includes('Troubleshooting')) tips.push('If the system looks "stuck", try logging out/in or rebooting.');
   if ((hack.topics || []).includes('Security & Privacy'))
     tips.push('Treat security changes as temporary—turn protections back on when finished.');
 
@@ -317,14 +424,14 @@ function buildTroubleshooting(hack) {
     items.push('Use System Settings search to find the right panel quickly.');
     items.push('Some settings may be hidden or locked by device management (MDM).');
   } else if (hack.method === 'Terminal') {
-    items.push('If you see “permission denied”, you may need admin rights or a different command.');
+    items.push('If you see "permission denied", you may need admin rights or a different command.');
     items.push('Read the command fully before running it; avoid `sudo` unless necessary.');
     items.push('If nothing changes, you may need to quit/reopen the relevant app for the setting to apply.');
   } else {
-    items.push('If you can’t find the UI, try searching the app’s menu bar.');
+    items.push("If you can't find the UI, try searching the app's menu bar.");
   }
 
-  if (hack.risk === 'High') items.push('If you’re unsure, test on a non-critical file or setting first.');
+  if (hack.risk === 'High') items.push("If you're unsure, test on a non-critical file or setting first.");
   return Array.from(new Set(items)).slice(0, 6);
 }
 
@@ -340,7 +447,7 @@ const TOPIC_USE_CASES = {
   'Performance': ['Reduce slowdowns during heavy workloads', 'Inspect or reset misbehaving processes'],
   'Networking': ['Fix flaky connections or DNS issues', 'Inspect Wi‑Fi/Bluetooth details'],
   'Accessibility': ['Use voice/assistive features', 'Improve ergonomics and readability'],
-  'Customization': ['Make the UI feel “yours”', 'Tweak defaults like startup sounds and appearances'],
+  'Customization': ['Make the UI feel "yours"', 'Tweak defaults like startup sounds and appearances'],
   'Troubleshooting': ['Reset stuck UI components', 'Boot into a safe state to debug issues'],
   'General': ['A handy trick to speed up everyday work'],
 };
@@ -355,8 +462,8 @@ function buildUseCases(hack) {
 
 function buildOverview(hack) {
   const { lead, rest } = splitLeadSentence(hack.desc);
-  const combo = extractKeyCombo(hack.desc) || extractKeyCombo(lead);
-  const command = extractTerminalCommand(hack.desc);
+  const combo = hack.shortcut || extractKeyCombo(hack.desc) || extractKeyCombo(lead);
+  const command = hack.command || extractTerminalCommand(hack.desc);
 
   const apps = (hack.app || []).join(', ') || 'macOS';
   const first =
@@ -380,7 +487,9 @@ function renderChip(label, variant = 'slate', href = null) {
         ? 'bg-amber-500/10 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 border-amber-500/20'
         : variant === 'red'
           ? 'bg-red-500/10 dark:bg-red-500/20 text-red-700 dark:text-red-300 border-red-500/20'
-          : 'bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10';
+          : variant === 'green'
+            ? 'bg-green-500/10 dark:bg-green-500/20 text-green-700 dark:text-green-300 border-green-500/20'
+            : 'bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10';
   const base = `px-2 py-1 rounded-lg text-xs font-semibold border ${cls}`;
   if (href) {
     return `<a href="${escapeHtml(
@@ -393,13 +502,42 @@ function renderChip(label, variant = 'slate', href = null) {
 function riskVariant(risk) {
   if (risk === 'High') return 'red';
   if (risk === 'Medium') return 'amber';
-  return 'slate';
+  return 'green';
+}
+
+// Generate Settings deep link
+function getSettingsDeepLink(hack) {
+  if (hack.settingsDeepLink) return hack.settingsDeepLink;
+  
+  // Common settings paths to deep links
+  const settingsMap = {
+    'Wi-Fi': 'x-apple.systempreferences:com.apple.wifi-settings-extension',
+    'Bluetooth': 'x-apple.systempreferences:com.apple.BluetoothSettings',
+    'Network': 'x-apple.systempreferences:com.apple.Network-Settings.extension',
+    'General': 'x-apple.systempreferences:com.apple.systempreferences.GeneralSettings',
+    'Appearance': 'x-apple.systempreferences:com.apple.Appearance-Settings.extension',
+    'Desktop & Dock': 'x-apple.systempreferences:com.apple.Desktop-Settings.extension',
+    'Displays': 'x-apple.systempreferences:com.apple.Displays-Settings.extension',
+    'Keyboard': 'x-apple.systempreferences:com.apple.Keyboard-Settings.extension',
+    'Trackpad': 'x-apple.systempreferences:com.apple.Trackpad-Settings.extension',
+    'Accessibility': 'x-apple.systempreferences:com.apple.Accessibility-Settings.extension',
+    'Privacy & Security': 'x-apple.systempreferences:com.apple.preference.security',
+    'Sound': 'x-apple.systempreferences:com.apple.Sound-Settings.extension',
+  };
+  
+  if (hack.settingsPath) {
+    for (const [key, link] of Object.entries(settingsMap)) {
+      if (hack.settingsPath.includes(key)) return link;
+    }
+  }
+  
+  return null;
 }
 
 function renderHackPage(hack, allHacks) {
   const { lead } = splitLeadSentence(hack.desc);
-  const combo = extractKeyCombo(hack.desc) || extractKeyCombo(lead);
-  const command = extractTerminalCommand(hack.desc);
+  const combo = hack.shortcut || extractKeyCombo(hack.desc) || extractKeyCombo(lead);
+  const command = hack.command || extractTerminalCommand(hack.desc);
   const steps = Array.isArray(hack.wiki?.steps) ? hack.wiki.steps : buildSteps(hack);
   const tips = Array.isArray(hack.wiki?.tips) ? hack.wiki.tips : buildTips(hack);
   const troubleshooting = Array.isArray(hack.wiki?.troubleshooting)
@@ -407,15 +545,20 @@ function renderHackPage(hack, allHacks) {
     : buildTroubleshooting(hack);
   const useCases = Array.isArray(hack.wiki?.useCases) ? hack.wiki.useCases : buildUseCases(hack);
   const overview = Array.isArray(hack.wiki?.overview) ? hack.wiki.overview : buildOverview(hack);
+  const prerequisites = buildPrerequisites(hack);
+  const verify = buildVerify(hack);
+  const compatibility = buildCompatibility(hack);
   const related = findRelated(allHacks, hack, 8);
   const undo = findUndoHack(allHacks, hack);
+  const undoSteps = buildUndoSteps(hack, undo);
+  const settingsDeepLink = getSettingsDeepLink(hack);
 
   const atAGlance = [
     ...(hack.app || []).map((a) => renderChip(a, 'slate', `../index.html?app=${encodeURIComponent(a)}`)),
     renderChip(hack.type, 'slate', `../index.html?type=${encodeURIComponent(hack.type)}`),
     renderChip(`Level: ${hack.level}`, 'slate'),
     renderChip(`Method: ${hack.method}`, 'blue', `../index.html?method=${encodeURIComponent(hack.method)}`),
-    renderChip(`Risk: ${hack.risk}`, riskVariant(hack.risk)),
+    renderChip(`Risk: ${hack.risk}`, riskVariant(hack.risk), `../index.html?risk=${encodeURIComponent(hack.risk)}`),
     ...(hack.tahoe ? [renderChip('Tahoe', 'blue')] : []),
   ].join('');
 
@@ -457,10 +600,59 @@ function renderHackPage(hack, allHacks) {
   const safetyNote =
     hack.risk === 'High'
       ? `<div class="mt-6 bg-red-500/10 border border-red-500/20 rounded-3xl p-6 text-red-800 dark:text-red-200">
-          <div class="font-bold mb-1">Safety note</div>
+          <div class="font-bold mb-1">⚠️ Safety note</div>
           <div class="text-sm leading-relaxed">This hack can change system behavior or cause data loss. Read the command/path carefully, and make sure you understand how to undo it before proceeding.</div>
         </div>`
       : '';
+
+  // Settings deep link button
+  const settingsButton = settingsDeepLink && hack.method === 'Settings'
+    ? `<a href="${escapeHtml(settingsDeepLink)}" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-700 dark:text-blue-300 border border-blue-500/20 font-semibold transition-colors mt-4">
+        <span>⚙️</span> Open in System Settings
+      </a>`
+    : '';
+
+  // Prerequisites section
+  const prerequisitesHtml = prerequisites.length > 0
+    ? `<div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Prerequisites</div>
+        <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+          ${prerequisites.map((p) => `<li>${escapeHtml(p)}</li>`).join('')}
+        </ul>
+      </div>`
+    : '';
+
+  // Verify section
+  const verifyHtml = verify.length > 0
+    ? `<div class="p-4 rounded-2xl bg-green-500/10 dark:bg-green-500/10 border border-green-500/20">
+        <div class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">✓ How to verify</div>
+        <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+          ${verify.map((v) => `<li>${escapeHtml(v)}</li>`).join('')}
+        </ul>
+      </div>`
+    : '';
+
+  // Compatibility section
+  const compatibilityHtml = compatibility
+    ? `<div class="p-4 rounded-2xl bg-blue-500/10 dark:bg-blue-500/10 border border-blue-500/20">
+        <div class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">Compatibility</div>
+        <div class="text-sm text-slate-700 dark:text-slate-300 space-y-1">
+          ${compatibility.macosMin ? `<div><strong>Requires:</strong> macOS ${escapeHtml(compatibility.macosMin)}${compatibility.macosMax ? ` – ${escapeHtml(compatibility.macosMax)}` : '+'}</div>` : ''}
+          ${compatibility.removedIn ? `<div class="text-amber-600 dark:text-amber-400"><strong>Removed in:</strong> macOS ${escapeHtml(compatibility.removedIn)}</div>` : ''}
+          ${compatibility.notes ? `<div class="text-slate-500">${escapeHtml(compatibility.notes)}</div>` : ''}
+        </div>
+      </div>`
+    : '';
+
+  // Undo steps section
+  const undoStepsHtml = undoSteps.length > 0
+    ? `<div class="mt-4">
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Undo steps</div>
+        <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+          ${undoSteps.map((u) => `<li>${escapeHtml(u)}</li>`).join('')}
+        </ul>
+      </div>`
+    : '';
 
   const relatedHtml = related.length
     ? related
@@ -495,21 +687,7 @@ function renderHackPage(hack, allHacks) {
       if (pref === 'dark') document.documentElement.classList.add('dark');
     } catch {}
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          borderRadius: { '4xl': '2rem' },
-          colors: { tahoe: { 500: '#0ea5e9', 900: '#0c4a6e' } },
-          fontFamily: {
-            sans: ['SF Pro Display', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="../assets/tailwind.css" />
   <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body data-hack-id="${hack.id}" data-hack-command="${escapeHtml(command || '')}" class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
@@ -530,8 +708,8 @@ function renderHackPage(hack, allHacks) {
           Toggle theme
         </button>
         <button id="fav-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white/80 dark:bg-slate-900/60 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 shadow-lg hover:opacity-90 transition-opacity">
-          <span class="text-lg" aria-hidden="true">🤍</span>
-          Save
+          <span class="text-lg" aria-hidden="true" data-fav-icon>🤍</span>
+          <span data-fav-label>Save</span>
         </button>
       </div>
     </div>
@@ -542,6 +720,7 @@ function renderHackPage(hack, allHacks) {
         hack.title,
       )}</h1>
       <p class="mt-3 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">${description}</p>
+      ${settingsButton}
     </div>
 
     <div class="flex flex-wrap gap-2 mb-10">${atAGlance}</div>
@@ -552,16 +731,11 @@ function renderHackPage(hack, allHacks) {
         ${overview.map((p) => `<p>${escapeHtml(p)}</p>`).join('')}
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        ${prerequisitesHtml}
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
           <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Common uses</div>
           <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
             ${useCases.map((u) => `<li>${escapeHtml(u)}</li>`).join('') || '<li>Use whenever it saves you time.</li>'}
-          </ul>
-        </div>
-        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Troubleshooting</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            ${troubleshooting.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}
           </ul>
         </div>
       </div>
@@ -590,6 +764,16 @@ function renderHackPage(hack, allHacks) {
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      ${verifyHtml ? `<div class="space-y-4">${verifyHtml}${compatibilityHtml ? compatibilityHtml : ''}</div>` : ''}
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Troubleshooting</h2>
+        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          ${troubleshooting.map((t) => `<li>${escapeHtml(t)}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
       <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
         <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Classifications</h2>
         <div class="space-y-4">
@@ -604,6 +788,7 @@ function renderHackPage(hack, allHacks) {
           <div>
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Undo / revert</div>
             <div class="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">${undoHtml}</div>
+            ${undoStepsHtml}
           </div>
         </div>
       </div>

@@ -2130,6 +2130,30 @@ const HACKS = [
       "memo"
     ],
     "desc": "Bottom-Right Hot Corner. Move mouse there to instantly create a Note (often links to current website).",
+    "settingsPath": "Desktop & Dock → Hot Corners… → Bottom Right: Quick Note",
+    "compatibility": {
+      "macosMin": "12.0",
+      "notes": "Quick Note is available in macOS Monterey (12) or later. On macOS 12, the path is typically Desktop & Screen Saver → Hot Corners…; on macOS 13+, it is Desktop & Dock → Hot Corners…"
+    },
+    "wiki": {
+      "prerequisites": [
+        "macOS Monterey (12) or later",
+        "Notes app set up (optional, but recommended)"
+      ],
+      "steps": [
+        "Open System Settings.",
+        "Go to Desktop & Dock → Hot Corners…",
+        "Set Bottom Right to Quick Note.",
+        "Move your pointer to the bottom-right corner to trigger a Quick Note."
+      ],
+      "verify": [
+        "Move your pointer to the bottom-right corner and confirm a Quick Note appears."
+      ],
+      "undo": [
+        "Return to Desktop & Dock → Hot Corners…",
+        "Set Bottom Right back to “–” (None) or your previous Hot Corner action."
+      ]
+    },
     "slug": "quick-note-93",
     "method": "Settings",
     "risk": "Low",
@@ -2219,6 +2243,26 @@ const HACKS = [
       "separator"
     ],
     "desc": "'defaults write com.apple.dock persistent-apps -array-add...'. Adds invisible spacers to organize the Dock.",
+    "command": "defaults write com.apple.dock persistent-apps -array-add '{\"tile-type\"=\"spacer-tile\";}' && killall Dock",
+    "wiki": {
+      "prerequisites": [
+        "Terminal app (built into macOS)",
+        "No admin rights required"
+      ],
+      "steps": [
+        "Open Terminal.",
+        "Run: defaults write com.apple.dock persistent-apps -array-add '{\"tile-type\"=\"spacer-tile\";}' && killall Dock",
+        "Wait for the Dock to restart.",
+        "Repeat the command to add more spacers, then drag items/spacers to position them."
+      ],
+      "verify": [
+        "The Dock restarts and you see an empty gap (spacer) you can drag around."
+      ],
+      "undo": [
+        "Drag the spacer out of the Dock until you see “Remove”, then let go.",
+        "Repeat for any other spacers you added."
+      ]
+    },
     "slug": "add-dock-spacers-97",
     "method": "Terminal",
     "risk": "Medium",
@@ -2264,7 +2308,29 @@ const HACKS = [
       "wipe",
       "nsa"
     ],
-    "desc": "'srm -v [file]'. Securely overwrites the file 35 times before deleting. Impossible to recover.",
+    "desc": "Older macOS: `srm -v <file>` overwrites then deletes a file. Removed on modern macOS; see Compatibility notes.",
+    "command": "srm -v <path-to-file>",
+    "compatibility": {
+      "macosMax": "10.11",
+      "removedIn": "10.12",
+      "notes": "The `srm` tool was removed from macOS Sierra (10.12). On modern macOS (APFS/SSD), secure deletion of individual files is not reliably guaranteed due to wear leveling and snapshots. Prefer FileVault (encryption) and rotating keys, or wiping entire external drives when appropriate."
+    },
+    "wiki": {
+      "prerequisites": [
+        "This only applies to older macOS versions that still include `srm`.",
+        "Understand that “secure delete” is not reliably achievable on SSD/APFS."
+      ],
+      "steps": [
+        "Open Terminal.",
+        "Run: srm -v <path-to-file>"
+      ],
+      "verify": [
+        "Confirm the file is gone (e.g., it no longer appears in Finder or `ls`)."
+      ],
+      "undo": [
+        "There is no undo. Treat this as irreversible."
+      ]
+    },
     "slug": "secure-empty-trash-99",
     "method": "Terminal",
     "risk": "High",
@@ -2359,6 +2425,25 @@ const HACKS = [
       "desktop"
     ],
     "desc": "'defaults write com.apple.screencapture location [path]'. Change save location from Desktop to elsewhere.",
+    "command": "mkdir -p \"$HOME/Pictures/Screenshots\" && defaults write com.apple.screencapture location \"$HOME/Pictures/Screenshots\" && killall SystemUIServer",
+    "undoCommand": "defaults write com.apple.screencapture location \"$HOME/Desktop\" && killall SystemUIServer",
+    "wiki": {
+      "prerequisites": [
+        "Choose a target folder (it must exist)",
+        "No admin rights required"
+      ],
+      "steps": [
+        "Open Terminal.",
+        "Run: mkdir -p \"$HOME/Pictures/Screenshots\" && defaults write com.apple.screencapture location \"$HOME/Pictures/Screenshots\" && killall SystemUIServer",
+        "Take a new screenshot (e.g., ⇧⌘4) and confirm it saves to the new folder."
+      ],
+      "verify": [
+        "New screenshots save to the chosen folder."
+      ],
+      "undo": [
+        "Run: defaults write com.apple.screencapture location \"$HOME/Desktop\" && killall SystemUIServer"
+      ]
+    },
     "slug": "change-screenshot-location-103",
     "method": "Terminal",
     "risk": "Medium",
@@ -2498,6 +2583,32 @@ const HACKS = [
       "unsigned"
     ],
     "desc": "'sudo spctl --master-disable'. Allows installing apps from 'Anywhere' (Risky, but useful for devs).",
+    "command": "sudo spctl --master-disable",
+    "undoCommand": "sudo spctl --master-enable",
+    "compatibility": {
+      "macosMin": "10.8",
+      "notes": "Gatekeeper behavior and UI varies by macOS version. On newer macOS versions, the “Anywhere” UI option may be hidden even when assessments are disabled; verify using `spctl --status`."
+    },
+    "wiki": {
+      "prerequisites": [
+        "Administrator password (sudo)",
+        "Only do this temporarily, for software you trust, then re-enable Gatekeeper."
+      ],
+      "steps": [
+        "Open Terminal.",
+        "Run: sudo spctl --master-disable",
+        "Optional: check status with `spctl --status`.",
+        "Install/open the app you need, then re-enable Gatekeeper."
+      ],
+      "verify": [
+        "Run `spctl --status` and confirm it says “assessments disabled”.",
+        "System Settings → Privacy & Security may show an “Anywhere” option depending on macOS version."
+      ],
+      "undo": [
+        "Run: sudo spctl --master-enable",
+        "Run `spctl --status` and confirm it says “assessments enabled”."
+      ]
+    },
     "slug": "gatekeeper-bypass-109",
     "method": "Terminal",
     "risk": "High",

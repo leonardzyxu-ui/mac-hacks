@@ -13,21 +13,7 @@
       if (pref === 'dark') document.documentElement.classList.add('dark');
     } catch {}
   </script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          borderRadius: { '4xl': '2rem' },
-          colors: { tahoe: { 500: '#0ea5e9', 900: '#0c4a6e' } },
-          fontFamily: {
-            sans: ['SF Pro Display', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+  <link rel="stylesheet" href="../assets/tailwind.css" />
   <link rel="stylesheet" href="../assets/site.css" />
 </head>
 <body data-hack-id="32" data-hack-command="" class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
@@ -48,8 +34,8 @@
           Toggle theme
         </button>
         <button id="fav-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white/80 dark:bg-slate-900/60 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 shadow-lg hover:opacity-90 transition-opacity">
-          <span class="text-lg" aria-hidden="true">🤍</span>
-          Save
+          <span class="text-lg" aria-hidden="true" data-fav-icon>🤍</span>
+          <span data-fav-label>Save</span>
         </button>
       </div>
     </div>
@@ -58,9 +44,10 @@
       <div class="text-sm text-slate-500 dark:text-slate-400 font-mono mb-3">Mac Hacks Dictionary</div>
       <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Find in Page</h1>
       <p class="mt-3 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Cmd + F. Opens a search bar to find specific text within the current web page or document.</p>
+      
     </div>
 
-    <div class="flex flex-wrap gap-2 mb-10"><a href="../index.html?app=System" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">System</a><a href="../index.html?type=Keyboard%20Commands" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">Keyboard Commands</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Level: Simple</span><a href="../index.html?method=Shortcut" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Method: Shortcut</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Risk: Low</span></div>
+    <div class="flex flex-wrap gap-2 mb-10"><a href="../index.html?app=System" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">System</a><a href="../index.html?type=Keyboard%20Commands" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">Keyboard Commands</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Level: Simple</span><a href="../index.html?method=Shortcut" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Method: Shortcut</a><a href="../index.html?risk=Low" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-green-500/10 dark:bg-green-500/20 text-green-700 dark:text-green-300 border-green-500/20 hover:opacity-90 transition-opacity">Risk: Low</a></div>
 
     <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl mb-6">
       <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Overview</h2>
@@ -68,16 +55,11 @@
         <p>This hack is a keyboard shortcut for System.</p><p>Opens a search bar to find specific text within the current web page or document.</p>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
           <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Common uses</div>
           <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
             <li>Manage tabs and history faster</li><li>Browse with less distraction (e.g., private windows)</li>
-          </ul>
-        </div>
-        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Troubleshooting</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            <li>Make sure the correct app/window is focused.</li><li>Check the menu bar for the command and its shortcut (apps can override defaults).</li><li>Try the shortcut in a different app to confirm your keyboard is working.</li>
           </ul>
         </div>
       </div>
@@ -102,6 +84,21 @@
     </div>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <div class="space-y-4"><div class="p-4 rounded-2xl bg-green-500/10 dark:bg-green-500/10 border border-green-500/20">
+        <div class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">✓ How to verify</div>
+        <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+          <li>The expected action should occur immediately</li><li>If nothing happens, check if the correct window/app is focused</li>
+        </ul>
+      </div></div>
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Troubleshooting</h2>
+        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>Make sure the correct app/window is focused.</li><li>Check the menu bar for the command and its shortcut (apps can override defaults).</li><li>Try the shortcut in a different app to confirm your keyboard is working.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
       <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
         <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Classifications</h2>
         <div class="space-y-4">
@@ -116,6 +113,12 @@
           <div>
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Undo / revert</div>
             <div class="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span class="text-slate-600 dark:text-slate-300">Return to the same place and switch the setting back, or use the inverse action if available.</span></div>
+            <div class="mt-4">
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Undo steps</div>
+        <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+          <li>Reverse the steps above or use the linked undo hack if available</li>
+        </ul>
+      </div>
           </div>
         </div>
       </div>
@@ -123,7 +126,7 @@
       <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
         <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Tips</h2>
         <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
-          <li>If it doesn’t work, check the app’s menu bar—shortcuts are listed next to commands.</li><li>Some shortcuts differ across keyboard layouts; try the menu-bar command to confirm.</li><li>You can customize many shortcuts in System Settings → Keyboard → Keyboard Shortcuts.</li>
+          <li>If it doesn&#39;t work, check the app&#39;s menu bar—shortcuts are listed next to commands.</li><li>Some shortcuts differ across keyboard layouts; try the menu-bar command to confirm.</li><li>You can customize many shortcuts in System Settings → Keyboard → Keyboard Shortcuts.</li>
         </ul>
       </div>
     </div>

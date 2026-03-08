@@ -1,0 +1,17 @@
+{
+  "id": 96,
+  "title": "Force Restart",
+  "app": [
+    "System"
+  ],
+  "level": "Professional",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "emergency",
+    "boot",
+    "power"
+  ],
+  "desc": "Cmd + Ctrl + Power Button. Forces an instant hard reboot. (WARNING: Unsaved data will be lost).",
+  "slug": "force-restart-96"
+}

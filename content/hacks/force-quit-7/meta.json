@@ -1,0 +1,19 @@
+{
+  "id": 7,
+  "title": "Force Quit",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "frozen",
+    "stuck",
+    "close",
+    "kill",
+    "stop"
+  ],
+  "desc": "Cmd + Option + Esc. Opens the Force Quit menu to kill apps that are frozen or not responding.",
+  "slug": "force-quit-7"
+}

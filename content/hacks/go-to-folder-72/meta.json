@@ -1,0 +1,17 @@
+{
+  "id": 72,
+  "title": "Go to Folder",
+  "app": [
+    "Finder"
+  ],
+  "level": "High",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "navigate",
+    "path",
+    "hidden"
+  ],
+  "desc": "Cmd + Shift + G. Allows you to type a direct file path (e.g., ~/Library) to jump to hidden folders.",
+  "slug": "go-to-folder-72"
+}

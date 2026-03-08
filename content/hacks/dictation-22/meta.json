@@ -1,0 +1,18 @@
+{
+  "id": 22,
+  "title": "Dictation",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "voice",
+    "speak",
+    "type",
+    "mic"
+  ],
+  "desc": "Press F5 (or Fn + F5). Starts the microphone so you can type with your voice.",
+  "slug": "dictation-22"
+}

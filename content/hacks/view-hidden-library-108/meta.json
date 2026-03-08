@@ -1,0 +1,17 @@
+{
+  "id": 108,
+  "title": "View Hidden Library",
+  "app": [
+    "Finder"
+  ],
+  "level": "Professional",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "folder",
+    "user",
+    "settings"
+  ],
+  "desc": "In Finder, click 'Go' in the menu bar and hold 'Option'. The hidden 'Library' folder appears.",
+  "slug": "view-hidden-library-108"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 42,
+  "title": "Paste Without Formatting",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "clean",
+    "text",
+    "style"
+  ],
+  "desc": "Cmd + Option + Shift + V. Pastes text matching the destination's font/style, ignoring the original format.",
+  "slug": "paste-without-formatting-42"
+}

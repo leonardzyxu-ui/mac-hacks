@@ -1,0 +1,17 @@
+{
+  "id": 87,
+  "title": "Smart Folders",
+  "app": [
+    "Finder"
+  ],
+  "level": "High",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "search",
+    "automation",
+    "organize"
+  ],
+  "desc": "Finder > File > New Smart Folder. Auto-groups files based on rules (e.g., 'All PDFs created this week').",
+  "slug": "smart-folders-87"
+}

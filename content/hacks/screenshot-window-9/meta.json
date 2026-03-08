@@ -1,0 +1,18 @@
+{
+  "id": 9,
+  "title": "Screenshot (Window)",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "capture",
+    "clean",
+    "shadow",
+    "spacebar"
+  ],
+  "desc": "Cmd + Shift + 4, then hit Spacebar. Click any window to capture it perfectly with a transparent shadow.",
+  "slug": "screenshot-window-9"
+}

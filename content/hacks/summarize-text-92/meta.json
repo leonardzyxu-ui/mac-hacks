@@ -1,0 +1,17 @@
+{
+  "id": 92,
+  "title": "Summarize Text",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "ai",
+    "shorten",
+    "read"
+  ],
+  "desc": "Keyboard Settings > Services > Summarize. Select text > Right Click > Summarize. (Old school AI!).",
+  "slug": "summarize-text-92"
+}

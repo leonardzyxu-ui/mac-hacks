@@ -1,0 +1,17 @@
+{
+  "id": 4,
+  "title": "Redo",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "restore",
+    "forward",
+    "revert"
+  ],
+  "desc": "Cmd + Shift + Z. Re-applies an action you just Undid.",
+  "slug": "redo-4"
+}

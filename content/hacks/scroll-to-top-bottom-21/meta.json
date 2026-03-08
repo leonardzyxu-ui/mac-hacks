@@ -1,0 +1,17 @@
+{
+  "id": 21,
+  "title": "Scroll to Top/Bottom",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "navigate",
+    "page",
+    "arrow"
+  ],
+  "desc": "Cmd + Up/Down Arrow. Instantly jumps to the very top or bottom of a document or webpage.",
+  "slug": "scroll-to-top-bottom-21"
+}

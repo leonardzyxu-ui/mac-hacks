@@ -1,0 +1,16 @@
+{
+  "id": 14,
+  "title": "Close Window",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "quit",
+    "exit"
+  ],
+  "desc": "Cmd + W. Closes the current window (tabs/documents) but keeps the app running in the dock.",
+  "slug": "close-window-14"
+}

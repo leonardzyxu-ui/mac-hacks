@@ -1,0 +1,17 @@
+{
+  "id": 63,
+  "title": "Crop to Circle",
+  "app": [
+    "Preview"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "edit",
+    "image",
+    "shape"
+  ],
+  "desc": "Preview > Markup. Select Ellipse tool. Hold Shift to draw a circle. Crop to create a perfect round icon.",
+  "slug": "crop-to-circle-63"
+}

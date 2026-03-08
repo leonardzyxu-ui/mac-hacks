@@ -1,0 +1,17 @@
+{
+  "id": 113,
+  "title": "Target Disk Mode",
+  "app": [
+    "System"
+  ],
+  "level": "Professional",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "transfer",
+    "harddrive",
+    "usbc"
+  ],
+  "desc": "Connect two Macs via USB-C. Boot one holding 'T'. It mounts as an external hard drive on the other.",
+  "slug": "target-disk-mode-113"
+}

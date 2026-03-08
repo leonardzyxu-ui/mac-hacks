@@ -1,0 +1,17 @@
+{
+  "id": 102,
+  "title": "View iCloud Drive",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "cloud",
+    "navigate",
+    "path"
+  ],
+  "desc": "Type 'cd ~/Library/Mobile\\ Documents'. Navigates to the hidden local folder for iCloud data.",
+  "slug": "view-icloud-drive-102"
+}

@@ -1,0 +1,18 @@
+{
+  "id": 18,
+  "title": "Chrome History",
+  "app": [
+    "Chrome"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "log",
+    "past",
+    "website",
+    "visited"
+  ],
+  "desc": "Cmd + Y. Instantly opens your Chrome browsing history page.",
+  "slug": "chrome-history-18"
+}

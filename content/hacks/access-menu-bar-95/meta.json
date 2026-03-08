@@ -1,0 +1,17 @@
+{
+  "id": 95,
+  "title": "Access Menu Bar",
+  "app": [
+    "System"
+  ],
+  "level": "Professional",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "keyboard",
+    "navigate",
+    "mouse-free"
+  ],
+  "desc": "Ctrl + F2. Focuses the Apple Menu so you can navigate menus using only arrow keys.",
+  "slug": "access-menu-bar-95"
+}

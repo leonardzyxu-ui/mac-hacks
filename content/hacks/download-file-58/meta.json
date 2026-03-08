@@ -1,0 +1,17 @@
+{
+  "id": 58,
+  "title": "Download File",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "curl",
+    "web",
+    "get"
+  ],
+  "desc": "Type 'curl -O [URL]'. Downloads the file from the URL directly to your Home folder.",
+  "slug": "download-file-58"
+}

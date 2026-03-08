@@ -1,0 +1,17 @@
+{
+  "id": 28,
+  "title": "Show Clipboard",
+  "app": [
+    "Finder"
+  ],
+  "level": "Simple",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "paste",
+    "history",
+    "copy"
+  ],
+  "desc": "Finder > Edit > Show Clipboard. Opens a window showing exactly what is currently copied.",
+  "slug": "show-clipboard-28"
+}

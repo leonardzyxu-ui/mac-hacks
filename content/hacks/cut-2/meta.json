@@ -1,0 +1,17 @@
+{
+  "id": 2,
+  "title": "Cut",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "move",
+    "remove",
+    "clipboard"
+  ],
+  "desc": "Cmd + X. Removes the selection and copies it to the clipboard (Move operation).",
+  "slug": "cut-2"
+}

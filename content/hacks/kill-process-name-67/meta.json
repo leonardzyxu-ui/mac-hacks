@@ -1,0 +1,17 @@
+{
+  "id": 67,
+  "title": "Kill Process Name",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "force",
+    "stop",
+    "program"
+  ],
+  "desc": "Type 'pkill [App Name]' (e.g., pkill Safari). Instantly force closes the specified application.",
+  "slug": "kill-process-name-67"
+}

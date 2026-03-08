@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Switch Apps - Mac Hacks Dictionary</title>
+  <meta name="description" content="Cmd + Tab. Hold Cmd and tap Tab to quickly cycle through your open applications." />
+
+  <script>
+    try {
+      const pref = localStorage.getItem('mac_hacks_theme');
+      if (pref === 'light') document.documentElement.classList.remove('dark');
+      if (pref === 'dark') document.documentElement.classList.add('dark');
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="../../assets/tailwind.css" />
+  <link rel="stylesheet" href="../../assets/site.css" />
+</head>
+<body data-hack-id="13" data-hack-command="" class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
+  <div class="max-w-5xl mx-auto px-6 pt-10">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-10">
+      <div class="flex items-center gap-2">
+        <a href="../../index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+          <span aria-hidden="true">←</span>
+          All hacks
+        </a>
+        <button id="copy-link" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+          Copy link
+        </button>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="theme-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-slate-600 dark:text-slate-300">
+          Toggle theme
+        </button>
+        <button id="fav-toggle" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl border bg-white/80 dark:bg-slate-900/60 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 shadow-lg hover:opacity-90 transition-opacity">
+          <span class="text-lg" aria-hidden="true" data-fav-icon>🤍</span>
+          <span data-fav-label>Save</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="mb-6">
+      <div class="text-sm text-slate-500 dark:text-slate-400 font-mono mb-3">Mac Hacks Dictionary</div>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">Switch Apps</h1>
+      <p class="mt-3 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">Cmd + Tab. Hold Cmd and tap Tab to quickly cycle through your open applications.</p>
+      
+    </div>
+
+    <div class="flex flex-wrap gap-2 mb-10"><a href="../../index.html?app=System" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">System</a><a href="../../index.html?type=Keyboard%20Commands" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">Keyboard Commands</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Level: Simple</span><a href="../../index.html?method=Shortcut" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Method: Shortcut</a><a href="../../index.html?risk=Low" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-green-500/10 dark:bg-green-500/20 text-green-700 dark:text-green-300 border-green-500/20 hover:opacity-90 transition-opacity">Risk: Low</a></div>
+
+    <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl mb-6">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Overview</h2>
+      <div class="space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed">
+        <p>This hack is a keyboard shortcut for System.</p><p>Hold Cmd and tap Tab to quickly cycle through your open applications.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+        
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Common uses</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Switch apps and windows quickly</li><li>Split-screen and multitask efficiently</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <div class="flex items-center justify-between gap-3 mb-4">
+          <h2 class="text-lg font-bold text-slate-900 dark:text-white">Quick reference</h2>
+          <button id="copy-command" class="hidden text-sm px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">Copy</button>
+        </div>
+        <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Shortcut</div>
+        <div class="flex flex-wrap items-center gap-2"><kbd class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 font-mono text-sm text-slate-700 dark:text-slate-200 shadow-sm">⌘</kbd><span class="text-slate-400 dark:text-slate-500 font-mono">+</span><kbd class="px-3 py-2 rounded-xl bg-slate-100 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 font-mono text-sm text-slate-700 dark:text-slate-200 shadow-sm">Tab</kbd></div>
+      </div>
+
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">How to use</h2>
+        <ol class="list-decimal ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>Focus the relevant app or window.</li><li>Press Cmd + Tab.</li><li>Hold Cmd and tap Tab to quickly cycle through your open applications.</li><li>Repeat whenever you need it; most shortcuts work everywhere.</li>
+        </ol>
+      </div>
+    </div>
+
+    <section class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div>
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white">Detailed guide</h2>
+        <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Long-form wiki content authored per hack in Markdown.</p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <aside class="lg:col-span-1">
+          <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4 sticky top-6">
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
+            <nav class="wiki-toc flex flex-col gap-2 text-sm">
+              <a href="#what-this-hack-does" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What this hack does</a><a href="#shortcut-to-remember" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Shortcut to remember</a><a href="#when-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">When to use it</a><a href="#before-you-start" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Before you start</a><a href="#step-by-step" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Step-by-step</a><a href="#why-this-helps" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why this helps</a><a href="#common-mistakes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Common mistakes</a><a href="#how-to-verify" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to verify</a><a href="#undo-or-recovery" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or recovery</a><a href="#practical-examples" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Practical examples</a><a href="#troubleshooting-notes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Troubleshooting notes</a>
+            </nav>
+          </div>
+        </aside>
+      <article class="wiki-content lg:col-span-2">
+        <h2 id="what-this-hack-does">What this hack does</h2>
+<p>Switch Apps is a shortcut-driven macOS hack for System. Hold Cmd and tap Tab to quickly cycle through your open applications. In isolation that may sound small, but this kind of action is exactly the sort of thing that shapes how smooth or clumsy a normal day on a Mac feels.</p>
+<p>This hack is tagged Simple and low risk. The risk here is generally low, which shifts the emphasis away from safety and toward consistency. The biggest gain comes from practicing the habit until it becomes the default way you handle that task. Window-management tricks are worthwhile because they reduce the cost of multitasking instead of asking you to open fewer things. Switch Apps belongs to the Window Management area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.</p>
+<h2 id="shortcut-to-remember">Shortcut to remember</h2>
+<p>The core shortcut is <code>Cmd + Tab</code>. Once you have the right app or selection focused, the whole point is that the action should feel immediate and repeatable.</p>
+<h2 id="when-to-use-it">When to use it</h2>
+<ul><li>Use it when you are moving quickly between apps, windows, and layouts.</li><li>Use it when you are reducing context-switching friction during multitasking.</li><li>Use it when you are keeping the desktop readable while several apps are open.</li><li>Use it when you are keeping your hands on the keyboard instead of reaching for menus.</li></ul>
+<h2 id="before-you-start">Before you start</h2>
+<p>Before you use Switch Apps, think about the context around it instead of only the action itself. The right window, the right selection, the right permissions, and the right macOS version all matter more than most people expect. That is true for beginner-friendly tricks just as much as it is for professional ones, because the difference between a smooth result and a confusing one is often just a missing assumption.</p>
+<ul><li>Make sure the correct app, window, or field is focused first.</li></ul>
+<h2 id="step-by-step">Step-by-step</h2>
+<ol><li>Open the app or window where you want the action to happen.</li><li>Put the cursor or focus in the place where the shortcut should act.</li><li>Press <code>Cmd + Tab</code>.</li><li>Look for the expected result: Hold Cmd and tap Tab to quickly cycle through your open applications.</li><li>Repeat it a few times so the motion becomes automatic.</li></ol>
+<p>If you treat the steps above as a repeatable sequence rather than a one-off experiment, the hack becomes much easier to trust. Repetition matters here: the first success teaches the mechanic, but the second and third uses are what turn it into a real workflow habit.</p>
+<h2 id="why-this-helps">Why this helps</h2>
+<p>The important thing to understand about a shortcut like Switch Apps is context. The keyboard combination <code>Cmd + Tab</code> is fast because it bypasses the menu bar, but it still acts on whatever is currently focused. That means the most reliable way to use it is to slow down for one second, confirm that the right app or selection is active, and then press the keys as one deliberate motion.</p>
+<p>Window-management tricks are worthwhile because they reduce the cost of multitasking instead of asking you to open fewer things. Switch Apps belongs to the Window Management area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.</p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<p>Most problems with Switch Apps come from context, not complexity. People usually either trigger it in the wrong place, expect a different result than the feature was designed to give, or forget that macOS can vary a bit between apps and versions.</p>
+<ul><li>Pressing the shortcut while the wrong window is focused.</li><li>Forgetting to select the text, file, or object first when the action needs a target.</li><li>Assuming every app handles the shortcut identically.</li></ul>
+<h2 id="how-to-verify">How to verify</h2>
+<p>Verification is important because it keeps this from becoming cargo-cult behavior. Rather than assuming the hack worked, use a quick check so you know whether the expected result actually happened.</p>
+<ul><li>The action should happen immediately when you press the shortcut.</li><li>If nothing happens, check focus and selection first.</li></ul>
+<h2 id="undo-or-recovery">Undo or recovery</h2>
+<p>Undo is part of the workflow, not an afterthought. Even if you expect to keep the change, it is worth knowing how you would back out of it before you rely on it heavily.</p>
+<ul><li>Repeat the opposite action if one exists, or use the app&#39;s normal Undo command.</li><li>If the shortcut only reveals a view or menu, dismiss it and continue working.</li></ul>
+<h2 id="practical-examples">Practical examples</h2>
+<ul><li>A good real-world moment for this hack is moving quickly between apps, windows, and layouts.</li><li>A good real-world moment for this hack is reducing context-switching friction during multitasking.</li><li>A good real-world moment for this hack is keeping the desktop readable while several apps are open.</li><li>A good real-world moment for this hack is keeping your hands on the keyboard instead of reaching for menus.</li></ul>
+<p>The broader point is that Switch Apps becomes more valuable the moment it shows up in a real task you already do. When you can connect the trick to your own workflow, it stops being trivia and starts being leverage.</p>
+<h2 id="troubleshooting-notes">Troubleshooting notes</h2>
+<p>If the hack does not behave the way you expect, avoid random retries. A short, methodical check is usually enough to tell you whether the issue is focus, permissions, version differences, or simply a misunderstood expectation.</p>
+<ul><li>Check the app menu to confirm the shortcut and the exact action name.</li><li>Try the same shortcut in another app to rule out an app-specific override.</li><li>If the action depends on a selection, recreate the selection and try again.</li></ul>
+      </article>
+    </div>
+  </section>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <div class="space-y-4"><div class="p-4 rounded-2xl bg-green-500/10 dark:bg-green-500/10 border border-green-500/20">
+          <div class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">How to verify</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>The expected action should occur immediately</li><li>If nothing happens, check that the correct window or app is focused</li>
+          </ul>
+        </div></div>
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Troubleshooting</h2>
+        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>Make sure the correct app or window is focused.</li><li>Check the menu bar for the command and its shortcut; apps can override defaults.</li><li>Try the shortcut in a different app to confirm your keyboard is working.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Classifications</h2>
+        <div class="space-y-4">
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Topics</div>
+            <div class="mt-2 flex flex-wrap gap-2"><a href="../../index.html?topic=Window%20Management" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Window Management</a></div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Keywords</div>
+            <div class="mt-2 flex flex-wrap gap-2"><a href="../../index.html?q=navigate" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">navigate</a><a href="../../index.html?q=multitasking" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">multitasking</a><a href="../../index.html?q=tab" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">tab</a></div>
+          </div>
+          <div>
+            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Undo or revert</div>
+            <div class="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span class="text-slate-600 dark:text-slate-300">Return to the same place and switch the setting back, or use the inverse action if available.</span></div>
+            <div class="mt-4">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Undo steps</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Reverse the steps above or use the linked inverse hack if available</li>
+          </ul>
+        </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Tips</h2>
+        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
+          <li>If it doesn&#39;t work, check the app&#39;s menu bar; shortcuts are listed next to commands.</li><li>Some shortcuts differ across keyboard layouts; use the menu-bar command to confirm.</li><li>You can customize many shortcuts in System Settings → Keyboard → Keyboard Shortcuts.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Related hacks</h2>
+      <div class="space-y-3">
+          <a href="../screenshot-window-9/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Screenshot (Window)</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + Shift + 4, then hit Spacebar. Click any window to capture it perfectly with a transparent shadow.</div>
+          </a>
+        
+          <a href="../app-expose-12/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">App Expose</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Ctrl + Down Arrow (or Swipe Down with 3 fingers). Shows all open windows of the CURRENT app only.</div>
+          </a>
+        
+          <a href="../close-window-14/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Close Window</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + W. Closes the current window (tabs/documents) but keeps the app running in the dock.</div>
+          </a>
+        
+          <a href="../cycle-windows-same-app-47/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Cycle Windows (Same App)</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + ~ (Tilde). Switches between different windows of the SAME app (e.g., two Word docs).</div>
+          </a>
+        
+          <a href="../scroll-to-top-bottom-21/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Scroll to Top/Bottom</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + Up/Down Arrow. Instantly jumps to the very top or bottom of a document or webpage.</div>
+          </a>
+        
+          <a href="../settings-shortcut-68/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Settings Shortcut</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + , (Comma). Opens the Settings/Preferences window for almost ANY open application.</div>
+          </a>
+        
+          <a href="../minimize-all-windows-75/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Minimize All Windows</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + Option + M. Minimizes ALL windows of the current app. (Hold Shift to see it in slow motion!).</div>
+          </a>
+        
+          <a href="../copy-0/" class="block p-4 rounded-2xl border border-slate-200 dark:border-white/10 hover:bg-slate-50 dark:hover:bg-slate-800/60 transition-colors">
+            <div class="flex items-center justify-between gap-3">
+              <div class="font-semibold text-slate-900 dark:text-white">Copy</div>
+              <div class="text-xs font-mono text-slate-400">Keyboard Commands</div>
+            </div>
+            <div class="mt-1 text-sm text-slate-600 dark:text-slate-300">Cmd + C. Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere.</div>
+          </a>
+        </div>
+    </div>
+
+    
+  </div>
+
+  <script src="../../assets/hack-page.js"></script>
+</body>
+</html>

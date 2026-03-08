@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "title": "Paste",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "clipboard",
+    "insert",
+    "move"
+  ],
+  "desc": "Cmd + V. Inserts the contents of your clipboard into the current field or folder.",
+  "slug": "paste-1"
+}

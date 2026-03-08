@@ -1,0 +1,17 @@
+{
+  "id": 88,
+  "title": "WiFi Details",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "ip",
+    "router",
+    "technical"
+  ],
+  "desc": "Hold Option + Click WiFi Icon. Shows advanced stats like IP Address, Noise Level, and Router Channel.",
+  "slug": "wifi-details-88"
+}

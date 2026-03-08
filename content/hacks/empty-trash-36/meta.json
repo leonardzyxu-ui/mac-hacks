@@ -1,0 +1,17 @@
+{
+  "id": 36,
+  "title": "Empty Trash",
+  "app": [
+    "Finder"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "clean",
+    "delete",
+    "permanent"
+  ],
+  "desc": "Cmd + Shift + Delete. Empties the trash (asks for confirmation). Add 'Option' to skip confirmation.",
+  "slug": "empty-trash-36"
+}

@@ -1,0 +1,18 @@
+{
+  "id": 38,
+  "title": "Game Mode",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "performance",
+    "cpu",
+    "gpu",
+    "play"
+  ],
+  "desc": "Auto-triggers in full-screen games. Prioritizes CPU/GPU for the game and reduces background usage.",
+  "slug": "game-mode-38"
+}

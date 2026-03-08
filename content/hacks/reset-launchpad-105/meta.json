@@ -1,0 +1,17 @@
+{
+  "id": 105,
+  "title": "Reset Launchpad",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "layout",
+    "organize",
+    "default"
+  ],
+  "desc": "'defaults write com.apple.dock ResetLaunchPad -bool true; killall Dock'. Resets Launchpad to factory layout.",
+  "slug": "reset-launchpad-105"
+}

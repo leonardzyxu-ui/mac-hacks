@@ -1,0 +1,23 @@
+{
+  "id": 109,
+  "title": "Gatekeeper Bypass",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "security",
+    "install",
+    "unsigned"
+  ],
+  "desc": "'sudo spctl --master-disable'. Allows installing apps from 'Anywhere' (Risky, but useful for devs).",
+  "command": "sudo spctl --master-disable",
+  "undoCommand": "sudo spctl --master-enable",
+  "compatibility": {
+    "macosMin": "10.8",
+    "notes": "Gatekeeper behavior and UI varies by macOS version. On newer macOS versions, the “Anywhere” UI option may be hidden even when assessments are disabled; verify using `spctl --status`."
+  },
+  "slug": "gatekeeper-bypass-109"
+}

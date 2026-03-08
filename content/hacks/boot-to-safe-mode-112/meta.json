@@ -1,0 +1,17 @@
+{
+  "id": 112,
+  "title": "Boot to Safe Mode",
+  "app": [
+    "System"
+  ],
+  "level": "Professional",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "troubleshoot",
+    "fix",
+    "startup"
+  ],
+  "desc": "Shut down. Hold Power button until options appear. Shift-click 'Continue in Safe Mode'.",
+  "slug": "boot-to-safe-mode-112"
+}

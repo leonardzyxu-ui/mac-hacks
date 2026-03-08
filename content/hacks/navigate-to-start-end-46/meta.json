@@ -1,0 +1,17 @@
+{
+  "id": 46,
+  "title": "Navigate to Start/End",
+  "app": [
+    "Text"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "line",
+    "move",
+    "cursor"
+  ],
+  "desc": "Cmd + Left/Right Arrow. Jumps the cursor instantly to the start or end of the current line.",
+  "slug": "navigate-to-start-end-46"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 43,
+  "title": "Screen Recording HUD",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "video",
+    "record",
+    "screen"
+  ],
+  "desc": "Cmd + Shift + 5. Opens the advanced HUD for recording video or taking timed screenshots.",
+  "slug": "screen-recording-hud-43"
+}

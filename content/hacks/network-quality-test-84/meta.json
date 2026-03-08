@@ -1,0 +1,17 @@
+{
+  "id": 84,
+  "title": "Network Quality Test",
+  "app": [
+    "Terminal"
+  ],
+  "level": "High",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "speed",
+    "internet",
+    "wifi"
+  ],
+  "desc": "Type 'networkQuality'. Runs Apple's built-in internet speed and responsiveness test.",
+  "slug": "network-quality-test-84"
+}

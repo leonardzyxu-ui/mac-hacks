@@ -1,0 +1,17 @@
+{
+  "id": 94,
+  "title": "Show Hidden Files",
+  "app": [
+    "Finder"
+  ],
+  "level": "Professional",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "system",
+    "dotfiles",
+    "view"
+  ],
+  "desc": "Cmd + Shift + . (Period). Toggles visibility of system files (like .gitignore or .DS_Store).",
+  "slug": "show-hidden-files-94"
+}

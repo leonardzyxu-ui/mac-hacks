@@ -1,0 +1,17 @@
+{
+  "id": 48,
+  "title": "Search Current Folder",
+  "app": [
+    "Finder"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "find",
+    "scope",
+    "limit"
+  ],
+  "desc": "Cmd + F inside a folder. Then click 'Current Folder' near the top to search ONLY that specific location.",
+  "slug": "search-current-folder-48"
+}

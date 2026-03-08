@@ -1,0 +1,17 @@
+{
+  "id": 56,
+  "title": "Prevent Sleep (Caffeinate)",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "awake",
+    "coffee",
+    "caffeinate"
+  ],
+  "desc": "Type 'caffeinate -d' in Terminal. Keeps screen awake indefinitely. Press Ctrl+C to stop.",
+  "slug": "prevent-sleep-caffeinate-56"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 26,
+  "title": "Interactive Widgets",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "desktop",
+    "home",
+    "gadget"
+  ],
+  "desc": "Right-click Desktop > Edit Widgets. You can check off reminders or play podcasts directly from the desktop.",
+  "slug": "interactive-widgets-26"
+}

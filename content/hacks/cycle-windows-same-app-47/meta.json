@@ -1,0 +1,17 @@
+{
+  "id": 47,
+  "title": "Cycle Windows (Same App)",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "switch",
+    "tab",
+    "tilde"
+  ],
+  "desc": "Cmd + ~ (Tilde). Switches between different windows of the SAME app (e.g., two Word docs).",
+  "slug": "cycle-windows-same-app-47"
+}

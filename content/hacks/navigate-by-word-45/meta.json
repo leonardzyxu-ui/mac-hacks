@@ -1,0 +1,17 @@
+{
+  "id": 45,
+  "title": "Navigate by Word",
+  "app": [
+    "Text"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "move",
+    "cursor",
+    "jump"
+  ],
+  "desc": "Option + Left/Right Arrow. Jumps the cursor one entire word at a time.",
+  "slug": "navigate-by-word-45"
+}

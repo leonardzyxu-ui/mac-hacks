@@ -1,0 +1,17 @@
+{
+  "id": 91,
+  "title": "Password Protected Zip",
+  "app": [
+    "Terminal"
+  ],
+  "level": "High",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "security",
+    "encrypt",
+    "archive"
+  ],
+  "desc": "'zip -er archive.zip [folder]'. Creates a secure zip file that requires a password to open.",
+  "slug": "password-protected-zip-91"
+}

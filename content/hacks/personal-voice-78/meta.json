@@ -1,0 +1,17 @@
+{
+  "id": 78,
+  "title": "Personal Voice",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Settings Hacks",
+  "tahoe": true,
+  "keywords": [
+    "ai",
+    "speech",
+    "clone"
+  ],
+  "desc": "Settings > Accessibility > Personal Voice. Train the Mac to speak in YOUR own voice using AI.",
+  "slug": "personal-voice-78"
+}

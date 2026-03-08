@@ -1,0 +1,17 @@
+{
+  "id": 53,
+  "title": "Function Keys",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "fn",
+    "touchbar",
+    "control"
+  ],
+  "desc": "System Settings > Keyboard. Set 'Press Fn to' to 'Show F1, F2, etc.' for pro function key access.",
+  "slug": "function-keys-53"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 49,
+  "title": "Clear Terminal",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "clean",
+    "wipe",
+    "screen"
+  ],
+  "desc": "Cmd + K. Instantly clears all previous text and output in the Terminal window.",
+  "slug": "clear-terminal-49"
+}

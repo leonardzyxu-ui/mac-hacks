@@ -1,0 +1,17 @@
+{
+  "id": 19,
+  "title": "Incognito Mode",
+  "app": [
+    "Chrome"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "private",
+    "hidden",
+    "secret"
+  ],
+  "desc": "Cmd + Shift + N. Opens a new Incognito (Private) window in Chrome.",
+  "slug": "incognito-mode-19"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 114,
+  "title": "Network Utility",
+  "app": [
+    "System"
+  ],
+  "level": "Professional",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "ping",
+    "trace",
+    "lookup"
+  ],
+  "desc": "Hidden tool. Accessible via Terminal or CoreServices. Used for Pinging and Traceroute.",
+  "slug": "network-utility-114"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 83,
+  "title": "Matrix Screen Saver",
+  "app": [
+    "Terminal"
+  ],
+  "level": "High",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "fun",
+    "hacker",
+    "code"
+  ],
+  "desc": "Install Homebrew, then type 'cmatrix'. Turns your terminal into the famous Matrix digital rain.",
+  "slug": "matrix-screen-saver-83"
+}

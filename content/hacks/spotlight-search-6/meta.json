@@ -1,0 +1,19 @@
+{
+  "id": 6,
+  "title": "Spotlight Search",
+  "app": [
+    "Spotlight"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "find",
+    "open",
+    "launch",
+    "calculate",
+    "math"
+  ],
+  "desc": "Cmd + Space. The brain of your Mac. Type to open apps, find files, or do math instantly.",
+  "slug": "spotlight-search-6"
+}

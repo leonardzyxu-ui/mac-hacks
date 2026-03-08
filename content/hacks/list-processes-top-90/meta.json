@@ -1,0 +1,17 @@
+{
+  "id": 90,
+  "title": "List Processes (Top)",
+  "app": [
+    "Terminal"
+  ],
+  "level": "High",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "cpu",
+    "monitor",
+    "activity"
+  ],
+  "desc": "Type 'top -o cpu'. Displays a real-time, text-based task manager sorted by CPU usage.",
+  "slug": "list-processes-top-90"
+}

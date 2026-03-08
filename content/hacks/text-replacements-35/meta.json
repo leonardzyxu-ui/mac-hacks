@@ -1,0 +1,18 @@
+{
+  "id": 35,
+  "title": "Text Replacements",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "shortcut",
+    "expand",
+    "email",
+    "typing"
+  ],
+  "desc": "System Settings > Keyboard > Text Replacements. Set a shortcut like '@@' to auto-expand to your full email address.",
+  "slug": "text-replacements-35"
+}

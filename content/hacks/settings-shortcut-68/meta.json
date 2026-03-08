@@ -1,0 +1,17 @@
+{
+  "id": 68,
+  "title": "Settings Shortcut",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "preferences",
+    "config",
+    "universal"
+  ],
+  "desc": "Cmd + , (Comma). Opens the Settings/Preferences window for almost ANY open application.",
+  "slug": "settings-shortcut-68"
+}

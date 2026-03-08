@@ -1,0 +1,17 @@
+{
+  "id": 71,
+  "title": "Spotlight Workflow Predictor",
+  "app": [
+    "Spotlight"
+  ],
+  "level": "High",
+  "type": "Keyboard Commands",
+  "tahoe": true,
+  "keywords": [
+    "ai",
+    "suggestion",
+    "context"
+  ],
+  "desc": "Type 'Work' or 'Relax'. Spotlight AI sets up your window layout and playlists. (Tahoe Exclusive).",
+  "slug": "spotlight-workflow-predictor-71"
+}

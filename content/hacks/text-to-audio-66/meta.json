@@ -1,0 +1,17 @@
+{
+  "id": 66,
+  "title": "Text to Audio",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "speak",
+    "mp3",
+    "convert"
+  ],
+  "desc": "Type 'say -o output.aiff -f text.txt'. Converts a text file into a spoken audio file.",
+  "slug": "text-to-audio-66"
+}

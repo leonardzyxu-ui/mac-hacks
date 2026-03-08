@@ -1,0 +1,17 @@
+{
+  "id": 30,
+  "title": "Web Apps in Dock",
+  "app": [
+    "Safari"
+  ],
+  "level": "High",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "pwa",
+    "shortcut",
+    "app"
+  ],
+  "desc": "Safari > File > Add to Dock. Turns any website into a standalone app icon in your Dock.",
+  "slug": "web-apps-in-dock-30"
+}

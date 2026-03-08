@@ -1,0 +1,17 @@
+{
+  "id": 39,
+  "title": "Picture in Picture",
+  "app": [
+    "Safari"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "youtube",
+    "video",
+    "float"
+  ],
+  "desc": "Right-click a YouTube video TWICE. Select 'Picture in Picture' to float the video while you work.",
+  "slug": "picture-in-picture-39"
+}

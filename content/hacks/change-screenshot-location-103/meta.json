@@ -1,0 +1,19 @@
+{
+  "id": 103,
+  "title": "Change Screenshot Location",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "save",
+    "folder",
+    "desktop"
+  ],
+  "desc": "'defaults write com.apple.screencapture location [path]'. Change save location from Desktop to elsewhere.",
+  "command": "mkdir -p \"$HOME/Pictures/Screenshots\" && defaults write com.apple.screencapture location \"$HOME/Pictures/Screenshots\" && killall SystemUIServer",
+  "undoCommand": "defaults write com.apple.screencapture location \"$HOME/Desktop\" && killall SystemUIServer",
+  "slug": "change-screenshot-location-103"
+}

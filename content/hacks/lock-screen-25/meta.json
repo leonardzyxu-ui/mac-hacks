@@ -1,0 +1,17 @@
+{
+  "id": 25,
+  "title": "Lock Screen",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "security",
+    "sleep",
+    "away"
+  ],
+  "desc": "Cmd + Ctrl + Q. Instantly locks your Mac screen (requires password to re-enter).",
+  "slug": "lock-screen-25"
+}

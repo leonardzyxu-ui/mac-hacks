@@ -1,0 +1,18 @@
+{
+  "id": 8,
+  "title": "Screenshot (Selection)",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "capture",
+    "image",
+    "snip",
+    "clip"
+  ],
+  "desc": "Cmd + Shift + 4. Turns cursor into a crosshair. Drag to capture a specific part of the screen.",
+  "slug": "screenshot-selection-8"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 59,
+  "title": "Check Uptime",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "time",
+    "status",
+    "boot"
+  ],
+  "desc": "Type 'uptime'. Shows exactly how long your Mac has been running since the last full restart.",
+  "slug": "check-uptime-59"
+}

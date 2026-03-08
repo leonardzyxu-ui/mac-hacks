@@ -1,0 +1,17 @@
+{
+  "id": 51,
+  "title": "Path Bar",
+  "app": [
+    "Finder"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "location",
+    "breadcrump",
+    "where"
+  ],
+  "desc": "Finder > View > Show Path Bar. Shows the file trail (User > Docs > Folder) at the bottom of the window.",
+  "slug": "path-bar-51"
+}

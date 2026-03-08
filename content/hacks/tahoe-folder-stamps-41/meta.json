@@ -1,0 +1,18 @@
+{
+  "id": 41,
+  "title": "Tahoe Folder Stamps",
+  "app": [
+    "Finder"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": true,
+  "keywords": [
+    "icon",
+    "custom",
+    "emoji",
+    "color"
+  ],
+  "desc": "Right-click folder > 'Appearance'. Replace standard blue icons with Emojis or Tint Colors. (Tahoe Exclusive).",
+  "slug": "tahoe-folder-stamps-41"
+}

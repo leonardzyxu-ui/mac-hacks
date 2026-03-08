@@ -1,0 +1,17 @@
+{
+  "id": 101,
+  "title": "Enable Startup Chime",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "sound",
+    "boot",
+    "classic"
+  ],
+  "desc": "'sudo nvram -d SystemAudioVolume'. Restores the startup sound if previously disabled.",
+  "slug": "enable-startup-chime-101"
+}

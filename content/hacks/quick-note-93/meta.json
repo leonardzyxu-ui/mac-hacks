@@ -1,0 +1,22 @@
+{
+  "id": 93,
+  "title": "Quick Note",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "write",
+    "corner",
+    "memo"
+  ],
+  "desc": "Bottom-Right Hot Corner. Move mouse there to instantly create a Note (often links to current website).",
+  "settingsPath": "Desktop & Dock → Hot Corners… → Bottom Right: Quick Note",
+  "compatibility": {
+    "macosMin": "12.0",
+    "notes": "Quick Note is available in macOS Monterey (12) or later. On macOS 12, the path is typically Desktop & Screen Saver → Hot Corners…; on macOS 13+, it is Desktop & Dock → Hot Corners…"
+  },
+  "slug": "quick-note-93"
+}

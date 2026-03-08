@@ -1,0 +1,17 @@
+{
+  "id": 73,
+  "title": "Volume Fine Tuning",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "audio",
+    "precise",
+    "level"
+  ],
+  "desc": "Option + Shift + Volume Keys. Adjusts volume in tiny 1/4 increments for perfect audio control.",
+  "slug": "volume-fine-tuning-73"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 60,
+  "title": "Batch Rename",
+  "app": [
+    "Finder"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "bulk",
+    "change",
+    "files"
+  ],
+  "desc": "Select multiple files > Right Click > Rename. Find & Replace text or add numbers to all files at once.",
+  "slug": "batch-rename-60"
+}

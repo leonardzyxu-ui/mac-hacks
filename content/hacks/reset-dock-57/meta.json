@@ -1,0 +1,17 @@
+{
+  "id": 57,
+  "title": "Reset Dock",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "fix",
+    "restart",
+    "glitch"
+  ],
+  "desc": "Type 'killall Dock'. Restarts the Dock process if it gets stuck, frozen, or glitchy.",
+  "slug": "reset-dock-57"
+}

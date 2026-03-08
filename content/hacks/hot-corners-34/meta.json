@@ -1,0 +1,17 @@
+{
+  "id": 34,
+  "title": "Hot Corners",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "corner",
+    "mouse",
+    "shortcut"
+  ],
+  "desc": "System Settings > Desktop & Dock > Hot Corners. Trigger actions (like Lock Screen) by moving mouse to a corner.",
+  "slug": "hot-corners-34"
+}

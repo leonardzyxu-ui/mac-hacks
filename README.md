@@ -1,16 +1,44 @@
 # mac-hacks
 
-Static “Mac Hacks Dictionary” site with search, favorites, filters, and a separate wiki-style HTML page for every hack.
+Static Mac Hacks site built for GitHub Pages.
 
-## Usage
+The repo is now split into source content, source app files, and generated deploy output:
 
-- Open `index.html` in a browser.
-- Click any hack card to open its wiki page in `hacks/<slug>.html`.
-- Use filters to browse by `App`, `Type`, `Topic`, and `Method`.
-- On a hack page, click classification chips (App/Type/Topic/Method/Keyword) to jump back to filtered results.
+- `apps/site/src/`: hand-authored site shell and browser JS
+- `content/hacks/<slug>/`: one folder per hack
+- `docs/`: generated static site that GitHub Pages can serve directly
+- `scripts/generate.mjs`: static site generator
 
-## Content + generation
+## Content model
 
-- Source of truth: `data/hacks.json`
-- Generator: `node scripts/generate.mjs` (rebuilds `assets/hacks-data.js` and `hacks/*.html`)
-- Optional: add `wiki` fields per hack in `data/hacks.json` (e.g., `wiki.steps`, `wiki.tips`) to override the generated content.
+Each hack lives in its own directory:
+
+- `content/hacks/<slug>/meta.json`: metadata used for cards, filters, and generated quick-reference sections
+- `content/hacks/<slug>/wiki.md`: optional long-form markdown for the detailed wiki page
+
+This keeps long wiki content out of the homepage dataset. The homepage only gets summary metadata through generated `docs/assets/hacks-data.js`.
+
+## Build
+
+Run:
+
+```sh
+npm run build
+```
+
+This rebuilds `docs/` from:
+
+- `apps/site/src/index.html`
+- `apps/site/src/assets/*`
+- `content/hacks/*`
+
+## GitHub Pages
+
+Deploy the `docs/` directory. The generated site is fully static:
+
+- homepage: `docs/index.html`
+- one page per hack: `docs/hacks/<slug>/index.html`
+
+## Legacy seed data
+
+The original one-file dataset was preserved as a migration artifact at `scripts/legacy/hacks.seed.json`. It is not the active source of truth anymore.

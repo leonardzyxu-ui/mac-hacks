@@ -1,0 +1,17 @@
+{
+  "id": 24,
+  "title": "Delete File",
+  "app": [
+    "Finder"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "trash",
+    "remove",
+    "bin"
+  ],
+  "desc": "Cmd + Delete. Moves the selected file to the Trash.",
+  "slug": "delete-file-24"
+}

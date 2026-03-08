@@ -1,0 +1,18 @@
+{
+  "id": 61,
+  "title": "Merge All Windows",
+  "app": [
+    "Finder",
+    "Safari"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "combine",
+    "tabs",
+    "organize"
+  ],
+  "desc": "Window > Merge All Windows. Combines scattered windows of an app into one single window with tabs.",
+  "slug": "merge-all-windows-61"
+}

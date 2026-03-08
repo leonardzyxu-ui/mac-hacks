@@ -1,0 +1,17 @@
+{
+  "id": 76,
+  "title": "Slow Motion Animation",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "fun",
+    "effect",
+    "genie"
+  ],
+  "desc": "Hold Shift while clicking the yellow Minimize button. Plays the Genie effect in super slow motion.",
+  "slug": "slow-motion-animation-76"
+}

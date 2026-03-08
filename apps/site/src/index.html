@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Hacks: Tahoe Edition</title>
+
+    <script>
+        try {
+            const pref = localStorage.getItem('mac_hacks_theme');
+            if (pref === 'light') document.documentElement.classList.remove('dark');
+            if (pref === 'dark') document.documentElement.classList.add('dark');
+        } catch {}
+    </script>
+    
+    <!-- Local CSS for offline/GitHub hosting -->
+    <link rel="stylesheet" href="./assets/tailwind.css" />
+    
+    <!-- Firebase SDKs (optional - graceful degradation when offline) -->
+    <script type="module">
+        let db, auth;
+        window.isFirebaseActive = false;
+
+        // Only load Firebase if online
+        if (navigator.onLine) {
+            try {
+                const { initializeApp } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js");
+                const { getFirestore, doc, setDoc, getDoc } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js");
+                const { getAuth, signInAnonymously, onAuthStateChanged } = await import("https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js");
+
+                const firebaseConfig = {
+                    apiKey: "AIzaSyAC132xazKGMeM3IDFml5ODdJJBXN4JW-Y",
+                    authDomain: "mac-hacks-tahoe.firebaseapp.com",
+                    projectId: "mac-hacks-tahoe",
+                    storageBucket: "mac-hacks-tahoe.appspot.com",
+                    messagingSenderId: "752380504420",
+                    appId: "1:752380504420:web:c4ccb6e4ffc1447b63b271"
+                };
+
+                const app = initializeApp(firebaseConfig);
+                db = getFirestore(app);
+                auth = getAuth(app);
+                window.isFirebaseActive = true;
+                window.db = db;
+                window.auth = auth;
+                window.doc = doc;
+                window.setDoc = setDoc;
+                window.getDoc = getDoc;
+                window.signInAnonymously = signInAnonymously;
+                window.onAuthStateChanged = onAuthStateChanged;
+                console.log("Firebase Connected.");
+            } catch (e) {
+                console.warn("Firebase failed to load:", e);
+            }
+        } else {
+            console.log("Offline mode - Firebase disabled.");
+        }
+    </script>
+</head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
+
+    <!-- 1. SETTINGS MENU -->
+    <div class="fixed top-6 right-6 z-50">
+        <button onclick="toggleSettings()" class="bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 p-3 rounded-full shadow-2xl hover:scale-105 transition-all text-slate-700 dark:text-white">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+        </button>
+
+        <div id="settings-menu" class="hidden absolute right-0 mt-4 w-64 bg-white/95 dark:bg-slate-900/95 backdrop-blur-2xl border border-slate-200 dark:border-white/10 rounded-3xl shadow-2xl p-4 transform origin-top-right transition-all">
+            <div class="space-y-2">
+                <button onclick="toggleTheme()" class="w-full text-left px-4 py-3 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-3 transition-colors text-slate-800 dark:text-slate-200">
+                    <span class="text-xl">🌓</span> <span class="font-medium">Toggle Theme</span>
+                </button>
+                <button onclick="showFavorites()" class="w-full text-left px-4 py-3 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-3 transition-colors text-slate-800 dark:text-slate-200">
+                    <span class="text-xl">❤️</span> <span class="font-medium">My Favorites</span>
+                </button>
+                <button onclick="toggleSafeOnly()" class="w-full text-left px-4 py-3 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-3 transition-colors text-slate-800 dark:text-slate-200">
+                    <span class="text-xl">🛡️</span> <span class="font-medium">Safe Hacks Only</span>
+                </button>
+                <button onclick="reopenOnboarding()" class="w-full text-left px-4 py-3 rounded-2xl hover:bg-slate-100 dark:hover:bg-white/10 flex items-center gap-3 transition-colors text-slate-800 dark:text-slate-200">
+                    <span class="text-xl">🎓</span> <span class="font-medium">Change Level</span>
+                </button>
+                <div class="h-px bg-slate-200 dark:bg-white/10 my-2"></div>
+                <div class="px-4 py-2 text-xs text-slate-500 font-mono text-center">v4.0 Offline Ready</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. LANDING PAGE -->
+    <div id="landing-section" class="flex flex-col items-center justify-center min-h-[50vh] px-4 pt-20 transition-all duration-700">
+        
+        <!-- GRADIENT TITLE -->
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 text-center tracking-tighter animate-tahoe-gradient py-2">
+            Mac Hacks Dictionary
+        </h1>
+
+        <div class="w-full max-w-2xl relative group mb-6">
+            <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+            <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <svg class="h-6 w-6 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <input type="text" id="search-input" class="block w-full pl-12 pr-4 py-5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-2xl text-xl text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-xl transition-all" placeholder="Search for 'Copy', 'Folder', or 'Terminal'...">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4 w-full max-w-2xl">
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <select id="filter-app" onchange="updateFilter('app', this.value)" class="relative block w-full py-3 pl-4 pr-8 bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-xl transition-all cursor-pointer">
+                    <option value="All">All Apps</option>
+                </select>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <select id="filter-type" onchange="updateFilter('type', this.value)" class="relative block w-full py-3 pl-4 pr-8 bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-xl transition-all cursor-pointer">
+                    <option value="All">All Types</option>
+                </select>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <select id="filter-topic" onchange="updateFilter('topic', this.value)" class="relative block w-full py-3 pl-4 pr-8 bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-xl transition-all cursor-pointer">
+                    <option value="All">All Topics</option>
+                </select>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <select id="filter-method" onchange="updateFilter('method', this.value)" class="relative block w-full py-3 pl-4 pr-8 bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-xl transition-all cursor-pointer">
+                    <option value="All">All Methods</option>
+                </select>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <select id="filter-risk" onchange="updateFilter('risk', this.value)" class="relative block w-full py-3 pl-4 pr-8 bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent shadow-xl transition-all cursor-pointer">
+                    <option value="All">All Risk Levels</option>
+                </select>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-1000 group-hover:duration-200"></div>
+                <button onclick="clearSearch()" class="relative block w-full py-3 px-4 bg-white/80 dark:bg-slate-800/60 backdrop-blur-xl border border-slate-200 dark:border-white/10 rounded-2xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all shadow-xl">
+                    Clear Filters
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. HACK OF THE DAY -->
+    <div id="hotd-wrapper" class="max-w-7xl mx-auto px-6 mb-8 hidden">
+        <div class="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/30 rounded-[2rem] p-8 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-8 opacity-10">
+                <svg class="w-32 h-32 text-amber-500" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/></svg>
+            </div>
+            <div class="relative z-10">
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="bg-amber-500 text-slate-900 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-lg">Daily Pick</span>
+                    <span class="text-amber-600 dark:text-amber-400 text-sm font-mono" id="hotd-app">System</span>
+                </div>
+                <h2 class="text-3xl font-bold text-slate-900 dark:text-white mb-2" id="hotd-title">Loading...</h2>
+                <p class="text-slate-600 dark:text-slate-300 text-lg mb-4 max-w-2xl leading-relaxed" id="hotd-desc">Loading description...</p>
+                <div class="flex gap-2">
+                    <span class="px-3 py-1 bg-white/50 dark:bg-black/30 rounded-lg text-xs font-bold text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-white/10" id="hotd-level">Simple</span>
+                </div>
+                <div class="mt-6 flex items-center gap-3">
+                    <button id="hotd-open" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-700 dark:text-amber-300 border border-amber-500/30 font-semibold transition-colors">
+                        Open wiki
+                        <span aria-hidden="true">→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. CONTENT GRID -->
+    <div id="content-section" class="max-w-7xl mx-auto px-6 transition-opacity duration-500 opacity-100">
+        
+        <div id="filter-status" class="flex items-center gap-3 mb-6 hidden">
+            <span class="text-sm font-semibold text-slate-400 uppercase tracking-wider">Viewing:</span>
+            <span id="active-filter-badge" class="px-3 py-1 rounded-full bg-blue-500/10 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 text-sm border border-blue-500/30">All</span>
+            <button onclick="clearSearch()" class="text-sm text-slate-500 hover:text-slate-900 dark:hover:text-white underline">Clear</button>
+        </div>
+
+        <div id="hacks-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cards injected via JS -->
+        </div>
+    </div>
+
+    <!-- 5. ONBOARDING MODAL -->
+    <div id="onboarding-modal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 dark:bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-500">
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-8 rounded-[2rem] max-w-2xl w-full mx-4 shadow-2xl relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 to-blue-500"></div>
+            
+            <!-- CLOSE BUTTON (Hidden on first load) -->
+            <button id="modal-close-btn" onclick="closeModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-800 dark:hover:text-white transition-colors hidden">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+
+            <h1 class="text-4xl font-bold text-slate-900 dark:text-white mb-3 text-center">Welcome to <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-500">Tahoe</span></h1>
+            <p class="text-slate-500 dark:text-slate-400 text-center mb-8 text-lg">Choose your current Mac expertise level.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <button onclick="setLevel('Simple')" class="p-5 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 rounded-3xl hover:border-blue-500 hover:bg-slate-100 dark:hover:bg-slate-800 text-left group transition-all">
+                    <div class="text-blue-500 dark:text-blue-400 font-bold text-lg mb-1">Simple</div>
+                    <div class="text-sm text-slate-500">Basics every user should know.</div>
+                </button>
+                <button onclick="setLevel('Medium')" class="p-5 border border-teal-500/50 bg-teal-50 dark:bg-teal-900/10 rounded-3xl hover:bg-teal-100 dark:hover:bg-teal-900/20 text-left relative overflow-hidden group transition-all ring-1 ring-teal-500/50">
+                    <div class="absolute top-3 right-3 text-[10px] bg-teal-500 text-white dark:text-slate-900 px-2 py-0.5 rounded-full font-bold uppercase tracking-wide">Recommended</div>
+                    <div class="text-slate-900 dark:text-white font-bold text-lg mb-1">Medium</div>
+                    <div class="text-sm text-slate-600 dark:text-slate-300">Efficient workflows for students.</div>
+                </button>
+                <button onclick="setLevel('High')" class="p-5 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 rounded-3xl hover:border-purple-500 hover:bg-slate-100 dark:hover:bg-slate-800 text-left group transition-all">
+                    <div class="text-purple-500 dark:text-purple-400 font-bold text-lg mb-1">High</div>
+                    <div class="text-sm text-slate-500">Terminal & Power User tools.</div>
+                </button>
+                <button onclick="setLevel('Professional')" class="p-5 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 rounded-3xl hover:border-red-500 hover:bg-slate-100 dark:hover:bg-slate-800 text-left group transition-all">
+                    <div class="text-red-500 dark:text-red-400 font-bold text-lg mb-1">Professional</div>
+                    <div class="text-sm text-slate-500">Deep system overrides.</div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/hacks-data.js"></script>
+    <script src="./assets/app.js"></script>
+</body>
+</html>

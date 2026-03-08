@@ -1,0 +1,17 @@
+{
+  "id": 5,
+  "title": "Select All",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "highlight",
+    "everything",
+    "grab"
+  ],
+  "desc": "Cmd + A. Highlights every item in a folder or every word in a document.",
+  "slug": "select-all-5"
+}

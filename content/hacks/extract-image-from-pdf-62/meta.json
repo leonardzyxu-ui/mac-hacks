@@ -1,0 +1,17 @@
+{
+  "id": 62,
+  "title": "Extract Image from PDF",
+  "app": [
+    "Preview"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "copy",
+    "snip",
+    "export"
+  ],
+  "desc": "In Preview, use Selection tool to grab an area. Cmd+C (Copy), then Cmd+N (New) to create an image file from it.",
+  "slug": "extract-image-from-pdf-62"
+}

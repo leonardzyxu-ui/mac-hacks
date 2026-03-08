@@ -1,0 +1,17 @@
+{
+  "id": 23,
+  "title": "Rename File",
+  "app": [
+    "Finder"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "change",
+    "title",
+    "name"
+  ],
+  "desc": "Select a file and press Return (Enter). This enters rename mode (unlike Windows, which opens the file).",
+  "slug": "rename-file-23"
+}

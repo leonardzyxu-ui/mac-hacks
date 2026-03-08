@@ -1,0 +1,17 @@
+{
+  "id": 104,
+  "title": "Disable Shadow",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "clean",
+    "flat",
+    "window"
+  ],
+  "desc": "'defaults write com.apple.screencapture disable-shadow -bool TRUE'. Removes window screenshot shadows.",
+  "slug": "disable-shadow-104"
+}

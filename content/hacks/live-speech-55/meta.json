@@ -1,0 +1,17 @@
+{
+  "id": 55,
+  "title": "Live Speech",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "accessibility",
+    "talk",
+    "type"
+  ],
+  "desc": "System Settings > Accessibility > Live Speech. Type to have your Mac speak for you during FaceTime calls.",
+  "slug": "live-speech-55"
+}

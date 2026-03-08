@@ -1,0 +1,17 @@
+{
+  "id": 20,
+  "title": "Chrome Quit",
+  "app": [
+    "Chrome"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "exit",
+    "close",
+    "stop"
+  ],
+  "desc": "Hold Cmd + Q (or press Q twice). Chrome requires a 'slow' quit to prevent accidents.",
+  "slug": "chrome-quit-20"
+}

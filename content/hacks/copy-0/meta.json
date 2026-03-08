@@ -1,0 +1,17 @@
+{
+  "id": 0,
+  "title": "Copy",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "clipboard",
+    "duplicate",
+    "text"
+  ],
+  "desc": "Cmd + C. Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere.",
+  "slug": "copy-0"
+}

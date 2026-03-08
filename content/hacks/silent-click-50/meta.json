@@ -1,0 +1,17 @@
+{
+  "id": 50,
+  "title": "Silent Click",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "trackpad",
+    "haptic",
+    "noise"
+  ],
+  "desc": "System Settings > Trackpad. Turn off 'Force Click' and 'Sound' for a completely silent trackpad.",
+  "slug": "silent-click-50"
+}

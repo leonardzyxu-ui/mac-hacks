@@ -1,0 +1,17 @@
+{
+  "id": 82,
+  "title": "Remove Screenshot Shadow",
+  "app": [
+    "Terminal"
+  ],
+  "level": "High",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "clean",
+    "flat",
+    "image"
+  ],
+  "desc": "'defaults write com.apple.screencapture disable-shadow -bool TRUE'. Removes the drop shadow from window captures.",
+  "slug": "remove-screenshot-shadow-82"
+}

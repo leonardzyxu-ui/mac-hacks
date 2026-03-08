@@ -1,0 +1,17 @@
+{
+  "id": 86,
+  "title": "Re-Show Desktop Icons",
+  "app": [
+    "Terminal"
+  ],
+  "level": "High",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "restore",
+    "view",
+    "files"
+  ],
+  "desc": "'defaults write com.apple.finder CreateDesktop true; killall Finder'. Restores hidden desktop icons.",
+  "slug": "re-show-desktop-icons-86"
+}

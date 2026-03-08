@@ -1,0 +1,17 @@
+{
+  "id": 13,
+  "title": "Switch Apps",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "navigate",
+    "multitasking",
+    "tab"
+  ],
+  "desc": "Cmd + Tab. Hold Cmd and tap Tab to quickly cycle through your open applications.",
+  "slug": "switch-apps-13"
+}

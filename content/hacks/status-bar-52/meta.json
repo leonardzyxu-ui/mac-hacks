@@ -1,0 +1,17 @@
+{
+  "id": 52,
+  "title": "Status Bar",
+  "app": [
+    "Finder"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "count",
+    "space",
+    "storage"
+  ],
+  "desc": "Finder > View > Show Status Bar. Displays item count and remaining disk space at the bottom.",
+  "slug": "status-bar-52"
+}

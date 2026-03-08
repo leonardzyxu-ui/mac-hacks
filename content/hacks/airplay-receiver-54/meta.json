@@ -1,0 +1,17 @@
+{
+  "id": 54,
+  "title": "AirPlay Receiver",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "mirror",
+    "iphone",
+    "screen"
+  ],
+  "desc": "System Settings > General > AirDrop. Allow your Mac to act as a screen/speaker for your iPhone.",
+  "slug": "airplay-receiver-54"
+}

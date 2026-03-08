@@ -1,0 +1,18 @@
+{
+  "id": 12,
+  "title": "App Expose",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "view",
+    "windows",
+    "mission control",
+    "swipe"
+  ],
+  "desc": "Ctrl + Down Arrow (or Swipe Down with 3 fingers). Shows all open windows of the CURRENT app only.",
+  "slug": "app-expose-12"
+}

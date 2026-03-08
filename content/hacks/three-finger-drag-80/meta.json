@@ -1,0 +1,17 @@
+{
+  "id": 80,
+  "title": "Three Finger Drag",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "trackpad",
+    "move",
+    "gesture"
+  ],
+  "desc": "Accessibility > Pointer Control > Trackpad Options. Enable dragging windows with 3 fingers (no click needed).",
+  "slug": "three-finger-drag-80"
+}

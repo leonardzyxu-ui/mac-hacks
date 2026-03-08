@@ -1,0 +1,17 @@
+{
+  "id": 44,
+  "title": "Delete by Word",
+  "app": [
+    "Text"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "edit",
+    "remove",
+    "typing"
+  ],
+  "desc": "Option + Delete. Removes the entire word behind the cursor instead of just one letter.",
+  "slug": "delete-by-word-44"
+}

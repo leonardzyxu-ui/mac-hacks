@@ -1,0 +1,17 @@
+{
+  "id": 110,
+  "title": "Flush DNS",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "network",
+    "internet",
+    "fix"
+  ],
+  "desc": "'sudo dscacheutil -flushcache'. Resets how Mac resolves websites. Fixes some connection errors.",
+  "slug": "flush-dns-110"
+}

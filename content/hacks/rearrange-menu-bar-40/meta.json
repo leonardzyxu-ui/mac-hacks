@@ -1,0 +1,18 @@
+{
+  "id": 40,
+  "title": "Rearrange Menu Bar",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "organize",
+    "icons",
+    "move",
+    "drag"
+  ],
+  "desc": "Hold Cmd + Drag icons in the top menu bar. You can rearrange them or drag them out to remove them.",
+  "slug": "rearrange-menu-bar-40"
+}

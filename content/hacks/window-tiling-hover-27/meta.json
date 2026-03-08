@@ -1,0 +1,17 @@
+{
+  "id": 27,
+  "title": "Window Tiling (Hover)",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "split",
+    "organize",
+    "view"
+  ],
+  "desc": "Hover over the green maximize button (top left). Choose 'Tile Window to Left/Right' for split screen.",
+  "slug": "window-tiling-hover-27"
+}

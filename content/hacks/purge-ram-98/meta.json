@@ -1,0 +1,17 @@
+{
+  "id": 98,
+  "title": "Purge RAM",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "memory",
+    "speed",
+    "cache"
+  ],
+  "desc": "Type 'sudo purge'. Forces the Mac to dump inactive memory. Useful before launching heavy apps.",
+  "slug": "purge-ram-98"
+}

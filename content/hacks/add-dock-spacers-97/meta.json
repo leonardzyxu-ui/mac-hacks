@@ -1,0 +1,18 @@
+{
+  "id": 97,
+  "title": "Add Dock Spacers",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "organize",
+    "gap",
+    "separator"
+  ],
+  "desc": "'defaults write com.apple.dock persistent-apps -array-add...'. Adds invisible spacers to organize the Dock.",
+  "command": "defaults write com.apple.dock persistent-apps -array-add '{\"tile-type\"=\"spacer-tile\";}' && killall Dock",
+  "slug": "add-dock-spacers-97"
+}

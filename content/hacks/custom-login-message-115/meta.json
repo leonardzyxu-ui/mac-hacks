@@ -1,0 +1,17 @@
+{
+  "id": 115,
+  "title": "Custom Login Message",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "lockscreen",
+    "text",
+    "lost"
+  ],
+  "desc": "'sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \"Your Text\"'.",
+  "slug": "custom-login-message-115"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 106,
+  "title": "Stress Test CPU",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "benchmark",
+    "heat",
+    "fan"
+  ],
+  "desc": "Type 'yes > /dev/null &'. Runs a 100% CPU load process. (Kill with 'killall yes').",
+  "slug": "stress-test-cpu-106"
+}

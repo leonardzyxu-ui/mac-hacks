@@ -1,0 +1,17 @@
+{
+  "id": 65,
+  "title": "Check File Size",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Medium",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "storage",
+    "disk",
+    "space"
+  ],
+  "desc": "Type 'du -sh [folder path]'. Calculates and displays the total size of a specific folder.",
+  "slug": "check-file-size-65"
+}

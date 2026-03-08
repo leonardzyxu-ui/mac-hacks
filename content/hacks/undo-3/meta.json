@@ -1,0 +1,17 @@
+{
+  "id": 3,
+  "title": "Undo",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "oops",
+    "back",
+    "revert"
+  ],
+  "desc": "Cmd + Z. Instantly undoes your last action. Press multiple times to go further back.",
+  "slug": "undo-3"
+}

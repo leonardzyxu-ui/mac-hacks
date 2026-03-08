@@ -1,0 +1,17 @@
+{
+  "id": 70,
+  "title": "WiFi Password View",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "network",
+    "share",
+    "copy"
+  ],
+  "desc": "System Settings > Wi-Fi. Click the '...' next to a network > Copy Password. Useful for sharing.",
+  "slug": "wifi-password-view-70"
+}

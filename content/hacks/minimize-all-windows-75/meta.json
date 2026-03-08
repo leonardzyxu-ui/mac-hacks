@@ -1,0 +1,17 @@
+{
+  "id": 75,
+  "title": "Minimize All Windows",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "desktop",
+    "hide",
+    "clear"
+  ],
+  "desc": "Cmd + Option + M. Minimizes ALL windows of the current app. (Hold Shift to see it in slow motion!).",
+  "slug": "minimize-all-windows-75"
+}

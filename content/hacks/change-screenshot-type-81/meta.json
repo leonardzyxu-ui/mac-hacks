@@ -1,0 +1,17 @@
+{
+  "id": 81,
+  "title": "Change Screenshot Type",
+  "app": [
+    "Terminal"
+  ],
+  "level": "High",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "format",
+    "jpg",
+    "png"
+  ],
+  "desc": "'defaults write com.apple.screencapture type jpg'. Saves screenshots as smaller JPGs instead of PNGs.",
+  "slug": "change-screenshot-type-81"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 107,
+  "title": "Superuser Do",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "admin",
+    "root",
+    "permission"
+  ],
+  "desc": "Prefixing commands with 'sudo' (e.g. sudo purge) runs them as Administrator. Use with caution.",
+  "slug": "superuser-do-107"
+}

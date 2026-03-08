@@ -1,0 +1,18 @@
+{
+  "id": 10,
+  "title": "Emoji Picker",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "smile",
+    "icon",
+    "symbol",
+    "text"
+  ],
+  "desc": "Ctrl + Cmd + Space. Opens the emoji and symbol picker anywhere you can type text.",
+  "slug": "emoji-picker-10"
+}

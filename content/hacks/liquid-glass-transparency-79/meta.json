@@ -1,0 +1,17 @@
+{
+  "id": 79,
+  "title": "Liquid Glass Transparency",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Settings Hacks",
+  "tahoe": true,
+  "keywords": [
+    "ui",
+    "visual",
+    "depth"
+  ],
+  "desc": "Settings > Appearance. Toggles the advanced 'Tahoe' depth blur effect on window sidebars.",
+  "slug": "liquid-glass-transparency-79"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 29,
+  "title": "Tags",
+  "app": [
+    "Finder"
+  ],
+  "level": "Simple",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "color",
+    "organize",
+    "label"
+  ],
+  "desc": "Right-click files to assign colored tags (Red, Blue). You can then search for 'Red' to find them all.",
+  "slug": "tags-29"
+}

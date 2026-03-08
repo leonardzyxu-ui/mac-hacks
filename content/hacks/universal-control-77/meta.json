@@ -1,0 +1,17 @@
+{
+  "id": 77,
+  "title": "Universal Control",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "ipad",
+    "mouse",
+    "share"
+  ],
+  "desc": "System Settings > Displays. Push mouse off screen edge to seamlessly control a nearby iPad.",
+  "slug": "universal-control-77"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 11,
+  "title": "Quick Look",
+  "app": [
+    "Finder"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "preview",
+    "view",
+    "spacebar"
+  ],
+  "desc": "Select any file in Finder and press Spacebar to instantly preview it without opening the app.",
+  "slug": "quick-look-11"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 100,
+  "title": "Disable Startup Chime",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "sound",
+    "boot",
+    "quiet"
+  ],
+  "desc": "'sudo nvram SystemAudioVolume=%80'. Permanently mutes the iconic Mac startup sound.",
+  "slug": "disable-startup-chime-100"
+}

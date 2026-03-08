@@ -1,0 +1,17 @@
+{
+  "id": 37,
+  "title": "Sound Output Select",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "audio",
+    "headphones",
+    "speaker"
+  ],
+  "desc": "Option + Click the Sound icon in the menu bar. Allows you to quickly switch between Speakers/Headphones.",
+  "slug": "sound-output-select-37"
+}

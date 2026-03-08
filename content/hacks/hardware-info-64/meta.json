@@ -1,0 +1,17 @@
+{
+  "id": 64,
+  "title": "Hardware Info",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "specs",
+    "serial",
+    "model"
+  ],
+  "desc": "Hold Option + Click Apple Menu. 'About This Mac' becomes 'System Information', showing deep hardware specs.",
+  "slug": "hardware-info-64"
+}

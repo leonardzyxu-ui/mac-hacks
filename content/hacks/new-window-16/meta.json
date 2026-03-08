@@ -1,0 +1,19 @@
+{
+  "id": 16,
+  "title": "New Window",
+  "app": [
+    "Chrome",
+    "Safari",
+    "Finder"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "browse",
+    "fresh",
+    "open"
+  ],
+  "desc": "Cmd + N. Opens a completely new window instance for the active application.",
+  "slug": "new-window-16"
+}

@@ -1,0 +1,18 @@
+{
+  "id": 17,
+  "title": "Reopen Closed Tab",
+  "app": [
+    "Safari",
+    "Chrome"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "oops",
+    "undo",
+    "browser"
+  ],
+  "desc": "Cmd + Shift + T. Magically brings back the last browser tab you accidentally closed.",
+  "slug": "reopen-closed-tab-17"
+}

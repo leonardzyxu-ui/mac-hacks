@@ -1,0 +1,17 @@
+{
+  "id": 89,
+  "title": "Bluetooth Details",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "signal",
+    "codec",
+    "tech"
+  ],
+  "desc": "Hold Shift + Option + Click Bluetooth Icon. Shows technical details like Codec and signal strength.",
+  "slug": "bluetooth-details-89"
+}

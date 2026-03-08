@@ -1,0 +1,18 @@
+{
+  "id": 33,
+  "title": "Do Not Disturb",
+  "app": [
+    "System"
+  ],
+  "level": "Medium",
+  "type": "Settings Hacks",
+  "tahoe": false,
+  "keywords": [
+    "silence",
+    "notification",
+    "focus",
+    "quiet"
+  ],
+  "desc": "Option + Click the Date/Time in the menu bar. Instantly toggles 'Do Not Disturb' mode on/off.",
+  "slug": "do-not-disturb-33"
+}

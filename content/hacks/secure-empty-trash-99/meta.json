@@ -1,0 +1,23 @@
+{
+  "id": 99,
+  "title": "Secure Empty Trash",
+  "app": [
+    "Terminal"
+  ],
+  "level": "Professional",
+  "type": "Terminal Hacks",
+  "tahoe": false,
+  "keywords": [
+    "delete",
+    "wipe",
+    "nsa"
+  ],
+  "desc": "Older macOS: `srm -v <file>` overwrites then deletes a file. Removed on modern macOS; see Compatibility notes.",
+  "command": "srm -v <path-to-file>",
+  "compatibility": {
+    "macosMax": "10.11",
+    "removedIn": "10.12",
+    "notes": "The `srm` tool was removed from macOS Sierra (10.12). On modern macOS (APFS/SSD), secure deletion of individual files is not reliably guaranteed due to wear leveling and snapshots. Prefer FileVault (encryption) and rotating keys, or wiping entire external drives when appropriate."
+  },
+  "slug": "secure-empty-trash-99"
+}

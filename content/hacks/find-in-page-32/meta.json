@@ -1,0 +1,17 @@
+{
+  "id": 32,
+  "title": "Find in Page",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "search",
+    "locate",
+    "text"
+  ],
+  "desc": "Cmd + F. Opens a search bar to find specific text within the current web page or document.",
+  "slug": "find-in-page-32"
+}

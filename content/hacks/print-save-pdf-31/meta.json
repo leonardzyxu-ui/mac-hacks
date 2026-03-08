@@ -1,0 +1,17 @@
+{
+  "id": 31,
+  "title": "Print / Save PDF",
+  "app": [
+    "System"
+  ],
+  "level": "Simple",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "paper",
+    "pdf",
+    "save"
+  ],
+  "desc": "Cmd + P. Opens print dialog. Click the small 'PDF' arrow at the bottom to save as a file.",
+  "slug": "print-save-pdf-31"
+}

@@ -1,0 +1,17 @@
+{
+  "id": 74,
+  "title": "Brightness Fine Tuning",
+  "app": [
+    "System"
+  ],
+  "level": "High",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "display",
+    "precise",
+    "level"
+  ],
+  "desc": "Option + Shift + Brightness Keys. Adjusts screen brightness in tiny 1/4 increments.",
+  "slug": "brightness-fine-tuning-74"
+}

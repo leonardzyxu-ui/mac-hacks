@@ -1,0 +1,17 @@
+{
+  "id": 111,
+  "title": "Prevent App Nap",
+  "app": [
+    "System"
+  ],
+  "level": "Professional",
+  "type": "Other",
+  "tahoe": false,
+  "keywords": [
+    "performance",
+    "background",
+    "sleep"
+  ],
+  "desc": "Right-click App > Get Info > Prevent App Nap. Stops macOS from slowing the app when in background.",
+  "slug": "prevent-app-nap-111"
+}

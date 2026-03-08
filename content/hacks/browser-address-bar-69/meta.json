@@ -1,0 +1,18 @@
+{
+  "id": 69,
+  "title": "Browser Address Bar",
+  "app": [
+    "Chrome",
+    "Safari"
+  ],
+  "level": "Medium",
+  "type": "Keyboard Commands",
+  "tahoe": false,
+  "keywords": [
+    "url",
+    "type",
+    "search"
+  ],
+  "desc": "Cmd + L. Instantly highlights the URL bar so you can type a new search or website address.",
+  "slug": "browser-address-bar-69"
+}

@@ -100,24 +100,19 @@
           <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
-              <a href="#what-the-command-changes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What the command changes</a><a href="#exact-command" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Exact command</a><a href="#safe-way-to-run-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Safe way to run it</a><a href="#what-changes-afterward" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What changes afterward</a><a href="#what-to-watch-for" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What to watch for</a><a href="#undo-or-exit" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or exit</a>
+              <a href="#overview" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Overview</a><a href="#how-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to use it</a><a href="#why-it-matters" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why it matters</a><a href="#caveats" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Caveats</a>
             </nav>
           </div>
         </aside>
       <article class="wiki-content">
-        <h2 id="what-the-command-changes">What the command changes</h2>
-<p>Disable Shadow is a Terminal tweak for Terminal. Removes window screenshot shadows. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.</p>
-<h2 id="exact-command">Exact command</h2>
-<pre><code class="language-sh">defaults write com.apple.screencapture disable-shadow -bool TRUE</code></pre>
-<h2 id="safe-way-to-run-it">Safe way to run it</h2>
-<ol><li>Open Terminal.</li><li>Paste or type <code>defaults write com.apple.screencapture disable-shadow -bool TRUE</code>.</li><li>Press Return to run it.</li><li>Check the outcome described by the hack: Removes window screenshot shadows.</li></ol>
-<h2 id="what-changes-afterward">What changes afterward</h2>
-<p>Commands built around <code>defaults write</code> usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.</p>
-<p>Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.</p>
-<h2 id="what-to-watch-for">What to watch for</h2>
-<ul><li>If the command includes <code>killall</code>, the named app or service will restart as part of the change.</li><li>Preference tweaks can appear to do nothing until the affected app or service is reopened.</li><li>Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.</li></ul>
-<h2 id="undo-or-exit">Undo or exit</h2>
-<ul><li>If the command changes a preference, revert the same preference directly.</li><li>If it only runs for the current session, stop the process or close Terminal when you are done.</li></ul>
+        <h2 id="overview">Overview</h2>
+<p>This screenshot tweak disables the drop shadow that macOS normally adds when you capture an individual window. The effect is mostly visual, but it matters when you want screenshots to look cleaner, flatter, or easier to place into documents and mockups.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol><li>Run the screenshot shadow command in Terminal.</li><li>Restart the screenshot-related service if the command requires it.</li><li>Take a new window screenshot.</li><li>Confirm that the image no longer includes the standard Mac window shadow.</li></ol>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Shadow-free screenshots are easier to compose in documentation, presentations, blog posts, and visual assets where the default floating-window look is distracting or inconsistent with the surrounding design.</p>
+<h2 id="caveats">Caveats</h2>
+<ul><li>This only affects future screenshots, not old ones.</li><li>The difference is mostly visual, so it is easy to forget you changed the default.</li><li>If you later want the classic floating-window look back, you need to revert the tweak.</li></ul>
       </article>
     </div>
   </section>

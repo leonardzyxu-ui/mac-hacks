@@ -1,33 +1,20 @@
-## What it does
+## Overview
 
-Text to Audio is a Terminal utility command for Terminal. Converts a text file into a spoken audio file. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+The `say` command can read text aloud, and with output flags it can save speech to an audio file. That turns plain text into a quick spoken export without opening a separate voice tool.
 
-## Exact command
+## How to use it
 
-```sh
-say -o output.aiff -f text.txt
-```
+1. Prepare the text or text file you want read aloud.
+2. Run the `say` command with the correct input and output options.
+3. Let the Mac generate the spoken result.
+4. Open the resulting audio file and check whether it sounds the way you expected.
 
-## Running it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `say -o output.aiff -f text.txt`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Converts a text file into a spoken audio file.
+This is useful for rough voice exports, accessibility-adjacent tasks, quick previews of spoken copy, or simple audio generation when you do not need a polished studio workflow.
 
-## Why it is useful
+## Caveats
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
-
-## Read the result carefully
-
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- The result uses built-in synthetic voices unless you configure otherwise.
+- Pronunciation of names, code, or unusual text may need manual help.
+- It is best for utility output, not for polished narration.

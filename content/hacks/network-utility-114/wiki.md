@@ -1,30 +1,20 @@
-## What it does
+## Overview
 
-Network Utility is an advanced system feature or diagnostic view for System. Accessible via Terminal or CoreServices. Used for Pinging and Traceroute. These entries are useful because they surface deeper system information or boot-time behavior that ordinary settings screens do not expose directly.
+Network Utility was the old graphical grab bag for commands like ping, traceroute, and port lookups. On newer versions of macOS, it is less visible and in some setups effectively replaced by Terminal-based tools, but the idea behind the hack is still useful: macOS already includes serious networking diagnostics if you know where to look.
 
-## Reference
+## How to use it
 
-`Hidden tool`
+1. Decide what you are actually testing: reachability, route, name resolution, or open ports.
+2. If the app is available on your system, launch it from its deeper system location.
+3. If it is not, use the Terminal equivalents instead of hunting endlessly through Applications.
+4. Run the smallest diagnostic that answers the question.
 
-## Before you use it
+## Why it matters
 
-- Read the full description once before trying it; advanced system workflows are less forgiving than everyday shortcuts.
-- If external hardware or another Mac is involved, set that up first instead of improvising halfway through.
-- If you are troubleshooting, decide what question you are trying to answer before you trigger the feature.
+Most "the internet is broken" problems are not really internet problems. They are DNS issues, a bad route, a dead host, a firewall rule, or a local network problem. A simple built-in diagnostic can tell you which category you are in before you waste time restarting random hardware.
 
-## How it usually works
+## Caveats
 
-1. Start from the relevant system context for System.
-2. Use the documented interaction or entry point: Hidden tool.
-3. Look for the expected result: Accessible via Terminal or CoreServices. Used for Pinging and Traceroute.
-4. Exit cleanly once you have the information or behavior you needed.
-
-## Limits and safety
-
-- Advanced system features can vary significantly by Mac model and macOS version.
-- Diagnostic menus often reveal extra data, but they do not automatically fix the underlying problem.
-- Use the extra information to guide the next decision, not just to admire the menu.
-
-## Good to know
-
-Apple removed the visible Network Utility app from newer macOS releases, but the underlying network tools still exist through Terminal and system paths.
+- Network Utility availability varies across macOS versions.
+- These tools explain symptoms; they do not automatically fix them.
+- Use production hosts carefully when testing, especially if you are generating repeated requests.

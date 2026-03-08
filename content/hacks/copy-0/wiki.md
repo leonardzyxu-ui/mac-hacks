@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Copy is a keyboard editing shortcut for System. Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere. Clipboard shortcuts are the basic transport layer of everyday Mac work. They are how text, images, files, and small pieces of context move between apps.
-
-## Shortcut
-
-`Cmd + C`
+Copy is the basic transport command on a Mac. `Cmd + C` takes the current selection and places it on the clipboard so you can reuse it somewhere else. In text editors that usually means text. In Finder it can mean files or folders. In design and image apps it can mean pixels, layers, or objects. The exact payload depends on the app, but the mental model is always the same: select first, then copy.
 
 ## How to use it
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Press `Cmd + C`.
-4. Confirm the result: Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere.
+1. Highlight the text, file, image, or object you want to keep.
+2. Press `Cmd + C`.
+3. Move to the destination.
+4. Paste with `Cmd + V` or use another command that reads from the clipboard.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are working quickly inside notes, documents, chat boxes, code editors, or Finder lists.
-- Use it when you are staying on the keyboard instead of breaking rhythm to use the Edit menu.
-- Use it when you are repeating a tiny action many times in a row without thinking about it.
+Copy is one of the few shortcuts that pays off in almost every app. It lets you move information between windows without retyping, duplicate text before editing it, and collect snippets from different sources while staying on the keyboard. Once it becomes automatic, a lot of small Mac workflows get noticeably faster.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- Cut is not a universal file-moving shortcut in Finder, so do not assume Windows-style behavior everywhere.
+- Copy does not remove the original item.
+- The clipboard usually only holds the most recent copied item unless you use a clipboard manager.
+- If nothing useful happens, the problem is usually selection or focus: either nothing was selected, or the wrong window was active.

@@ -1,26 +1,20 @@
-## What this setting does
+## Overview
 
-Function Keys is a settings-driven feature for System. Set 'Press Fn to' to 'Show F1, F2, etc.' for pro function key access. The value here is persistence: you change the system once, and the new behavior stays available in later sessions until you change it back.
+Changing how the top-row keys behave determines whether your keyboard defaults to media controls or the traditional `F1`, `F2`, and so on. That choice matters a lot if you use pro apps, developer tools, or other software that actually expects function keys.
 
-## Where Apple put it
+## How to use it
 
-`System Settings > Keyboard`
+1. Open Keyboard settings.
+2. Find the option that controls top-row key behavior.
+3. Choose whether the Mac should prefer standard function keys or media controls.
+4. Test the result in the app that motivated the change.
 
-## How to enable it
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `System Settings > Keyboard`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Set 'Press Fn to' to 'Show F1, F2, etc.' for pro function key access.
+This setting removes friction if you regularly use software that depends on function keys. Instead of adding `Fn` every time, you can make the keyboard match the way you actually work.
 
-## When it is worth turning on
+## Caveats
 
-- when you want the behavior often enough that a one-time settings change beats a repeated manual workaround
-- when the feature matches how you actually use the Mac rather than how Apple expects a default user to work
-- when you are willing to live with the new behavior as an ongoing preference instead of a one-off experiment
-
-## What to keep in mind
-
-- Settings locations can shift across macOS releases even when the feature survives.
-- Persistent toggles are easy to forget later, so it helps to remember the panel where you enabled them.
-- If the feature interacts with nearby devices, accounts, or continuity services, those surrounding conditions still matter.
+- The more useful default depends entirely on your workflow.
+- Laptops and external keyboards can behave a little differently.
+- If you change it, expect some muscle-memory adjustment either way.

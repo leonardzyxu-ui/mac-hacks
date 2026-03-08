@@ -1,33 +1,20 @@
-## What this command does
+## Overview
 
-Superuser Do is a higher-risk Terminal hack for Terminal. Use with caution. The convenience can be real, but the main question here is not "can I run it?" so much as "do I fully understand why I am running it and how I will back out afterward?"
+`sudo` runs a command with elevated privileges. That makes it one of the most important and most dangerous command-line tools on the Mac, because it can push an ordinary shell command into system-wide territory very quickly.
 
-## Exact command
+## How to use it
 
-```sh
-sudo
-```
+1. Make sure you understand the command itself before adding `sudo`.
+2. Prefix the command with `sudo`.
+3. Enter the administrator password when prompted.
+4. Read the outcome carefully instead of assuming privileged access made everything correct.
 
-## Before you run it
+## Why it matters
 
-1. Open Terminal in an admin-capable account if the command needs elevated privileges.
-2. Read `sudo` from left to right and make sure every flag still matches your intent.
-3. Know what success looks like before you press Return.
-4. Know what the rollback step is before you rely on the result.
+Many system-level changes, service controls, and protected file operations require elevated privileges. Learning what `sudo` does is essential if you plan to do any serious Mac administration from Terminal.
 
-## When it is actually justified
+## Caveats
 
-- when the built-in macOS UI does not expose the behavior you need directly
-- when you have a concrete reason for the change rather than vague curiosity
-- when you are comfortable restoring the old state immediately after the special case is over
-
-## Main risks
-
-- Security-sensitive or destructive commands are easy to run faster than you can think through their consequences.
-- A short command can still alter system-wide behavior in ways that outlive the immediate task.
-- Compatibility matters more here than on ordinary shortcuts, because Apple changes or removes some of these behaviors across releases.
-
-## Undo or revert
-
-- Treat this as something you understand before you run it, because the rollback path may be limited or manual.
-- If the hack affects a system preference, reapply the opposite setting or return the system to its previous state as directly as possible.
+- `sudo` does not make a command smart; it only makes it powerful.
+- Running the wrong command with admin privileges can do much more damage than running it normally.
+- If you do not understand the command, do not paste `sudo` in front of it just because something failed.

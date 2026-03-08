@@ -1,26 +1,20 @@
-## What enabling it changes
+## Overview
 
-Summarize Text is an accessibility-leaning setting for System. Select text > Right Click > Summarize. (Old school AI!). Even when the feature was designed with accessibility in mind, it can still be broadly useful because it reduces friction, mechanical effort, or communication overhead.
+The old macOS Summarize service can generate a shorter version of selected text from within supporting apps. It is not modern generative AI, but it is still an interesting built-in writing aid for condensing long passages quickly.
 
-## Where Apple put it
+## How to use it
 
-`Keyboard Settings > Services > Summarize`
+1. Enable the Summarize service if it is not already available.
+2. Select the text you want shortened.
+3. Open the contextual menu or Services menu and choose Summarize.
+4. Adjust the result or length control if the interface offers one.
 
-## Turning it on
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `Keyboard Settings > Services > Summarize`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Select text > Right Click > Summarize. (Old school AI!).
+This is useful for rough condensation of articles, notes, or copied reference material when you want a shorter working version before you do your own editing.
 
-## Good reasons to use it
+## Caveats
 
-- when a repeated physical action is uncomfortable or slower than it should be
-- when speech, typing, or pointer input needs a built-in assistive fallback
-- when a feature intended for accessibility also turns out to be a solid productivity improvement
-
-## Things to watch
-
-- Some accessibility features require extra setup time before they become useful in daily work.
-- Voice, gesture, and speech features can depend on hardware quality, environment noise, and permissions.
-- If the behavior feels odd at first, give yourself a few repetitions before deciding whether it belongs in your workflow.
+- Support can vary by app and macOS version.
+- The output is a convenience draft, not something you should trust blindly.
+- Because it is an older feature, it can feel inconsistent compared with newer writing tools.

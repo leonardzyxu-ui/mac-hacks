@@ -1,26 +1,20 @@
-## What enabling it changes
+## Overview
 
-Text Replacements is an accessibility-leaning setting for System. Set a shortcut like '@@' to auto-expand to your full email address. Even when the feature was designed with accessibility in mind, it can still be broadly useful because it reduces friction, mechanical effort, or communication overhead.
+Text Replacements let short typed triggers expand into longer text automatically. A simple shortcut like `@@` can become your full email address, a phrase, or any other repeated string you are tired of typing manually.
 
-## Where Apple put it
+## How to use it
 
-`System Settings > Keyboard > Text Replacements`
+1. Open Text Replacements in Keyboard settings.
+2. Add the short trigger and the expanded text.
+3. Type the trigger in a supported app.
+4. Let macOS replace it automatically.
 
-## Turning it on
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `System Settings > Keyboard > Text Replacements`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Set a shortcut like '@@' to auto-expand to your full email address.
+This is one of the quietest productivity wins on the Mac. It saves time on repetitive typing, reduces typos in frequently reused text, and makes common phrases feel almost instant.
 
-## Good reasons to use it
+## Caveats
 
-- when a repeated physical action is uncomfortable or slower than it should be
-- when speech, typing, or pointer input needs a built-in assistive fallback
-- when a feature intended for accessibility also turns out to be a solid productivity improvement
-
-## Things to watch
-
-- Some accessibility features require extra setup time before they become useful in daily work.
-- Voice, gesture, and speech features can depend on hardware quality, environment noise, and permissions.
-- If the behavior feels odd at first, give yourself a few repetitions before deciding whether it belongs in your workflow.
+- Choose triggers that are unlikely to appear accidentally in normal writing.
+- App support is broad but not universal.
+- Bad replacements become annoying quickly, so keep the list intentional.

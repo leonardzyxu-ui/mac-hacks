@@ -1,26 +1,20 @@
-## In Finder
+## Overview
 
-Delete File is a Finder shortcut for Finder. Moves the selected file to the Trash. The value here is speed inside an already-open file workflow: picking the right item, triggering the command, and moving on without navigating extra menus.
-
-## Shortcut
-
-`Cmd + Delete`
+`Cmd + Delete` moves the selected Finder item to the Trash. It is not a permanent wipe. It is the normal Mac way to discard a file while preserving a recovery step in case you made the wrong call.
 
 ## How to use it
 
-1. Open Finder or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Press `Cmd + Delete`.
-4. Confirm the result: Moves the selected file to the Trash.
+1. Open Finder and highlight the file or folder you want to remove.
+2. Press `Cmd + Delete`.
+3. Check that the item moved to the Trash.
+4. Leave it there until you are sure you do not need it.
 
-## Why people keep this one
+## Why it matters
 
-- It cuts down on extra clicks in file-heavy workflows.
-- It works well when you already know which file or folder you want to act on.
-- It helps keep Finder feeling like a fast browser for files instead of a slow control panel.
+This shortcut is fast enough to keep cleanup moving, but safe enough to fit normal file management. It is useful for tidying folders, processing downloads, and removing obvious junk without immediately destroying the item.
 
-## Things to watch
+## Caveats
 
-- Most Finder shortcuts operate on the currently highlighted item or the currently active Finder window, so selection matters.
-- If you trigger the shortcut from the wrong app, nothing useful will happen because the command is Finder-specific.
-- Hidden files, deep paths, and renamed items can still behave differently from normal visible documents, so verify the target before committing.
+- This moves items to the Trash; it does not securely erase them.
+- If the wrong file is selected, the shortcut will still do exactly what you asked.
+- Some external drives, network shares, or permissions setups can change how deletion behaves.

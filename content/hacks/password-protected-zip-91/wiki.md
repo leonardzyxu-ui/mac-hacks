@@ -1,33 +1,20 @@
-## What this command does
+## Overview
 
-Password Protected Zip is a higher-risk Terminal hack for Terminal. Creates a secure zip file that requires a password to open. The convenience can be real, but the main question here is not "can I run it?" so much as "do I fully understand why I am running it and how I will back out afterward?"
+The `zip -er` workflow creates a password-protected archive from the command line. It is a practical way to bundle files while adding a basic access barrier before you hand the archive to someone else.
 
-## Exact command
+## How to use it
 
-```sh
-zip -er archive.zip [folder]
-```
+1. Open Terminal in the folder that contains the files you want to archive.
+2. Run the password-protected zip command.
+3. Enter the password carefully when prompted.
+4. Test the resulting archive before you send it anywhere.
 
-## Before you run it
+## Why it matters
 
-1. Open Terminal in an admin-capable account if the command needs elevated privileges.
-2. Read `zip -er archive.zip [folder]` from left to right and make sure every flag still matches your intent.
-3. Know what success looks like before you press Return.
-4. Know what the rollback step is before you rely on the result.
+This is useful when you need to share a collection of files in a single bundle but do not want the archive to open casually without a password. It is a good fit for small administrative and person-to-person transfers.
 
-## When it is actually justified
+## Caveats
 
-- when the built-in macOS UI does not expose the behavior you need directly
-- when you have a concrete reason for the change rather than vague curiosity
-- when you are comfortable restoring the old state immediately after the special case is over
-
-## Main risks
-
-- Security-sensitive or destructive commands are easy to run faster than you can think through their consequences.
-- A short command can still alter system-wide behavior in ways that outlive the immediate task.
-- Compatibility matters more here than on ordinary shortcuts, because Apple changes or removes some of these behaviors across releases.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- Password-protected zip is better than nothing, but it is not the same as a full secret-management strategy.
+- If the recipient loses the password, the archive becomes much less useful.
+- You still need a safe way to send the password separately.

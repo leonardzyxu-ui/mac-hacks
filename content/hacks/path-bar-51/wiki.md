@@ -1,25 +1,20 @@
-## What this changes in Finder
+## Overview
 
-Path Bar is a Finder presentation setting for Finder. Shows the file trail (User > Docs > Folder) at the bottom of the window. These settings are small, but they matter because Finder is an always-open part of the system; one useful visibility tweak pays off every time you browse files afterward.
+The Finder Path Bar shows the full folder trail for the current location at the bottom of the window. It turns Finder navigation from "where am I?" guesswork into a visible hierarchy.
 
-## Where Apple put it
+## How to use it
 
-`Finder > View > Show Path Bar`
+1. Open Finder.
+2. Enable the Path Bar from the View menu or the relevant Finder setting.
+3. Look at the bottom of the window for the current folder path.
+4. Use that path for orientation, quick jumps, or dragging files to parent folders.
 
-## Turn it on
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `Finder > View > Show Path Bar`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Shows the file trail (User > Docs > Folder) at the bottom of the window.
+This is one of the best Finder visibility tweaks for people who work in nested directories. It makes folder context explicit and reduces the chance of moving or saving something into the wrong level of a hierarchy.
 
-## Why people keep it enabled
+## Caveats
 
-- It makes file navigation more legible without changing your folder structure.
-- It reduces the amount of guessing while browsing nested folders or checking available space.
-- It is the sort of Finder tweak that becomes invisible in the best way once it is on.
-
-## When to turn it back off
-
-- If you prefer a cleaner Finder window with less footer information, this is easy to undo.
-- If the extra interface chrome feels noisy on a small display, that is a reasonable reason to disable it again.
+- It adds interface chrome, so minimalists may not want it on all the time.
+- The bar is most useful in deeper folder structures; shallow browsing benefits less.
+- If you already rely on tabs and sidebars heavily, it may feel redundant until you need it.

@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Select All is a keyboard editing shortcut for System. Highlights every item in a folder or every word in a document. Select All is mostly about scope. It is the fastest way to say "the next action should apply to everything currently visible in this context."
-
-## Shortcut
-
-`Cmd + A`
+`Cmd + A` selects everything in the current scope. In a text field, that means all text. In Finder, it means all visible items in the active window. The shortcut is simple, but it is powerful because it decides the scope of the next command. Once everything is selected, the next copy, delete, format, or move command can affect all of it at once.
 
 ## How to use it
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Press `Cmd + A`.
-4. Confirm the result: Highlights every item in a folder or every word in a document.
+1. Click into the document, field, list, or folder you want to control.
+2. Press `Cmd + A`.
+3. Confirm that the selection scope is what you intended.
+4. Run the next action only after checking that scope.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are working quickly inside notes, documents, chat boxes, code editors, or Finder lists.
-- Use it when you are staying on the keyboard instead of breaking rhythm to use the Edit menu.
-- Use it when you are repeating a tiny action many times in a row without thinking about it.
+Select All is the fastest way to say "this whole thing." It is useful for replacing text, cleaning a folder, reformatting a document, or copying an entire note without dragging over it manually.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- In large folders or long documents, selecting everything can make the next destructive action much bigger than intended.
+- The active window matters. `Cmd + A` in the wrong place can select something much larger or smaller than you intended.
+- In large folders and long documents, one follow-up command can become destructive very quickly.
+- If only part of the content is supposed to change, Select All is the wrong tool.

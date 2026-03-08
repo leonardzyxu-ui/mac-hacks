@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Rearrange Menu Bar is a system workflow trick for System. You can rearrange them or drag them out to remove them. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Hold Cmd + Drag icons in the top menu bar`
+Holding `Cmd` while dragging menu bar items lets you reorder many of them and, in some cases, remove them. It is a small customization feature, but it has a real quality-of-life effect if the right side of your menu bar is crowded.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for System.
-2. Use the interaction described by the hack: Hold Cmd + Drag icons in the top menu bar.
-3. Confirm the result: You can rearrange them or drag them out to remove them.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Hold `Cmd`.
+2. Drag a movable menu bar icon left or right to the position you want.
+3. Drag removable items away from the bar if you want to hide them.
+4. Release and check that the new order still matches your daily habits.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+The menu bar works best when the controls you touch most are easy to hit and the rarely used ones stay out of the way. Rearranging it is especially helpful on laptops, where space is tighter and menu extras compete directly with app menus.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- Not every icon can be moved or removed.
+- Some system-managed controls behave differently from third-party status items.
+- If you rely on muscle memory, changing the order may feel worse before it feels better.

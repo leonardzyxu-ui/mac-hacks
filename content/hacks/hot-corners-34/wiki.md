@@ -1,26 +1,20 @@
-## What this setting does
+## Overview
 
-Hot Corners is a settings-driven feature for System. Trigger actions (like Lock Screen) by moving mouse to a corner. The value here is persistence: you change the system once, and the new behavior stays available in later sessions until you change it back.
+Hot Corners assign a system action to one of the screen corners. Moving the pointer into that corner then triggers the action immediately. It is a deceptively simple feature that can make a Mac feel faster if you choose actions you genuinely use.
 
-## Where Apple put it
+## How to use it
 
-`System Settings > Desktop & Dock > Hot Corners`
+1. Open the Hot Corners settings.
+2. Assign one or more corners to actions such as Lock Screen, Mission Control, or Quick Note.
+3. Move the pointer into a configured corner to trigger the action.
+4. Revisit the assignments if accidental triggers become annoying.
 
-## How to enable it
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `System Settings > Desktop & Dock > Hot Corners`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Trigger actions (like Lock Screen) by moving mouse to a corner.
+Hot Corners are useful because they turn dead screen edges into shortcuts. They are especially helpful for actions you want often but not often enough to memorize another keyboard combo for.
 
-## When it is worth turning on
+## Caveats
 
-- when you want the behavior often enough that a one-time settings change beats a repeated manual workaround
-- when the feature matches how you actually use the Mac rather than how Apple expects a default user to work
-- when you are willing to live with the new behavior as an ongoing preference instead of a one-off experiment
-
-## What to keep in mind
-
-- Settings locations can shift across macOS releases even when the feature survives.
-- Persistent toggles are easy to forget later, so it helps to remember the panel where you enabled them.
-- If the feature interacts with nearby devices, accounts, or continuity services, those surrounding conditions still matter.
+- Bad corner assignments can be irritating if you trigger them accidentally.
+- Corners used during drag-and-drop or edge-focused work should be chosen carefully.
+- The best setup is personal; there is no universally correct corner map.

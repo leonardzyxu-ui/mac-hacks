@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Brightness Fine Tuning is a system-level shortcut for System. Adjusts screen brightness in tiny 1/4 increments. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Option + Shift` with the brightness keys changes display brightness in smaller increments than the standard key presses. It is the visual equivalent of fine volume control: a way to dial in comfort more precisely when the normal jumps are too large.
 
-## Shortcut
+## How to use it
 
-`Option + Shift + Brightness Keys`
+1. Hold `Option + Shift`.
+2. Press the brightness up or down key.
+3. Watch the brightness indicator move in smaller steps.
+4. Stop when the screen feels comfortable for the room and task.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Option + Shift + Brightness Keys`.
-4. Confirm the result: Adjusts screen brightness in tiny 1/4 increments.
+Fine brightness control is especially useful in low light, on external displays, or when you are trying to reduce eye strain without dimming the screen too aggressively. It helps make the display feel tuned rather than merely acceptable.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- Not every external monitor responds to brightness keys the same way.
+- Ambient lighting can change what "correct" brightness feels like over the day.
+- If you need bigger changes fast, the standard brightness taps are still quicker.

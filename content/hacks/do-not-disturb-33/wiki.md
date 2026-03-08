@@ -1,26 +1,20 @@
-## What this setting does
+## Overview
 
-Do Not Disturb is a settings-driven feature for System. Instantly toggles 'Do Not Disturb' mode on/off. The value here is persistence: you change the system once, and the new behavior stays available in later sessions until you change it back.
+Do Not Disturb suppresses notifications so the Mac stops interrupting you. The quick menu-bar toggle matters because the feature is only useful if you can enable it faster than the notifications arrive.
 
-## Reference
+## How to use it
 
-`Option + Click the Date/Time in the menu bar`
+1. Use the menu-bar shortcut or the current system control path for Do Not Disturb.
+2. Confirm that notification alerts are paused.
+3. Work through the focused block of time you cared about.
+4. Turn it off when you want normal alerts back.
 
-## How to enable it
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `Option + Click the Date/Time in the menu bar`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Instantly toggles 'Do Not Disturb' mode on/off.
+This is one of the cleanest attention-management tools on the Mac. It helps during deep work, calls, presentations, writing sessions, and any moment where one banner too many can break concentration.
 
-## When it is worth turning on
+## Caveats
 
-- when you want the behavior often enough that a one-time settings change beats a repeated manual workaround
-- when the feature matches how you actually use the Mac rather than how Apple expects a default user to work
-- when you are willing to live with the new behavior as an ongoing preference instead of a one-off experiment
-
-## What to keep in mind
-
-- Settings locations can shift across macOS releases even when the feature survives.
-- Persistent toggles are easy to forget later, so it helps to remember the panel where you enabled them.
-- If the feature interacts with nearby devices, accounts, or continuity services, those surrounding conditions still matter.
+- Muting notifications is only useful if you remember to turn them back on afterward.
+- Important messages can still wait unseen while the mode is active.
+- Focus modes and Do Not Disturb behavior can vary a bit across macOS versions.

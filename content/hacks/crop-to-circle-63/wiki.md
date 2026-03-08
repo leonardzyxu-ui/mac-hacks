@@ -1,26 +1,21 @@
-## What it does in Preview
+## Overview
 
-Crop to Circle is a Preview trick for Preview. Select Ellipse tool. Hold Shift to draw a circle. Crop to create a perfect round icon. Preview has a lot of lightweight image and PDF editing power, and hacks like this are useful precisely because they save you from opening a heavier editor for a small job.
+Preview does not advertise a one-click "make this round" command, but you can still create a circular crop by using the markup tools carefully. The usual pattern is to open the image, draw a perfect circle with the selection tool, and then crop to that shape or export the selected area for use as an avatar, icon, or sticker.
 
-## Reference
+## How to use it
 
-`Preview > Markup`
+1. Open the image in Preview and click the Markup toolbar if it is hidden.
+2. Choose the Elliptical Selection tool.
+3. Hold `Shift` while dragging so the selection stays perfectly circular.
+4. Reposition the circle until it frames the part of the image you actually want.
+5. Crop or copy the selected area, then export the result.
 
-## How to do it
+## Why it matters
 
-1. Open the image or PDF in Preview.
-2. Use the relevant Preview control or path: Preview > Markup.
-3. Make the selection or shape deliberately so the result is clean before you commit.
-4. Confirm the result: Select Ellipse tool. Hold Shift to draw a circle. Crop to create a perfect round icon.
-
-## Good use cases
-
-- quick one-off edits, exports, crops, or visual extractions
-- making a usable asset without opening Photoshop or another heavier tool
-- cleaning up a screenshot or PDF fragment just enough for sharing
+This is useful for profile pictures, contact photos, lightweight design mockups, and any situation where you need a circular image without opening Photoshop or another dedicated editor. Preview is already on the Mac, so the real advantage is speed. You can clean up a headshot or produce a round icon in under a minute.
 
 ## Caveats
 
-- Preview is great for light edits, but it is not a substitute for a full image editor when precision really matters.
-- Selections and crops only feel fast when you take a moment to place them accurately the first time.
-- If the source PDF or image is low quality, Preview cannot invent detail that is not there.
+- A crop is destructive unless you duplicate the file first or undo immediately.
+- Preview is good for simple shape work, not for layered editing.
+- If the result needs transparency, check the export format instead of assuming every format preserves it.

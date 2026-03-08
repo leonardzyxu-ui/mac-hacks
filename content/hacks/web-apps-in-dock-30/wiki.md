@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Web Apps in Dock is a system workflow trick for Safari. Turns any website into a standalone app icon in your Dock. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Safari > File > Add to Dock`
+Safari can save a website to the Dock as a standalone app-like window. That gives the site its own icon, its own window, and a cleaner boundary than keeping everything mixed together in normal browser tabs.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for Safari.
-2. Use the interaction described by the hack: Safari > File > Add to Dock.
-3. Confirm the result: Turns any website into a standalone app icon in your Dock.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Open the site in Safari.
+2. Use `File > Add to Dock`.
+3. Name the app sensibly so it is easy to spot later.
+4. Launch it from the Dock like a normal lightweight app.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+This is useful for tools you treat like apps anyway: chat clients, task boards, calendars, music players, dashboards, and admin consoles. Separating them from the main browser reduces tab clutter and can make context switching feel cleaner. It also helps when you want a service to feel persistent without being mixed into normal browsing.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- The experience depends heavily on the website. Some sites behave like polished apps; others clearly still feel like tabs in a wrapper.
+- Notifications, media controls, and login behavior vary by service.
+- If you already use many real apps, adding too many web apps to the Dock can become its own mess.

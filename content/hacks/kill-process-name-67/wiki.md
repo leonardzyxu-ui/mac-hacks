@@ -1,33 +1,20 @@
-## What it does
+## Overview
 
-Kill Process Name is a Terminal utility command for Terminal. Instantly force closes the specified application. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+`pkill` lets you terminate a process by name instead of hunting for its process ID first. It is the fast command-line way to stop a stuck or misbehaving app when you already know what the process is called.
 
-## Exact command
-
-```sh
-pkill [App Name]
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `pkill [App Name]`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Instantly force closes the specified application.
+2. Run `pkill` with the exact process or app name.
+3. Confirm that the app or process exits.
+4. Reopen the app if you were using this as a reset.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+This is faster than browsing a long process list when the target is obvious. It is useful for restarting stubborn apps, clearing background helpers, or quickly ending a process during troubleshooting.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- Process names must match what the system expects.
+- Killing the wrong process can interrupt more than you intended.
+- Unsaved app state can be lost if you use it as a forced exit path.

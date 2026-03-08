@@ -1,33 +1,20 @@
-## What it does
+## Overview
 
-Network Quality Test is a Terminal utility command for Terminal. Runs Apple's built-in internet speed and responsiveness test. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+`networkQuality` runs Apple's built-in network test, which focuses on responsiveness as well as throughput. That makes it more useful than a raw speed number when you are trying to understand how the connection will actually feel.
 
-## Exact command
-
-```sh
-networkQuality
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `networkQuality`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Runs Apple's built-in internet speed and responsiveness test.
+2. Run `networkQuality`.
+3. Wait for the test to complete.
+4. Read the reported upload, download, and responsiveness values.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+This is a strong first check when internet performance feels wrong. It helps distinguish "the network is slow" from "the network is high-latency" and gives you something concrete before you start blaming the browser or a specific app.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- Results reflect the current network conditions, not a permanent truth.
+- Wi-Fi quality, router load, and background traffic can all skew the result.
+- One test is useful, but comparing a few runs is often more informative.

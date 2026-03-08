@@ -1,30 +1,20 @@
-## What it captures
+## Overview
 
-Screenshot (Window) is a capture shortcut for System. Click any window to capture it perfectly with a transparent shadow. These shortcuts matter because macOS screenshot and print tools are already good; the real trick is learning the exact gesture that gets the right output the first time.
+Window screenshot mode is the polished version of screenshot capture on macOS. Press `Cmd + Shift + 4`, tap Spacebar, and then click a window to capture just that window cleanly instead of drawing a manual box around it.
 
-## Shortcut
+## How to use it
 
-`Cmd + Shift + 4`
+1. Press `Cmd + Shift + 4`.
+2. Tap Spacebar to switch from crosshair mode to window mode.
+3. Hover over the target window until it highlights.
+4. Click to capture it.
 
-## Capture flow
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Shift + 4`.
-4. Confirm the result: Click any window to capture it perfectly with a transparent shadow.
+This is the best screenshot mode when you want one app window, one dialog, or one floating panel without hand-cropping around it afterward. It is especially useful for documentation, support messages, and UI references.
 
-## Why it is worth remembering
+## Caveats
 
-- It is faster than opening a separate capture app or moving screenshots around afterward.
-- It helps when you are documenting a bug, sending visual context, or archiving something that is only visible on screen for a moment.
-- It reduces the amount of cleanup needed after the capture because you are choosing the right mode up front.
-
-## Practical caveats
-
-- Make sure you are using the right capture mode before you start dragging or clicking.
-- The save location, file format, and shadow behavior can change if you have already customized macOS screenshot defaults.
-- Timed captures, recording, and PDF export each solve a slightly different problem, so use the mode that matches the output you actually need.
-
-## Good to know
-
-After `Cmd + Shift + 4`, tapping Space turns the crosshair into a camera pointer that snaps to individual windows.
+- macOS may include a window shadow depending on your screenshot settings.
+- The highlight follows the current window under the pointer, so click carefully.
+- If you need a non-rectangular or mixed-content capture, selection mode may still be better.

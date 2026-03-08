@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Add Dock Spacers is a Terminal tweak for Terminal. Adds invisible spacers to organize the Dock. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+Adding Dock spacers is a customization trick that inserts invisible gaps between app icons so the Dock is easier to scan. It does not add functionality, but it does make heavy Dock setups feel more organized by visually separating groups of apps.
 
-## Exact command
+## How to use it
 
-```sh
-defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}' && killall Dock
-```
+1. Run the Dock spacer command in Terminal.
+2. Let the Dock restart if the command triggers a `killall Dock`.
+3. Look for the new empty slot in the Dock.
+4. Drag the spacer where you want the visual separation to appear.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}' && killall Dock`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Adds invisible spacers to organize the Dock.
+This tweak is useful if your Dock is crowded and you mentally group apps by role, such as communication, browsers, development, and media. A small visual gap can make the whole Dock easier to read at a glance.
 
-## What changes afterward
+## Caveats
 
-Commands built around `defaults write` usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.
-
-Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- This is purely organizational.
+- Because it changes the Dock layout, it can be annoying if you already have a carefully tuned icon order.
+- If you add too many spacers, the Dock can become harder to use rather than cleaner.

@@ -91,23 +91,19 @@
           <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
-              <a href="#what-this-command-does" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What this command does</a><a href="#exact-command" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Exact command</a><a href="#before-you-run-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Before you run it</a><a href="#when-it-is-actually-justified" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">When it is actually justified</a><a href="#main-risks" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Main risks</a><a href="#undo-or-revert" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or revert</a>
+              <a href="#overview" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Overview</a><a href="#how-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to use it</a><a href="#why-it-matters" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why it matters</a><a href="#caveats" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Caveats</a>
             </nav>
           </div>
         </aside>
       <article class="wiki-content">
-        <h2 id="what-this-command-does">What this command does</h2>
-<p>Superuser Do is a higher-risk Terminal hack for Terminal. Use with caution. The convenience can be real, but the main question here is not &quot;can I run it?&quot; so much as &quot;do I fully understand why I am running it and how I will back out afterward?&quot;</p>
-<h2 id="exact-command">Exact command</h2>
-<pre><code class="language-sh">sudo</code></pre>
-<h2 id="before-you-run-it">Before you run it</h2>
-<ol><li>Open Terminal in an admin-capable account if the command needs elevated privileges.</li><li>Read <code>sudo</code> from left to right and make sure every flag still matches your intent.</li><li>Know what success looks like before you press Return.</li><li>Know what the rollback step is before you rely on the result.</li></ol>
-<h2 id="when-it-is-actually-justified">When it is actually justified</h2>
-<ul><li>when the built-in macOS UI does not expose the behavior you need directly</li><li>when you have a concrete reason for the change rather than vague curiosity</li><li>when you are comfortable restoring the old state immediately after the special case is over</li></ul>
-<h2 id="main-risks">Main risks</h2>
-<ul><li>Security-sensitive or destructive commands are easy to run faster than you can think through their consequences.</li><li>A short command can still alter system-wide behavior in ways that outlive the immediate task.</li><li>Compatibility matters more here than on ordinary shortcuts, because Apple changes or removes some of these behaviors across releases.</li></ul>
-<h2 id="undo-or-revert">Undo or revert</h2>
-<ul><li>Treat this as something you understand before you run it, because the rollback path may be limited or manual.</li><li>If the hack affects a system preference, reapply the opposite setting or return the system to its previous state as directly as possible.</li></ul>
+        <h2 id="overview">Overview</h2>
+<p><code>sudo</code> runs a command with elevated privileges. That makes it one of the most important and most dangerous command-line tools on the Mac, because it can push an ordinary shell command into system-wide territory very quickly.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol><li>Make sure you understand the command itself before adding <code>sudo</code>.</li><li>Prefix the command with <code>sudo</code>.</li><li>Enter the administrator password when prompted.</li><li>Read the outcome carefully instead of assuming privileged access made everything correct.</li></ol>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Many system-level changes, service controls, and protected file operations require elevated privileges. Learning what <code>sudo</code> does is essential if you plan to do any serious Mac administration from Terminal.</p>
+<h2 id="caveats">Caveats</h2>
+<ul><li><code>sudo</code> does not make a command smart; it only makes it powerful.</li><li>Running the wrong command with admin privileges can do much more damage than running it normally.</li><li>If you do not understand the command, do not paste <code>sudo</code> in front of it just because something failed.</li></ul>
       </article>
     </div>
   </section>

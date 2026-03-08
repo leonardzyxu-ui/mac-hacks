@@ -1,36 +1,20 @@
-## What it does
+## Overview
 
-Stress Test CPU is a Terminal utility command for Terminal. Runs a 100% CPU load process. (Kill with 'killall yes'). Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+The classic `yes > /dev/null` trick creates a synthetic CPU load. It is deliberately wasteful, and that is the point: you use it to test thermals, fan behavior, power draw, and how the Mac reacts under sustained pressure.
 
-## Exact command
-
-```sh
-yes > /dev/null &
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `yes > /dev/null &`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Runs a 100% CPU load process. (Kill with 'killall yes').
+2. Start one or more stress processes.
+3. Watch CPU, temperature, and fan behavior with the tool of your choice.
+4. Kill the processes when you are done.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+Synthetic load is useful for diagnosing throttling, checking whether cooling still behaves properly, or validating whether a machine can survive a sustained burst without crashing or overheating.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Good to know
-
-This is intentionally abusive to the CPU. The only reason to run it is to test thermals, fan behavior, or how a machine reacts under synthetic load.
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- This is intentionally abusive to the CPU.
+- It can make the machine hot, loud, and battery-hungry very quickly.
+- Always know how to stop the stress processes before you start them.

@@ -1,26 +1,21 @@
-## What it does in Preview
+## Overview
 
-Extract Image from PDF is a Preview trick for Preview. Cmd+C (Copy), then Cmd+N (New) to create an image file from it. Preview has a lot of lightweight image and PDF editing power, and hacks like this are useful precisely because they save you from opening a heavier editor for a small job.
+Preview can turn part of a PDF into a standalone image without any extra software. The basic trick is to select the area you want, copy it, and create a new document from the clipboard. That gives you a clean image file instead of forcing you to take a lower-quality screenshot.
 
-## Reference
+## How to use it
 
-`In Preview, use Selection tool to grab an area`
+1. Open the PDF in Preview and switch to the page that contains the graphic you want.
+2. Choose the selection tool and drag around the image or region you need.
+3. Press `Cmd + C` to copy the selection.
+4. Press `Cmd + N` to create a new document from the clipboard contents.
+5. Save or export that new document in the image format you want.
 
-## How to do it
+## Why it matters
 
-1. Open the image or PDF in Preview.
-2. Use the relevant Preview control or path: In Preview, use Selection tool to grab an area.
-3. Make the selection or shape deliberately so the result is clean before you commit.
-4. Confirm the result: Cmd+C (Copy), then Cmd+N (New) to create an image file from it.
-
-## Good use cases
-
-- quick one-off edits, exports, crops, or visual extractions
-- making a usable asset without opening Photoshop or another heavier tool
-- cleaning up a screenshot or PDF fragment just enough for sharing
+This workflow is useful when a PDF contains a chart, diagram, scanned signature, or illustration that you need to reuse elsewhere. It avoids the extra browser tabs, conversion sites, or screenshot cleanup that people often default to. For quick internal work, it is usually the fastest built-in option.
 
 ## Caveats
 
-- Preview is great for light edits, but it is not a substitute for a full image editor when precision really matters.
-- Selections and crops only feel fast when you take a moment to place them accurately the first time.
-- If the source PDF or image is low quality, Preview cannot invent detail that is not there.
+- The quality depends on the original PDF content. A raster scan will not magically become sharp.
+- Be careful with copyrighted material or brand assets that were not meant to be reused outside the PDF.
+- If you need the original embedded image rather than a selected region, a dedicated PDF tool may be more precise.

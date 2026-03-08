@@ -1,33 +1,20 @@
-## What enabling it changes
+## Overview
 
-Personal Voice is an accessibility-leaning setting for System. Train the Mac to speak in YOUR own voice using AI. Even when the feature was designed with accessibility in mind, it can still be broadly useful because it reduces friction, mechanical effort, or communication overhead.
+Personal Voice is a more involved accessibility feature that trains the Mac to generate speech in a voice modeled on you. It is not a quick toggle. It is a setup process that pays off later if custom speech output matters to you.
 
-## Where Apple put it
+## How to use it
 
-`Settings > Accessibility > Personal Voice`
+1. Open the Personal Voice setup in Accessibility settings.
+2. Record the required training phrases.
+3. Wait for the system to process and build the voice model.
+4. Use that voice in supported speech features afterward.
 
-## Turning it on
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `Settings > Accessibility > Personal Voice`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Train the Mac to speak in YOUR own voice using AI.
+For people who need synthetic speech regularly, voice identity can matter a lot. Personal Voice is valuable because it aims to preserve some continuity between your own voice and the spoken output your Mac can generate for you.
 
-## Good reasons to use it
+## Caveats
 
-- when a repeated physical action is uncomfortable or slower than it should be
-- when speech, typing, or pointer input needs a built-in assistive fallback
-- when a feature intended for accessibility also turns out to be a solid productivity improvement
-
-## Things to watch
-
-- Some accessibility features require extra setup time before they become useful in daily work.
-- Voice, gesture, and speech features can depend on hardware quality, environment noise, and permissions.
-- If the behavior feels odd at first, give yourself a few repetitions before deciding whether it belongs in your workflow.
-
-## Good to know
-
-Personal Voice is a setup-heavy feature. It is closer to training a voice model than flipping on a normal accessibility toggle.
-## Compatibility notes
-
-- This entry is marked as Tahoe-specific, so do not expect it on older macOS releases.
+- Setup takes time and patience.
+- A quiet environment and consistent recording quality help.
+- It is one of the heavier accessibility features in the repo, so do not expect instant results.

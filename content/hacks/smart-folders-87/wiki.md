@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Smart Folders is a Finder-side workflow trick for Finder. Auto-groups files based on rules (e.g., 'All PDFs created this week'). These are not deep system hacks so much as features hiding in plain sight, and the main win is knowing that Finder can already do more than many people assume.
-
-## Reference
-
-`Finder > File > New Smart Folder`
+Smart Folders are saved Finder searches that update automatically. They are not ordinary folders containing copied files. They are dynamic views built from rules such as kind, date, tag, or location.
 
 ## How to use it
 
-1. Open Finder and go to the file or folder context where the feature makes sense.
-2. Use the relevant menu path or interaction: Finder > File > New Smart Folder.
-3. Confirm the result: Auto-groups files based on rules (e.g., 'All PDFs created this week').
-4. Repeat it once or twice so you remember where Apple hid it.
+1. Create a new Smart Folder in Finder.
+2. Add search criteria that describe the files you want grouped.
+3. Save the Smart Folder.
+4. Reopen it later to see the live results.
 
-## Why it is useful
+## Why it matters
 
-- It keeps more of your file-management workflow inside Finder instead of pushing you to separate utilities.
-- It helps when the same organization or search task comes up repeatedly.
-- It turns a hidden capability into something you can deliberately reach for again later.
+Smart Folders are excellent for "all PDFs from this week," "all tagged client files," or any recurring view you would otherwise rebuild with a manual search each time. They turn search logic into a reusable workspace.
 
-## Limits
+## Caveats
 
-- These features still depend on the current Finder window, selection, or search context.
-- Some Finder tools look obvious only after you have seen them once; until then they are easy to miss.
-- Folder metadata, tags, and smart views are only useful if you keep using them consistently.
+- Smart Folders do not move the underlying files.
+- Bad rules create bad views, so keep the criteria clear.
+- They are powerful, but only if you remember that they are live searches rather than storage containers.

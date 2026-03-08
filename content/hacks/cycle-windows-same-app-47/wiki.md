@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Cycle Windows (Same App) is a system-level shortcut for System. Switches between different windows of the SAME app (e.g., two Word docs). Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + ~` cycles through different windows of the same app. That is the missing complement to `Cmd + Tab`, which switches between apps but does not help much when one app has several open windows.
 
-## Shortcut
+## How to use it
 
-`Cmd + ~ (Tilde)`
+1. Focus the app that has multiple windows.
+2. Press `Cmd + ~`.
+3. Keep pressing it until the window you want comes forward.
+4. Stop when the right window is active.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + ~ (Tilde)`.
-4. Confirm the result: Switches between different windows of the SAME app (e.g., two Word docs).
+This shortcut is especially useful in Finder, document-heavy apps, terminals, and browsers when one app owns several windows at once. It keeps you inside the same app while still moving quickly between its internal workspaces.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- The key next to Tab can vary by keyboard layout.
+- This does not move across apps; it only cycles windows inside the current app.
+- If the app uses tabs more than separate windows, the effect may be limited.

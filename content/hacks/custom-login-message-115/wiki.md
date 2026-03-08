@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Custom Login Message is a Terminal tweak for Terminal. sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Your Text This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+This login-window tweak adds a custom message to the Mac's sign-in screen. It is mostly used for ownership notes, return instructions, or a short administrative message rather than for aesthetics alone.
 
-## Exact command
+## How to use it
 
-```sh
-sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText
-```
+1. Decide on the exact message you want.
+2. Run the login-window command with administrator privileges.
+3. Log out or return to the login screen to verify the text.
+4. Remove or change the message later if it is no longer appropriate.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText`.
-3. Read the full command one more time before pressing Return.
-4. Check the outcome described by the hack: sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText "Your Text
+A login message can be useful on shared, school, or travel devices where a simple notice such as contact information or policy text has real value. It is one of those small admin touches that can help when a machine is misplaced or handed to someone else temporarily.
 
-## What changes afterward
+## Caveats
 
-Commands built around `defaults write` usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.
-
-Because this tweak crosses into higher-risk territory, read the full command carefully and know how you would restore the old behavior before you press Return.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Do not run a privileged tweak casually just because it is short.
-
-## Undo or revert
-
-- Treat this as something you understand before you run it, because the rollback path may be limited or manual.
-- If the hack affects a system preference, reapply the opposite setting or return the system to its previous state as directly as possible.
+- This is a privileged system change.
+- Keep the text short and deliberate so it fits well and reads clearly.
+- Do not put sensitive information on a screen that anyone can see before login.

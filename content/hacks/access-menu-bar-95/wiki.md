@@ -1,30 +1,20 @@
-## What it controls
+## Overview
 
-Access Menu Bar is a system-level shortcut for System. Focuses the Apple Menu so you can navigate menus using only arrow keys. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Ctrl + F2` moves keyboard focus to the menu bar so you can navigate menus without the mouse. It is one of those older Mac commands that still matters because it exposes the full menu system to the keyboard, even in apps where you do not remember the exact shortcut for a command.
 
-## Shortcut
+## How to use it
 
-`Ctrl + F2`
+1. Focus the app whose menus you want to control.
+2. Press `Ctrl + F2`.
+3. Use Left and Right Arrow to move between menus.
+4. Use Down Arrow and Return to open a menu and run a command.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Ctrl + F2`.
-4. Confirm the result: Focuses the Apple Menu so you can navigate menus using only arrow keys.
+This is useful when you want keyboard-only navigation, when you know the command exists somewhere in a menu but do not remember the shortcut, or when you are troubleshooting an app without relying on the pointer.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
-
-## Good to know
-
-Once the menu bar has focus, use the left and right arrow keys to move between menus, the down arrow to open the highlighted menu, Return to activate a command, and Escape to back out.
+- Function-key behavior can affect whether you need `Fn` on some keyboards.
+- The shortcut changes focus rather than running a command directly, so you still need arrow-key navigation afterward.
+- If the wrong app is active, you will land in the wrong menu bar.

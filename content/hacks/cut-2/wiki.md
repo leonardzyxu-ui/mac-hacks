@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Cut is a keyboard editing shortcut for System. Removes the selection and copies it to the clipboard (Move operation). Clipboard shortcuts are the basic transport layer of everyday Mac work. They are how text, images, files, and small pieces of context move between apps.
-
-## Shortcut
-
-`Cmd + X`
+Cut removes the current selection and places it on the clipboard so you can paste it somewhere else. On macOS, `Cmd + X` is primarily a text-editing command. In editors, note apps, chat boxes, and many form fields, it behaves exactly the way you expect. In Finder, though, it is not the normal way to move files, so this is one of the shortcuts where app context matters a lot.
 
 ## How to use it
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Press `Cmd + X`.
-4. Confirm the result: Removes the selection and copies it to the clipboard (Move operation).
+1. Select the text or object you want to move.
+2. Press `Cmd + X`.
+3. Move to the new destination.
+4. Paste with `Cmd + V`.
 
-## Where it earns its keep
+## Where it helps
 
-- Use it when you are working quickly inside notes, documents, chat boxes, code editors, or Finder lists.
-- Use it when you are staying on the keyboard instead of breaking rhythm to use the Edit menu.
-- Use it when you are repeating a tiny action many times in a row without thinking about it.
+Cut is useful when you know something should be moved rather than duplicated. It keeps you from copying first and then deleting the original later. In writing and editing workflows, that saves a lot of tiny cleanup actions.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- Cut is not a universal file-moving shortcut in Finder, so do not assume Windows-style behavior everywhere.
+- For files in Finder, `Cmd + X` is not the normal move command.
+- Because Cut removes the original immediately, it is easier to make a visible mistake than with Copy.
+- If you are unsure whether an app supports Cut for the current selection, check the Edit menu before relying on it.

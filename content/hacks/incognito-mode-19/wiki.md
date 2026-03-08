@@ -1,25 +1,20 @@
-## In the browser
+## Overview
 
-Incognito Mode is a browser-focused shortcut for Chrome. Opens a new Incognito (Private) window in Chrome. This is about opening a private browsing session quickly, not about becoming invisible online. It changes local history behavior, not the wider network.
+`Cmd + Shift + N` opens a new Incognito window in Chrome. The point is local privacy and session separation: Chrome will avoid storing the browsing history from that window in the usual way, and you can use a different session context from your normal signed-in browser state.
 
-## Shortcut
+## How to use it
 
-`Cmd + Shift + N`
+1. Focus Chrome.
+2. Press `Cmd + Shift + N`.
+3. Use the new dark-themed Incognito window for the task that needs separation.
+4. Close the window when you are done.
 
-## Fast workflow
+## Why it matters
 
-1. Open Chrome or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Shift + N`.
-4. Confirm the result: Opens a new Incognito (Private) window in Chrome.
+Incognito is useful for testing sites without your normal cookies, checking how something looks when you are not logged in, or handling a private browsing task without mixing it into your normal history.
 
-## Good times to use it
+## Caveats
 
-- when several tabs or windows are open and you want the browser to respond immediately
-- when you are researching, comparing pages, or recovering something you just closed
-- when the browser menu has the action but reaching for it would break your flow
-
-## Limits and gotchas
-
-- Make sure the browser window itself is focused; the same keys can do something else inside web apps or form fields.
-- Some browser shortcuts are shared between Chrome and Safari, but not every tab or window behavior is identical.
+- Incognito is not anonymity. Websites, networks, employers, schools, and service providers may still see your traffic.
+- Downloads and bookmarks you create can still persist.
+- It is a separate browser session, so you may need to sign in again even if you are already signed in normally.

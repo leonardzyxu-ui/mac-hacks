@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Navigate by Word is a keyboard editing shortcut for Text. Jumps the cursor one entire word at a time. These are text-navigation shortcuts. They save time because they operate at the level of words or lines instead of forcing you to move character by character.
-
-## Shortcut
-
-`Option + Left/Right Arrow`
+`Option + Left Arrow` and `Option + Right Arrow` move the insertion point by whole words instead of by single characters. It is one of the core navigation commands for editing text efficiently on macOS, especially when the line is long and you only need to jump to the next meaningful boundary.
 
 ## How to use it
 
-1. Open Text or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Option + Left/Right Arrow`.
-4. Confirm the result: Jumps the cursor one entire word at a time.
+1. Put the cursor in a text field or document.
+2. Press `Option + Left Arrow` to move backward by word.
+3. Press `Option + Right Arrow` to move forward by word.
+4. Combine it with Shift if you want to select by word rather than just move.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are editing prose or code when your hands are already on the keyboard.
-- Use it when you are rewriting or cleaning up text without reaching for the pointer.
-- Use it when you are moving through a line or removing chunks of text faster than backspacing one character at a time.
+Moving by word makes editing feel deliberate. It is much faster than tapping the arrow key repeatedly, and it pairs naturally with Delete by Word, line navigation, and selection shortcuts when you are revising text or code.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- They only make sense in fields or editors that actually have text focus.
+- Word boundaries can feel a little different around punctuation, slashes, hyphens, and symbols.
+- This is a text-navigation shortcut, so it depends on cursor focus inside an editor or field.
+- If you need to move to the start or end of the whole line, use the line-navigation shortcuts instead.

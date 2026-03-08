@@ -1,30 +1,20 @@
-## What it captures
+## Overview
 
-Screen Recording HUD is a capture shortcut for System. Opens the advanced HUD for recording video or taking timed screenshots. These shortcuts matter because macOS screenshot and print tools are already good; the real trick is learning the exact gesture that gets the right output the first time.
+`Cmd + Shift + 5` opens the macOS screenshot and recording HUD. This is the control center for advanced capture on the Mac: full-screen recording, partial recording, timed screenshots, save-location choices, and a few other useful options all live here.
 
-## Shortcut
+## How to use it
 
-`Cmd + Shift + 5`
+1. Press `Cmd + Shift + 5`.
+2. Choose whether you want a still screenshot, a selected region, full-screen recording, or partial recording.
+3. Adjust options such as timer, save location, or pointer visibility if needed.
+4. Start the capture and stop it when you are done.
 
-## Capture flow
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Shift + 5`.
-4. Confirm the result: Opens the advanced HUD for recording video or taking timed screenshots.
+The HUD is the better tool whenever the simple screenshot shortcuts are not enough. It saves time because you do not have to remember a separate command for every advanced capture mode, and it gives you more control before you hit record.
 
-## Why it is worth remembering
+## Caveats
 
-- It is faster than opening a separate capture app or moving screenshots around afterward.
-- It helps when you are documenting a bug, sending visual context, or archiving something that is only visible on screen for a moment.
-- It reduces the amount of cleanup needed after the capture because you are choosing the right mode up front.
-
-## Practical caveats
-
-- Make sure you are using the right capture mode before you start dragging or clicking.
-- The save location, file format, and shadow behavior can change if you have already customized macOS screenshot defaults.
-- Timed captures, recording, and PDF export each solve a slightly different problem, so use the mode that matches the output you actually need.
-
-## Good to know
-
-The HUD is where macOS groups screenshots, timed captures, window recording, full-screen recording, and save-location options in one place.
+- Recording the wrong area is easy if you rush through the selection step.
+- Audio options are limited compared with dedicated recording apps.
+- For quick one-off screenshots, the older direct shortcuts can still be faster.

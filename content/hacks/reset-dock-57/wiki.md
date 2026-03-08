@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Reset Dock is a Terminal tweak for Terminal. Restarts the Dock process if it gets stuck, frozen, or glitchy. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+`killall Dock` restarts the Dock process. This is a troubleshooting command, not a permanent preference change. It is what you use when the Dock is frozen, visually glitched, or not responding properly to normal interaction.
 
-## Exact command
-
-```sh
-killall Dock
-```
-
-## Safe way to run it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `killall Dock`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Restarts the Dock process if it gets stuck, frozen, or glitchy.
+2. Run the Dock restart command.
+3. Wait for the Dock to disappear and relaunch.
+4. Test the Dock again.
 
-## What changes afterward
+## Why it matters
 
-This command changes behavior at the system or app level, so the result can outlast the Terminal window you used to trigger it.
+The Dock is central enough to the Mac interface that when it breaks, the whole system feels broken. Restarting just that process is much lighter than rebooting the entire machine.
 
-Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.
+## Caveats
 
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- The Dock will briefly disappear and relaunch.
+- This does not fix every deeper system issue, but it does clear many transient UI glitches.
+- If the Dock keeps breaking, restart alone is probably not the root-cause fix.

@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Show Clipboard is a Finder-side workflow trick for Finder. Opens a window showing exactly what is currently copied. These are not deep system hacks so much as features hiding in plain sight, and the main win is knowing that Finder can already do more than many people assume.
-
-## Reference
-
-`Finder > Edit > Show Clipboard`
+Finder can display the current clipboard contents through the Show Clipboard command. This is less glamorous than a full clipboard manager, but it is useful when you want to confirm what the Mac thinks is currently copied.
 
 ## How to use it
 
-1. Open Finder and go to the file or folder context where the feature makes sense.
-2. Use the relevant menu path or interaction: Finder > Edit > Show Clipboard.
-3. Confirm the result: Opens a window showing exactly what is currently copied.
-4. Repeat it once or twice so you remember where Apple hid it.
+1. Copy something first.
+2. Open Finder.
+3. Use Edit > Show Clipboard.
+4. Inspect the result to verify what is actually on the clipboard.
 
-## Why it is useful
+## Why it matters
 
-- It keeps more of your file-management workflow inside Finder instead of pushing you to separate utilities.
-- It helps when the same organization or search task comes up repeatedly.
-- It turns a hidden capability into something you can deliberately reach for again later.
+This is useful when clipboard behavior feels confusing, especially with copied files, images, or text that did not paste the way you expected. It gives you a simple sanity check without third-party tools.
 
-## Limits
+## Caveats
 
-- These features still depend on the current Finder window, selection, or search context.
-- Some Finder tools look obvious only after you have seen them once; until then they are easy to miss.
-- Folder metadata, tags, and smart views are only useful if you keep using them consistently.
+- It is a basic view, not a rich clipboard history.
+- It only reflects the current clipboard state.
+- If you copied something else afterward, the view will update to the newer item.

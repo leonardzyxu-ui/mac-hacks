@@ -1,26 +1,20 @@
-## What enabling it changes
+## Overview
 
-Live Speech is an accessibility-leaning setting for System. Type to have your Mac speak for you during FaceTime calls. Even when the feature was designed with accessibility in mind, it can still be broadly useful because it reduces friction, mechanical effort, or communication overhead.
+Live Speech lets you type text that your Mac then speaks aloud. It is primarily an accessibility feature, but it is also useful in practical situations where typed communication needs to become spoken output quickly.
 
-## Where Apple put it
+## How to use it
 
-`System Settings > Accessibility > Live Speech`
+1. Enable Live Speech in Accessibility settings.
+2. Open the Live Speech interface when you need it.
+3. Type the phrase you want spoken.
+4. Let the Mac read it aloud through the active audio output.
 
-## Turning it on
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `System Settings > Accessibility > Live Speech`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Type to have your Mac speak for you during FaceTime calls.
+This feature helps when speech is difficult, inconvenient, or temporarily unavailable. It can also be useful in calls, accessibility workflows, and situations where a typed response needs to be delivered audibly without improvising a different tool.
 
-## Good reasons to use it
+## Caveats
 
-- when a repeated physical action is uncomfortable or slower than it should be
-- when speech, typing, or pointer input needs a built-in assistive fallback
-- when a feature intended for accessibility also turns out to be a solid productivity improvement
-
-## Things to watch
-
-- Some accessibility features require extra setup time before they become useful in daily work.
-- Voice, gesture, and speech features can depend on hardware quality, environment noise, and permissions.
-- If the behavior feels odd at first, give yourself a few repetitions before deciding whether it belongs in your workflow.
+- It requires setup before it is useful in the moment.
+- Output voice quality depends on the configured voice.
+- It is best treated as communication support, not as a replacement for every voice workflow.

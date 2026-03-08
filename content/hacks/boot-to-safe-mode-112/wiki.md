@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Boot to Safe Mode is an advanced system feature or diagnostic view for System. Hold Power button until options appear. Shift-click 'Continue in Safe Mode'. These entries are useful because they surface deeper system information or boot-time behavior that ordinary settings screens do not expose directly.
+Safe Mode starts macOS with a reduced set of extensions, clears certain caches, and runs basic disk checks during startup. It is not something you use every day. It is a troubleshooting mode for crashes, login problems, odd startup behavior, and software conflicts.
 
-## Reference
+## How to use it
 
-`Shut down`
+1. Shut the Mac down fully.
+2. On Apple silicon, hold the power button until startup options appear, select your disk, then hold `Shift` and choose Safe Mode.
+3. On Intel Macs, turn the Mac on and immediately hold `Shift` until the login screen appears.
+4. Log in, test the problem, and restart normally when you are done.
 
-## Before you use it
+## Why it matters
 
-- Read the full description once before trying it; advanced system workflows are less forgiving than everyday shortcuts.
-- If external hardware or another Mac is involved, set that up first instead of improvising halfway through.
-- If you are troubleshooting, decide what question you are trying to answer before you trigger the feature.
+Safe Mode helps separate system-level issues from third-party interference. If a problem disappears in Safe Mode, that is a strong clue that a login item, extension, cache, or add-on is involved. It does not solve every issue, but it narrows the search quickly.
 
-## How it usually works
+## Caveats
 
-1. Start from the relevant system context for System.
-2. Use the documented interaction or entry point: Shut down.
-3. Look for the expected result: Hold Power button until options appear. Shift-click 'Continue in Safe Mode'.
-4. Exit cleanly once you have the information or behavior you needed.
-
-## Limits and safety
-
-- Advanced system features can vary significantly by Mac model and macOS version.
-- Diagnostic menus often reveal extra data, but they do not automatically fix the underlying problem.
-- Use the extra information to guide the next decision, not just to admire the menu.
+- Performance is often worse in Safe Mode, so some slowdown is expected.
+- Some peripherals, extensions, and background tools will not behave normally there.
+- Treat it as a diagnostic step, not a long-term working environment.

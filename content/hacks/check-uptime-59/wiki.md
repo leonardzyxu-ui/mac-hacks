@@ -1,33 +1,20 @@
-## What it does
+## Overview
 
-Check Uptime is a Terminal utility command for Terminal. Shows exactly how long your Mac has been running since the last full restart. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+`uptime` tells you how long the Mac has been running since the last reboot and also gives a quick snapshot of system load. It is a simple diagnostic command, but it answers an important question immediately: has this machine actually been restarted recently?
 
-## Exact command
-
-```sh
-uptime
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `uptime`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Shows exactly how long your Mac has been running since the last full restart.
+2. Run `uptime`.
+3. Read the time-since-boot value.
+4. Note the load figures if you are already troubleshooting responsiveness.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+Uptime is useful during support, debugging, and general sanity checks. It helps explain weird long-running behavior, reveals whether "I restarted already" is true, and gives a little context about current system load at the same time.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- A long uptime is not automatically bad.
+- Load averages are informative, but they are not the whole performance story.
+- If the machine was sleeping rather than rebooted, uptime keeps counting.

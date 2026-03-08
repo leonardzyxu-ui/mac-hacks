@@ -1,26 +1,20 @@
-## What it captures
+## Overview
 
-Screenshot (Selection) is a capture shortcut for System. Turns cursor into a crosshair. Drag to capture a specific part of the screen. These shortcuts matter because macOS screenshot and print tools are already good; the real trick is learning the exact gesture that gets the right output the first time.
+`Cmd + Shift + 4` turns the pointer into a crosshair so you can capture a custom region of the screen. This is the screenshot mode for precision: you decide exactly what rectangle to save instead of grabbing the whole display.
 
-## Shortcut
+## How to use it
 
-`Cmd + Shift + 4`
+1. Press `Cmd + Shift + 4`.
+2. Drag over the area you want to capture.
+3. Release the mouse or trackpad to take the screenshot.
+4. Open the saved image or use the thumbnail that appears for quick markup.
 
-## Capture flow
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Shift + 4`.
-4. Confirm the result: Turns cursor into a crosshair. Drag to capture a specific part of the screen.
+Selection capture is the default screenshot tool for bug reports, tutorials, chats, and notes because it keeps the output focused. A good region screenshot usually needs less cropping later and exposes less unrelated content.
 
-## Why it is worth remembering
+## Caveats
 
-- It is faster than opening a separate capture app or moving screenshots around afterward.
-- It helps when you are documenting a bug, sending visual context, or archiving something that is only visible on screen for a moment.
-- It reduces the amount of cleanup needed after the capture because you are choosing the right mode up front.
-
-## Practical caveats
-
-- Make sure you are using the right capture mode before you start dragging or clicking.
-- The save location, file format, and shadow behavior can change if you have already customized macOS screenshot defaults.
-- Timed captures, recording, and PDF export each solve a slightly different problem, so use the mode that matches the output you actually need.
+- If the region is too loose, you create more cleanup work later.
+- If the region is too tight, you may cut off the important context.
+- Screenshot save location and file format depend on your current macOS screenshot settings.

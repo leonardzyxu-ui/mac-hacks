@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Re-Show Desktop Icons is a Terminal tweak for Terminal. Restores hidden desktop icons. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+This is the companion command that makes Desktop icons visible again after they were hidden. It restores the normal Finder behavior and is the recovery step if the empty Desktop was only meant to be temporary.
 
-## Exact command
+## How to use it
 
-```sh
-defaults write com.apple.finder CreateDesktop true; killall Finder
-```
+1. Run the Desktop-visibility restore command in Terminal.
+2. Let Finder restart.
+3. Confirm that Desktop files and folders are visible again.
+4. Clean up the Desktop if the restored clutter reminds you why you hid it in the first place.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `defaults write com.apple.finder CreateDesktop true; killall Finder`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Restores hidden desktop icons.
+This command matters because a visibility tweak is only useful if it has a simple way back. It restores confidence that nothing was lost and puts Finder back into its familiar default state.
 
-## What changes afterward
+## Caveats
 
-Commands built around `defaults write` usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.
-
-Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- It only changes visibility, not the files themselves.
+- Finder must restart for the change to show up.
+- If the Desktop still looks empty, double-check that the files were not moved elsewhere.

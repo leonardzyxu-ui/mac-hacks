@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Merge All Windows is a system workflow trick for Finder, Safari. Combines scattered windows of an app into one single window with tabs. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Window > Merge All Windows`
+`Window > Merge All Windows` combines multiple windows from the same app into a single tabbed window. Finder and Safari are the most common places to use it, but other tab-capable apps may support it too.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for Finder, Safari.
-2. Use the interaction described by the hack: Window > Merge All Windows.
-3. Confirm the result: Combines scattered windows of an app into one single window with tabs.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Open the app that currently has too many separate windows.
+2. Go to the `Window` menu.
+3. Choose `Merge All Windows`.
+4. Work from the resulting tabbed window instead of a scattered desktop.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+This is a quick reset when window sprawl gets out of hand. In Finder, it makes it easier to keep several locations open without covering the screen in overlapping folders. In Safari, it can collapse a messy set of detached windows back into a single browsing workspace.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- The command only appears in apps that support that style of tabbed window management.
+- Merging everything is not always desirable if you intentionally keep windows on different displays or Spaces.
+- Tab order after the merge may not match the order you expected.

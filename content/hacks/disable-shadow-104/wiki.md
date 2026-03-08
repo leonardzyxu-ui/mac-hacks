@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Disable Shadow is a Terminal tweak for Terminal. Removes window screenshot shadows. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+This screenshot tweak disables the drop shadow that macOS normally adds when you capture an individual window. The effect is mostly visual, but it matters when you want screenshots to look cleaner, flatter, or easier to place into documents and mockups.
 
-## Exact command
+## How to use it
 
-```sh
-defaults write com.apple.screencapture disable-shadow -bool TRUE
-```
+1. Run the screenshot shadow command in Terminal.
+2. Restart the screenshot-related service if the command requires it.
+3. Take a new window screenshot.
+4. Confirm that the image no longer includes the standard Mac window shadow.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `defaults write com.apple.screencapture disable-shadow -bool TRUE`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Removes window screenshot shadows.
+Shadow-free screenshots are easier to compose in documentation, presentations, blog posts, and visual assets where the default floating-window look is distracting or inconsistent with the surrounding design.
 
-## What changes afterward
+## Caveats
 
-Commands built around `defaults write` usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.
-
-Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- This only affects future screenshots, not old ones.
+- The difference is mostly visual, so it is easy to forget you changed the default.
+- If you later want the classic floating-window look back, you need to revert the tweak.

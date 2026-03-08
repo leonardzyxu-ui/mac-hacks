@@ -1,33 +1,20 @@
-## What it does
+## Overview
 
-List Processes (Top) is a Terminal utility command for Terminal. Displays a real-time, text-based task manager sorted by CPU usage. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+`top` gives you a live, text-based process view similar in spirit to Activity Monitor. Sorted by CPU usage, it becomes a quick way to see which process is consuming the machine right now.
 
-## Exact command
-
-```sh
-top -o cpu
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `top -o cpu`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Displays a real-time, text-based task manager sorted by CPU usage.
+2. Run the `top` command with the sort option you want.
+3. Watch the live process list update.
+4. Quit when you have identified the process you care about.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+This is useful when a Mac feels hot, loud, or slow and you want immediate evidence of what is consuming CPU. It is also handy over remote shells or lightweight troubleshooting sessions where opening Activity Monitor is inconvenient.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- The display updates continuously, so it can feel noisy at first.
+- High CPU is not automatically a bug; some tasks are supposed to be expensive.
+- If you need a friendlier GUI, Activity Monitor may still be the better choice.

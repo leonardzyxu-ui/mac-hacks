@@ -1,30 +1,20 @@
-## What this setting does
+## Overview
 
-Universal Control is a settings-driven feature for System. Push mouse off screen edge to seamlessly control a nearby iPad. The value here is persistence: you change the system once, and the new behavior stays available in later sessions until you change it back.
+Universal Control lets a keyboard and pointer move across nearby Apple devices as if they were part of one workspace. It is one of the more ambitious continuity features in macOS because it treats multiple devices like adjacent desks rather than isolated machines.
 
-## Where Apple put it
+## How to use it
 
-`System Settings > Displays`
+1. Enable the relevant display and continuity settings.
+2. Make sure the devices are nearby, compatible, and signed in as expected.
+3. Push the pointer toward the edge where the second device should appear.
+4. Let the cursor cross over and continue working on the other device.
 
-## How to enable it
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `System Settings > Displays`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Push mouse off screen edge to seamlessly control a nearby iPad.
+Universal Control is useful for Mac-and-iPad setups where you want one keyboard and pointer to serve both devices without constant pairing changes. It makes sidecar-style multitasking feel more seamless.
 
-## When it is worth turning on
+## Caveats
 
-- when you want the behavior often enough that a one-time settings change beats a repeated manual workaround
-- when the feature matches how you actually use the Mac rather than how Apple expects a default user to work
-- when you are willing to live with the new behavior as an ongoing preference instead of a one-off experiment
-
-## What to keep in mind
-
-- Settings locations can shift across macOS releases even when the feature survives.
-- Persistent toggles are easy to forget later, so it helps to remember the panel where you enabled them.
-- If the feature interacts with nearby devices, accounts, or continuity services, those surrounding conditions still matter.
-
-## Good to know
-
-This works best when the nearby devices are already signed in correctly, unlocked, and within the short-range continuity ecosystem Apple expects.
+- It depends heavily on Apple's ecosystem assumptions.
+- If discovery fails, the problem is often environment or account state rather than the visible toggle.
+- It is powerful when it works, but not something to rely on without a fallback in critical moments.

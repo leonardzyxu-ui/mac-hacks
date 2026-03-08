@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Interactive Widgets is a system workflow trick for System. You can check off reminders or play podcasts directly from the desktop. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Right-click Desktop > Edit Widgets`
+Interactive widgets turn the desktop from a passive dashboard into a place where you can do small actions directly. Instead of opening the full app first, you can check off a reminder, control media, or glance at live information from the widget itself.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for System.
-2. Use the interaction described by the hack: Right-click Desktop > Edit Widgets.
-3. Confirm the result: You can check off reminders or play podcasts directly from the desktop.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Right-click the desktop and choose `Edit Widgets`.
+2. Add widgets from apps that support interaction rather than simple display.
+3. Place the ones you will actually use where they are visible without cluttering the desktop.
+4. Click the widget controls directly when you want to complete a small task.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+The value here is reduced friction. If opening an app feels like too much overhead for a two-second action, that action often gets delayed. Interactive widgets are best for tiny, repeatable tasks such as checking reminders, starting playback, or monitoring day-to-day information without breaking focus.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- Not every widget is interactive.
+- Too many widgets can turn the desktop into noise instead of a useful surface.
+- This works best when you choose only a few actions you genuinely repeat.

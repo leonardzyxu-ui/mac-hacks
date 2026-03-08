@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Navigate to Start/End is a keyboard editing shortcut for Text. Jumps the cursor instantly to the start or end of the current line. These are text-navigation shortcuts. They save time because they operate at the level of words or lines instead of forcing you to move character by character.
-
-## Shortcut
-
-`Cmd + Left/Right Arrow`
+`Cmd + Left Arrow` and `Cmd + Right Arrow` jump the cursor to the start or end of the current line. This is a line-level navigation shortcut, and it matters because a lot of editing work is really about reaching line boundaries quickly rather than moving one word or character at a time.
 
 ## How to use it
 
-1. Open Text or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Left/Right Arrow`.
-4. Confirm the result: Jumps the cursor instantly to the start or end of the current line.
+1. Place the cursor anywhere inside a line of text.
+2. Press `Cmd + Left Arrow` to jump to the line start.
+3. Press `Cmd + Right Arrow` to jump to the line end.
+4. Add Shift if you want to select from the cursor to that line boundary.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are editing prose or code when your hands are already on the keyboard.
-- Use it when you are rewriting or cleaning up text without reaching for the pointer.
-- Use it when you are moving through a line or removing chunks of text faster than backspacing one character at a time.
+This shortcut is ideal for rewriting, inserting text at the edge of a sentence, trimming a line in code, or moving around long text fields without touching the mouse. Once it becomes muscle memory, line editing feels much more controlled.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- They only make sense in fields or editors that actually have text focus.
+- This is different from `Cmd + Up` and `Cmd + Down`, which often move to the top or bottom of a document.
+- Some terminal emulators, code editors, or remote sessions can map line navigation differently.
+- It only applies when the text cursor is actually inside editable or navigable text.

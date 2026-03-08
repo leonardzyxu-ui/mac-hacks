@@ -98,27 +98,19 @@
           <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
-              <a href="#what-this-command-does" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What this command does</a><a href="#exact-command" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Exact command</a><a href="#before-you-run-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Before you run it</a><a href="#when-it-is-actually-justified" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">When it is actually justified</a><a href="#main-risks" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Main risks</a><a href="#good-to-know" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Good to know</a><a href="#compatibility-notes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Compatibility notes</a><a href="#undo-or-revert" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or revert</a>
+              <a href="#overview" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Overview</a><a href="#how-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to use it</a><a href="#why-it-matters" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why it matters</a><a href="#caveats" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Caveats</a>
             </nav>
           </div>
         </aside>
       <article class="wiki-content">
-        <h2 id="what-this-command-does">What this command does</h2>
-<p>Secure Empty Trash is a higher-risk Terminal hack for Terminal. Removed on modern macOS; see Compatibility notes. The convenience can be real, but the main question here is not &quot;can I run it?&quot; so much as &quot;do I fully understand why I am running it and how I will back out afterward?&quot;</p>
-<h2 id="exact-command">Exact command</h2>
-<pre><code class="language-sh">srm -v &lt;path-to-file&gt;</code></pre>
-<h2 id="before-you-run-it">Before you run it</h2>
-<ol><li>Open Terminal in an admin-capable account if the command needs elevated privileges.</li><li>Read <code>srm -v &lt;path-to-file&gt;</code> from left to right and make sure every flag still matches your intent.</li><li>Know what success looks like before you press Return.</li><li>Know what the rollback step is before you rely on the result.</li></ol>
-<h2 id="when-it-is-actually-justified">When it is actually justified</h2>
-<ul><li>when the built-in macOS UI does not expose the behavior you need directly</li><li>when you have a concrete reason for the change rather than vague curiosity</li><li>when you are comfortable restoring the old state immediately after the special case is over</li></ul>
-<h2 id="main-risks">Main risks</h2>
-<ul><li>Security-sensitive or destructive commands are easy to run faster than you can think through their consequences.</li><li>A short command can still alter system-wide behavior in ways that outlive the immediate task.</li><li>Compatibility matters more here than on ordinary shortcuts, because Apple changes or removes some of these behaviors across releases.</li></ul>
-<h2 id="good-to-know">Good to know</h2>
-<p>This is primarily historical now. Modern macOS versions removed the old Secure Empty Trash workflow, which is why compatibility matters more here than on most entries.</p>
-<h2 id="compatibility-notes">Compatibility notes</h2>
-<ul><li>The repo also marks it as relevant only through macOS 10.11.</li><li>The <code>srm</code> tool was removed from macOS Sierra (10.12). On modern macOS (APFS/SSD), secure deletion of individual files is not reliably guaranteed due to wear leveling and snapshots. Prefer FileVault (encryption) and rotating keys, or wiping entire external drives when appropriate.</li></ul>
-<h2 id="undo-or-revert">Undo or revert</h2>
-<ul><li>Treat this as something you understand before you run it, because the rollback path may be limited or manual.</li><li>If the hack affects a system preference, reapply the opposite setting or return the system to its previous state as directly as possible.</li></ul>
+        <h2 id="overview">Overview</h2>
+<p>Secure deletion used to be a more visible part of macOS, but on modern systems it is mostly a historical workflow. The old <code>srm</code>-style approach attempted to overwrite data before deletion, which made sense in older storage contexts but is no longer a standard modern Mac feature.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol><li>Check whether the command or workflow is even supported on the macOS version you are using.</li><li>If it is supported in your environment, run it only on the exact target you intend.</li><li>Verify the result carefully.</li><li>Treat modern compatibility limits as part of the hack, not as a surprise.</li></ol>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>This entry is mainly useful as a compatibility and systems-history note. It explains an older secure-deletion idea that people still search for even though Apple&#39;s storage and platform direction moved away from it.</p>
+<h2 id="caveats">Caveats</h2>
+<ul><li>Modern macOS versions removed or limited the old secure-empty-trash path.</li><li>SSD behavior complicates assumptions about overwrite-based deletion.</li><li>If secure disposal truly matters, broader device and encryption strategy matters more than nostalgia for one old command.</li></ul>
       </article>
     </div>
   </section>

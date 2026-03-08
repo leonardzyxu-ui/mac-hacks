@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Lock Screen is a system-level shortcut for System. Instantly locks your Mac screen (requires password to re-enter). Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + Ctrl + Q` locks the current Mac session immediately. It is the fast security move for stepping away from your machine without logging out or shutting down.
 
-## Shortcut
+## How to use it
 
-`Cmd + Ctrl + Q`
+1. Save anything that would be annoying to lose.
+2. Press `Cmd + Ctrl + Q`.
+3. Walk away.
+4. Unlock with your password, Touch ID, or whatever the Mac is configured to require.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Ctrl + Q`.
-4. Confirm the result: Instantly locks your Mac screen (requires password to re-enter).
+Lock Screen is one of the simplest habits that meaningfully improves everyday security. It protects your open work, active logins, and visible data when you leave your desk even for a short time.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- It assumes your Mac is configured to require authentication on wake or unlock.
+- Locking is not the same as quitting apps or hiding sensitive content beforehand.
+- On shared or public machines, do not treat locking as the only security step.

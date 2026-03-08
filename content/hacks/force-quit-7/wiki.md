@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Force Quit is a system-level shortcut for System. Opens the Force Quit menu to kill apps that are frozen or not responding. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + Option + Esc` opens the Force Quit Applications window. This is the emergency exit for apps that are frozen, beachballing, or otherwise not responding to normal quit commands.
 
-## Shortcut
+## How to use it
 
-`Cmd + Option + Esc`
+1. Press `Cmd + Option + Esc`.
+2. Select the app that is not responding.
+3. Click Force Quit.
+4. Reopen the app only after the stuck process is gone.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Option + Esc`.
-4. Confirm the result: Opens the Force Quit menu to kill apps that are frozen or not responding.
+Force Quit is faster than opening Activity Monitor for the common case of “this app is dead and I need it gone now.” It is the shortcut you want when one app is misbehaving but the rest of the Mac is still usable.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- Unsaved work in the killed app can be lost.
+- Use normal Quit first if the app still responds.
+- If the whole Mac is frozen rather than one app, Force Quit may not be enough.

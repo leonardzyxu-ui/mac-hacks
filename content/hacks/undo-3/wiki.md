@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Undo is a keyboard editing shortcut for System. Instantly undoes your last action. Press multiple times to go further back. Undo and redo are what make experimentation cheap. You can try something, inspect the result, and step backward or forward without manually rebuilding your work.
-
-## Shortcut
-
-`Cmd + Z`
+Undo is the safety net that makes fast editing possible. `Cmd + Z` reverses the most recent action in the current app or document. In practice, that means you can make a change, evaluate it, and step backward immediately if it was wrong. Good Mac workflows depend on this shortcut because it lowers the cost of trying things.
 
 ## How to use it
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Z`.
-4. Confirm the result: Instantly undoes your last action. Press multiple times to go further back.
+1. Do the action you want to reverse.
+2. Press `Cmd + Z`.
+3. If needed, press it again to keep moving backward through the recent history.
+4. Stop as soon as the document or window returns to the state you wanted.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are editing text, moving files, or changing formatting when you want a fast recovery path.
-- Use it when you are testing an action to see what it changes before you commit to it.
-- Use it when you are walking backward through a short chain of recent actions.
+Undo encourages experimentation. You can reword a sentence, move a file, change formatting, or delete something, knowing there is a quick path back if the result is bad. That is why experienced Mac users tend to use Undo constantly instead of hesitating over every edit.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- Undo history depth is app-specific, so older actions may fall off sooner than you expect.
+- Undo history is app-specific. Some apps keep a deep stack; others only remember a short sequence.
+- Not every action is undoable.
+- Undo only affects the currently active app or document, so make sure the right window has focus before pressing it.

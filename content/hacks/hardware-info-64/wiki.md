@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Hardware Info is an advanced system feature or diagnostic view for System. About This Mac' becomes 'System Information', showing deep hardware specs. These entries are useful because they surface deeper system information or boot-time behavior that ordinary settings screens do not expose directly.
+Holding `Option` while opening the Apple menu gives you a faster path into System Information, the deeper hardware inventory for your Mac. That is where you check exact model identifiers, memory layout, storage buses, battery data, serial information, connected peripherals, and much more.
 
-## Reference
+## How to use it
 
-`Hold Option + Click Apple Menu`
+1. Hold `Option`.
+2. Click the Apple menu.
+3. Open `System Information` from the modified menu.
+4. Browse the hardware sections that match the question you are trying to answer.
 
-## Before you use it
+## Why it matters
 
-- Read the full description once before trying it; advanced system workflows are less forgiving than everyday shortcuts.
-- If external hardware or another Mac is involved, set that up first instead of improvising halfway through.
-- If you are troubleshooting, decide what question you are trying to answer before you trigger the feature.
+This is the place to go when "About This Mac" is too shallow. It helps with support tickets, resale prep, upgrade planning, warranty conversations, troubleshooting external devices, and verifying exactly which Mac you are dealing with. For advanced users, it is one of the most important built-in reference screens on the system.
 
-## How it usually works
+## Caveats
 
-1. Start from the relevant system context for System.
-2. Use the documented interaction or entry point: Hold Option + Click Apple Menu.
-3. Look for the expected result: About This Mac' becomes 'System Information', showing deep hardware specs.
-4. Exit cleanly once you have the information or behavior you needed.
-
-## Limits and safety
-
-- Advanced system features can vary significantly by Mac model and macOS version.
-- Diagnostic menus often reveal extra data, but they do not automatically fix the underlying problem.
-- Use the extra information to guide the next decision, not just to admire the menu.
+- The tool exposes a lot of data, so it is easy to get lost if you do not start with a clear question.
+- Some sections are more useful to support and admins than to casual users.
+- Read-only inspection is safe; changing settings elsewhere based on misunderstood data is where mistakes happen.

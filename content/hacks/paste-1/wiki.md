@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Paste is a keyboard editing shortcut for System. Inserts the contents of your clipboard into the current field or folder. Clipboard shortcuts are the basic transport layer of everyday Mac work. They are how text, images, files, and small pieces of context move between apps.
-
-## Shortcut
-
-`Cmd + V`
+Paste is the other half of the clipboard workflow. `Cmd + V` inserts whatever is currently on the clipboard into the active destination. In a document, that means text or media. In Finder, that usually means a copied file or folder. The important rule is that Paste always acts on the current destination, not the place where the content originally came from.
 
 ## How to use it
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
+1. Copy or cut something first.
+2. Click into the destination field, document, folder, or app.
 3. Press `Cmd + V`.
-4. Confirm the result: Inserts the contents of your clipboard into the current field or folder.
+4. Check the result before moving on, especially if pasting into the wrong place would be annoying.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are working quickly inside notes, documents, chat boxes, code editors, or Finder lists.
-- Use it when you are staying on the keyboard instead of breaking rhythm to use the Edit menu.
-- Use it when you are repeating a tiny action many times in a row without thinking about it.
+Paste is what turns the clipboard from storage into movement. It is how notes get assembled from research, how files get duplicated into the right project folder, and how links, images, and snippets move from one app to another without rebuilding them manually.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- Cut is not a universal file-moving shortcut in Finder, so do not assume Windows-style behavior everywhere.
+- Paste uses the most recent clipboard contents, so if you copied something else in the meantime, that newer item wins.
+- Rich text, styled content, and images may paste differently depending on the destination app.
+- Some secure fields intentionally block paste.

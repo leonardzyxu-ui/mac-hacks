@@ -1,26 +1,20 @@
-## In Finder
+## Overview
 
-Empty Trash is a Finder shortcut for Finder. Empties the trash (asks for confirmation). Add 'Option' to skip confirmation. The value here is speed inside an already-open file workflow: picking the right item, triggering the command, and moving on without navigating extra menus.
-
-## Shortcut
-
-`Cmd + Shift + Delete`
+`Cmd + Shift + Delete` empties the Trash in Finder. It is the second-stage delete on macOS: after you have already moved items into the Trash and decided you are comfortable removing them from the normal recovery path.
 
 ## How to use it
 
-1. Open Finder or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
+1. Make sure the files in the Trash are actually safe to remove.
+2. Focus Finder.
 3. Press `Cmd + Shift + Delete`.
-4. Confirm the result: Empties the trash (asks for confirmation). Add 'Option' to skip confirmation.
+4. Confirm the action when Finder asks.
 
-## Why people keep this one
+## Why it matters
 
-- It cuts down on extra clicks in file-heavy workflows.
-- It works well when you already know which file or folder you want to act on.
-- It helps keep Finder feeling like a fast browser for files instead of a slow control panel.
+Empty Trash is the cleanup command that turns a temporary discard into a real one. It is useful when you have already reviewed what is in the Trash and want to reclaim space or clear out clutter that no longer needs to hang around.
 
-## Things to watch
+## Caveats
 
-- Most Finder shortcuts operate on the currently highlighted item or the currently active Finder window, so selection matters.
-- If you trigger the shortcut from the wrong app, nothing useful will happen because the command is Finder-specific.
-- Hidden files, deep paths, and renamed items can still behave differently from normal visible documents, so verify the target before committing.
+- Adding Option can skip the confirmation prompt, which is faster but less forgiving.
+- Once the Trash is emptied, recovery becomes much harder.
+- If you are not sure, open the Trash and inspect it before emptying everything at once.

@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Clear Terminal is a system-level keyboard-led action for Terminal. Instantly clears all previous text and output in the Terminal window. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + K` clears the Terminal window contents so you can start with a visually clean screen. This is mostly about readability, not changing shell state. Your current shell session is still alive; the window just stops showing the old clutter.
 
-## Reference
+## How to use it
 
-`Cmd + K`
+1. Focus Terminal.
+2. Press `Cmd + K`.
+3. Continue working in the same shell session.
+4. Run `pwd`, `ls`, or another command if you want to re-establish visible context.
 
-## How to trigger it
+## Why it matters
 
-1. Open Terminal or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Use the interaction described by the hack: Cmd + K.
-4. Confirm the result: Instantly clears all previous text and output in the Terminal window.
+Clear Terminal is useful when your screen is full of logs, command output, or errors and you want a fresh visual workspace without opening a new tab or window. It helps you think more clearly in longer shell sessions.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- Clearing the window does not undo commands you already ran.
+- If you actually need the old output, do not clear it before copying or saving it.
+- This is different from starting a new shell session.

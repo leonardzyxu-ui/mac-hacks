@@ -1,30 +1,20 @@
-## What it is
+## Overview
 
-Sound Output Select is a system workflow trick for System. Allows you to quickly switch between Speakers/Headphones. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Option + Click the Sound icon in the menu bar`
+`Option + Click` on the sound control opens a faster audio routing menu. Instead of digging through System Settings, you can switch between speakers, headphones, monitors, interfaces, or Bluetooth devices directly from the menu bar.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for System.
-2. Use the interaction described by the hack: Option + Click the Sound icon in the menu bar.
-3. Confirm the result: Allows you to quickly switch between Speakers/Headphones.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Make sure the sound control is visible in the menu bar or Control Center.
+2. Hold `Option`.
+3. Click the sound control.
+4. Pick the output device you want, and check the input device too if needed.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+Audio routing is one of those small tasks that interrupts momentum more than it should. This shortcut is useful when you move between desk speakers, wired headphones, AirPods, or an external microphone throughout the day. It turns a settings hunt into a one-step adjustment.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
-
-## Good to know
-
-The Option-click version of the menu skips System Settings and takes you straight to the current output-device list.
+- The device list only helps if the hardware is already connected and recognized.
+- Bluetooth devices may take a moment to finish switching.
+- If the sound control is hidden, expose it first instead of assuming the shortcut stopped working.

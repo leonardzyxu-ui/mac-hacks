@@ -1,25 +1,20 @@
-## In the browser
+## Overview
 
-Reopen Closed Tab is a browser-focused shortcut for Safari, Chrome. Magically brings back the last browser tab you accidentally closed. This is a recovery shortcut. It saves you from rebuilding a tab you closed by habit or by mistake, especially in the middle of research or shopping.
+`Cmd + Shift + T` restores the most recently closed browser tab. It is one of the best recovery shortcuts in Safari and Chrome because it turns an accidental close into a tiny interruption instead of a scavenger hunt through history.
 
-## Shortcut
+## How to use it
 
-`Cmd + Shift + T`
-
-## Fast workflow
-
-1. Open Safari, Chrome or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
+1. Close a tab by mistake.
+2. Stay in the browser where the tab was closed.
 3. Press `Cmd + Shift + T`.
-4. Confirm the result: Magically brings back the last browser tab you accidentally closed.
+4. Repeat if you need to walk backward through several recently closed tabs.
 
-## Good times to use it
+## Why it matters
 
-- when several tabs or windows are open and you want the browser to respond immediately
-- when you are researching, comparing pages, or recovering something you just closed
-- when the browser menu has the action but reaching for it would break your flow
+This shortcut saves time whenever you are researching, shopping, comparing documentation, or bouncing between reference tabs. It is much faster than opening History and trying to remember the title or URL of what you just lost.
 
-## Limits and gotchas
+## Caveats
 
-- Make sure the browser window itself is focused; the same keys can do something else inside web apps or form fields.
-- Some browser shortcuts are shared between Chrome and Safari, but not every tab or window behavior is identical.
+- It restores recent tab history, so it works best immediately after the mistake.
+- Different browsers can restore tab groups, pinned tabs, or sessions differently.
+- If the tab was closed in a different browser window, make sure that browser still has focus.

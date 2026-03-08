@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Delete by Word is a keyboard editing shortcut for Text. Removes the entire word behind the cursor instead of just one letter. These are text-navigation shortcuts. They save time because they operate at the level of words or lines instead of forcing you to move character by character.
-
-## Shortcut
-
-`Option + Delete`
+`Option + Delete` removes the word to the left of the cursor instead of deleting a single character. It is a text-editing shortcut, not a Finder or system command, and it is one of the fastest ways to rewrite sentences without reaching for the mouse or holding Delete repeatedly.
 
 ## How to use it
 
-1. Open Text or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Option + Delete`.
-4. Confirm the result: Removes the entire word behind the cursor instead of just one letter.
+1. Place the text cursor after the word you want to remove.
+2. Press `Option + Delete`.
+3. Repeat if you want to delete multiple words quickly.
+4. Use Undo if you overshoot.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are editing prose or code when your hands are already on the keyboard.
-- Use it when you are rewriting or cleaning up text without reaching for the pointer.
-- Use it when you are moving through a line or removing chunks of text faster than backspacing one character at a time.
+Delete by Word is useful when writing, editing code, cleaning prompts, or reworking a sentence. It speeds up revision because you can erase chunks of thought instead of nibbling backward one character at a time.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- They only make sense in fields or editors that actually have text focus.
+- This works only in apps and fields that currently have text focus.
+- What counts as a "word" can vary slightly depending on punctuation and the app's text engine.
+- Because it is fast, it is easy to remove more than you meant to. Undo is your friend.

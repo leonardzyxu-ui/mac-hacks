@@ -81,23 +81,19 @@
           <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
-              <a href="#what-it-does" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What it does</a><a href="#reference" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Reference</a><a href="#before-you-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Before you use it</a><a href="#how-it-usually-works" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How it usually works</a><a href="#limits-and-safety" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Limits and safety</a><a href="#good-to-know" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Good to know</a>
+              <a href="#overview" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Overview</a><a href="#how-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to use it</a><a href="#why-it-matters" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why it matters</a><a href="#caveats" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Caveats</a>
             </nav>
           </div>
         </aside>
       <article class="wiki-content">
-        <h2 id="what-it-does">What it does</h2>
-<p>Target Disk Mode is an advanced system feature or diagnostic view for System. Boot one holding &#39;T&#39;. It mounts as an external hard drive on the other. These entries are useful because they surface deeper system information or boot-time behavior that ordinary settings screens do not expose directly.</p>
-<h2 id="reference">Reference</h2>
-<p><code>Connect two Macs via USB-C</code></p>
-<h2 id="before-you-use-it">Before you use it</h2>
-<ul><li>Read the full description once before trying it; advanced system workflows are less forgiving than everyday shortcuts.</li><li>If external hardware or another Mac is involved, set that up first instead of improvising halfway through.</li><li>If you are troubleshooting, decide what question you are trying to answer before you trigger the feature.</li></ul>
-<h2 id="how-it-usually-works">How it usually works</h2>
-<ol><li>Start from the relevant system context for System.</li><li>Use the documented interaction or entry point: Connect two Macs via USB-C.</li><li>Look for the expected result: Boot one holding &#39;T&#39;. It mounts as an external hard drive on the other.</li><li>Exit cleanly once you have the information or behavior you needed.</li></ol>
-<h2 id="limits-and-safety">Limits and safety</h2>
-<ul><li>Advanced system features can vary significantly by Mac model and macOS version.</li><li>Diagnostic menus often reveal extra data, but they do not automatically fix the underlying problem.</li><li>Use the extra information to guide the next decision, not just to admire the menu.</li></ul>
-<h2 id="good-to-know">Good to know</h2>
-<p>Older Macs expose this as Target Disk Mode. Newer Macs can require a different recovery-based flow, so treat this as a hardware- and macOS-version-dependent feature.</p>
+        <h2 id="overview">Overview</h2>
+<p>Target Disk Mode lets one Mac expose its storage to another Mac over a cable, which is useful for file recovery, migration, or pulling data from a machine that is hard to use normally. On newer Apple silicon systems, the equivalent workflow is often called Share Disk, but the purpose is the same.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol><li>Connect the two Macs with a cable that supports both data and the port standard you are using.</li><li>On older Intel Macs, start the source Mac while holding <code>T</code>.</li><li>On newer Apple silicon Macs, enter startup options and use the disk-sharing workflow instead.</li><li>Mount the shared disk on the second Mac and copy only what you need.</li></ol>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>This is one of the best built-in recovery tools when a Mac will not boot normally but the internal storage is still readable. It is also useful during migrations when direct disk access is faster or simpler than cloud sync, AirDrop, or ad hoc network transfers.</p>
+<h2 id="caveats">Caveats</h2>
+<ul><li>The exact steps differ between Intel and Apple silicon Macs.</li><li>Cable quality and protocol support matter more than most people expect.</li><li>Be deliberate about ejecting the disk cleanly when you are done.</li></ul>
       </article>
     </div>
   </section>

@@ -1,33 +1,20 @@
-## What it does
+## Overview
 
-Prevent Sleep (Caffeinate) is a Terminal utility command for Terminal. Keeps screen awake indefinitely. Press Ctrl+C to stop. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+`caffeinate` keeps the Mac awake while the command is running. It is a temporary anti-sleep tool, which makes it safer than changing system-wide energy settings just because you need the machine to stay awake for one job.
 
-## Exact command
-
-```sh
-caffeinate -d
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `caffeinate -d`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Keeps screen awake indefinitely. Press Ctrl+C to stop.
+2. Run the `caffeinate` command with the flags that fit your case.
+3. Leave the command running while the Mac needs to stay awake.
+4. Stop it with `Ctrl + C` when you are done.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+This is useful for long downloads, presentations, builds, backups, or any task where sleep would interrupt the work. It gives you a one-session override instead of a persistent settings change you might forget later.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- The command only protects against sleep while it is active.
+- Keep power and battery impact in mind on portable Macs.
+- If the job spans hours, make sure the machine also has the power and network conditions it needs.

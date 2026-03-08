@@ -1,40 +1,20 @@
-## What this command does
+## Overview
 
-Gatekeeper Bypass is a higher-risk Terminal hack for Terminal. Allows installing apps from 'Anywhere' (Risky, but useful for devs). The convenience can be real, but the main question here is not "can I run it?" so much as "do I fully understand why I am running it and how I will back out afterward?"
+This command disables Gatekeeper assessments so macOS becomes less strict about app installation. That can be useful in narrow development or testing situations, but it is also exactly the kind of change that deserves caution because it weakens a built-in security layer.
 
-## Exact command
+## How to use it
 
-```sh
-sudo spctl --master-disable
-```
+1. Decide whether you truly need a system-wide Gatekeeper change rather than a one-off override.
+2. Run the command with administrator privileges.
+3. Verify the new state deliberately instead of assuming it worked.
+4. Re-enable Gatekeeper as soon as the special case is over.
 
-## Before you run it
+## Why it matters
 
-1. Open Terminal in an admin-capable account if the command needs elevated privileges.
-2. Read `sudo spctl --master-disable` from left to right and make sure every flag still matches your intent.
-3. Know what success looks like before you press Return.
-4. Know what the rollback step is before you rely on the result.
+There are legitimate situations where developers or advanced users need to run software that macOS does not trust by default. This command exists for those edge cases, not as a general recommendation for everyday app installation.
 
-## When it is actually justified
+## Caveats
 
-- when the built-in macOS UI does not expose the behavior you need directly
-- when you have a concrete reason for the change rather than vague curiosity
-- when you are comfortable restoring the old state immediately after the special case is over
-
-## Main risks
-
-- Security-sensitive or destructive commands are easy to run faster than you can think through their consequences.
-- A short command can still alter system-wide behavior in ways that outlive the immediate task.
-- Compatibility matters more here than on ordinary shortcuts, because Apple changes or removes some of these behaviors across releases.
-
-## Good to know
-
-If you use this at all, use it as a short-lived exception for a specific trusted app and then restore normal Gatekeeper behavior immediately afterward.
-## Compatibility notes
-
-- Minimum version noted by the repo: macOS 10.8.
-- Gatekeeper behavior and UI varies by macOS version. On newer macOS versions, the “Anywhere” UI option may be hidden even when assessments are disabled; verify using `spctl --status`.
-## Undo or revert
-
-- Run `sudo spctl --master-enable` if you want to reverse the change.
-- Reopen the affected app or service after reverting if the result is not immediate.
+- This lowers security.
+- Behavior and UI around Gatekeeper can vary by macOS version.
+- Treat it as a temporary exception for software you trust, not as a permanent convenience toggle.

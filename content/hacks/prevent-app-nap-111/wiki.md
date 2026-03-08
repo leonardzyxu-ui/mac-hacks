@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Prevent App Nap is a system workflow trick for System. Stops macOS from slowing the app when in background. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Right-click App > Get Info > Prevent App Nap`
+App Nap is a power-saving feature that lets macOS reduce work for background apps that appear idle. The `Prevent App Nap` checkbox in an app's Get Info panel tells the system not to throttle that app in the usual way.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for System.
-2. Use the interaction described by the hack: Right-click App > Get Info > Prevent App Nap.
-3. Confirm the result: Stops macOS from slowing the app when in background.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Quit the app if you want to make the change cleanly.
+2. Find the app in Applications.
+3. Open `Get Info`.
+4. Enable `Prevent App Nap` if the checkbox is available, then reopen the app and test the workload you care about.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+This matters for apps that need to keep working even when they are not frontmost, such as long-running sync tools, dashboards, media workflows, data processing jobs, or niche utilities that behave poorly when macOS treats them as low priority.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- More background activity can mean more battery drain, heat, or fan noise.
+- Not every slow background task is caused by App Nap, so change the setting because you observed a real problem, not because it sounds powerful.
+- If an app is already well behaved, disabling App Nap may offer little or no benefit.

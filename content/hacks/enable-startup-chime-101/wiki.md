@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Enable Startup Chime is a Terminal tweak for Terminal. Restores the startup sound if previously disabled. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+Re-enabling the startup chime restores the normal audible boot sound if it was previously disabled. This is the undo path for people who decided they actually do want the classic startup feedback.
 
-## Exact command
+## How to use it
 
-```sh
-sudo nvram -d SystemAudioVolume
-```
+1. Run the NVRAM reset command that restores the startup sound.
+2. Restart the Mac.
+3. Listen on the next boot.
+4. Keep or undo the change depending on whether you prefer audible startup feedback.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `sudo nvram -d SystemAudioVolume`.
-3. Read the full command one more time before pressing Return.
-4. Check the outcome described by the hack: Restores the startup sound if previously disabled.
+Sometimes the startup chime is useful. It gives immediate confirmation that the machine has powered on and can be reassuring on machines where the screen takes a moment to wake.
 
-## What changes afterward
+## Caveats
 
-This command changes behavior at the system or app level, so the result can outlast the Terminal window you used to trigger it.
-
-Because this tweak crosses into higher-risk territory, read the full command carefully and know how you would restore the old behavior before you press Return.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Do not run a privileged tweak casually just because it is short.
-
-## Undo or revert
-
-- Treat this as something you understand before you run it, because the rollback path may be limited or manual.
-- If the hack affects a system preference, reapply the opposite setting or return the system to its previous state as directly as possible.
+- This only matters if the chime was previously changed.
+- As with the disable command, this is still an NVRAM-level tweak.
+- Environment matters: what feels helpful at home may feel annoying in a shared quiet space.

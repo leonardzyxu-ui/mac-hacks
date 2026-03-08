@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Game Mode is a system workflow trick for System. Prioritizes CPU/GPU for the game and reduces background usage. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Auto-triggers in full-screen games`
+Game Mode is a macOS performance feature that activates when a supported game runs full screen. Its purpose is to give the game higher priority for CPU and GPU resources while reducing some competing background activity.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for System.
-2. Use the interaction described by the hack: Auto-triggers in full-screen games.
-3. Confirm the result: Prioritizes CPU/GPU for the game and reduces background usage.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Launch a game that supports the feature.
+2. Put the game into full-screen mode.
+3. Let macOS activate Game Mode automatically.
+4. Play normally and exit full screen when you want standard behavior back.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+This is useful for smoothing performance on Macs that are doing several things at once. Even when a game is already playable, a little extra resource priority can help with consistency, controller responsiveness, and general stability during longer sessions.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- It is automatic, so there is less to "tune" than the name might suggest.
+- Results depend on the specific game, the Mac's hardware, and what else is running.
+- Game Mode cannot compensate for a title that is fundamentally poorly optimized for the platform.

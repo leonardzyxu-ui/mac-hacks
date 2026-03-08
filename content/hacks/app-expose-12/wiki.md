@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-App Expose is a system-level shortcut for System. Shows all open windows of the CURRENT app only. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+App Expose shows all open windows for the current app only. That makes it different from full Mission Control: instead of showing everything on the Mac, it narrows the view to just the windows that belong to the app you are currently working in.
 
-## Shortcut
+## How to use it
 
-`Ctrl + Down Arrow (or Swipe Down with 3 fingers)`
+1. Focus the app whose windows you want to inspect.
+2. Trigger App Expose with its configured gesture or key command.
+3. Look at the window spread for that one app.
+4. Choose the window you want to bring forward.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Ctrl + Down Arrow (or Swipe Down with 3 fingers)`.
-4. Confirm the result: Shows all open windows of the CURRENT app only.
+App Expose is useful when one app has become cluttered with too many documents, chats, browser windows, or Finder windows. It helps you stay inside the same app while still regaining window-level control.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- The exact trigger can vary depending on your input settings and trackpad configuration.
+- If the wrong app has focus, you will see the wrong set of windows.
+- It is for switching within one app, not across all apps.

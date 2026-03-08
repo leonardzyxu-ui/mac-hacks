@@ -1,36 +1,20 @@
-## What it does
+## Overview
 
-Purge RAM is a Terminal utility command for Terminal. Forces the Mac to dump inactive memory. Useful before launching heavy apps. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+`sudo purge` forces macOS to clear inactive memory caches. This is not a normal daily-maintenance command. It is a niche troubleshooting move for specific situations where you want to free cached memory aggressively before testing something else.
 
-## Exact command
-
-```sh
-sudo purge
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `sudo purge`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Forces the Mac to dump inactive memory. Useful before launching heavy apps.
+2. Run the command with administrator privileges.
+3. Wait for it to finish.
+4. Launch or retest the workload you were concerned about.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+The command can be useful in controlled testing when you want to compare before and after states, or when you want to remove cached memory from the equation before opening a heavy app.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Good to know
-
-macOS normally manages inactive memory on its own, so this is a niche troubleshooting command rather than something you should run out of habit.
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- macOS normally manages memory well on its own.
+- Clearing caches is not the same as "fixing RAM."
+- Use this as a specific experiment, not as a superstition or ritual.

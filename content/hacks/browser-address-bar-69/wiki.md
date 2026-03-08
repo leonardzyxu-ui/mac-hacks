@@ -1,25 +1,20 @@
-## In the browser
+## Overview
 
-Browser Address Bar is a browser-focused shortcut for Chrome, Safari. Instantly highlights the URL bar so you can type a new search or website address. The address bar shortcut is one of the quickest ways to pivot from reading to navigating. It puts the URL field under your hands immediately so you can paste, search, or replace the current location.
+`Cmd + L` highlights the browser's address bar. That sounds small, but it is one of the fastest navigation shortcuts in Safari and Chrome because it lets you immediately replace the current URL, paste a link, or start a new search without touching the mouse.
 
-## Shortcut
+## How to use it
 
-`Cmd + L`
+1. Focus Safari or Chrome.
+2. Press `Cmd + L`.
+3. Type a URL, search query, or paste a copied link.
+4. Press Return to go there.
 
-## Fast workflow
+## Why it matters
 
-1. Open Chrome, Safari or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + L`.
-4. Confirm the result: Instantly highlights the URL bar so you can type a new search or website address.
+Address-bar focus is the shortcut that turns the browser into a launcher. It is faster than clicking the field, faster than selecting the existing URL manually, and especially useful when you are rapidly pivoting between pages or queries.
 
-## Good times to use it
+## Caveats
 
-- when several tabs or windows are open and you want the browser to respond immediately
-- when you are researching, comparing pages, or recovering something you just closed
-- when the browser menu has the action but reaching for it would break your flow
-
-## Limits and gotchas
-
-- Make sure the browser window itself is focused; the same keys can do something else inside web apps or form fields.
-- Some browser shortcuts are shared between Chrome and Safari, but not every tab or window behavior is identical.
+- This works best when the browser window itself is focused.
+- If you were in the middle of typing into a page field, `Cmd + L` pulls you out of that field and into navigation mode.
+- Search suggestions, bookmarks, and history can affect what the browser offers while you type, so pay attention before pressing Return.

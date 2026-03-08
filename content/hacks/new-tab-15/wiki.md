@@ -1,25 +1,20 @@
-## In the browser
+## Overview
 
-New Tab is a browser-focused shortcut for Safari, Chrome, Finder. Opens a new tab in Web Browsers and even Finder windows. Browser shortcuts are most valuable when you are juggling tabs, links, search terms, and reading context faster than the pointer can keep up.
+`Cmd + T` opens a new tab in apps that support tabs, most obviously Safari and Chrome, but also Finder. On macOS, that makes it a surprisingly broad shortcut. In a browser, it gives you a fresh page without replacing the current one. In Finder, it creates another file-browsing context inside the same window instead of spawning yet another separate window.
 
-## Shortcut
+## How to use it
 
-`Cmd + T`
+1. Focus Safari, Chrome, or Finder.
+2. Press `Cmd + T`.
+3. Start typing a URL, search, or folder path, or navigate manually in the new tab.
+4. Leave the original tab open if you want to preserve context.
 
-## Fast workflow
+## Why it matters
 
-1. Open Safari, Chrome, Finder or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + T`.
-4. Confirm the result: Opens a new tab in Web Browsers and even Finder windows.
+New Tab is the low-friction way to branch your current task. It is useful when you want to check a second page, open a search alongside what you are already reading, or compare two Finder locations without scattering windows all over the desktop.
 
-## Good times to use it
+## Caveats
 
-- when several tabs or windows are open and you want the browser to respond immediately
-- when you are researching, comparing pages, or recovering something you just closed
-- when the browser menu has the action but reaching for it would break your flow
-
-## Limits and gotchas
-
-- Make sure the browser window itself is focused; the same keys can do something else inside web apps or form fields.
-- Some browser shortcuts are shared between Chrome and Safari, but not every tab or window behavior is identical.
+- Tabs only work in apps that support them.
+- If you actually need two windows side by side, New Window is the better command.
+- In Finder, tabs are easy to forget if you prefer visible separate windows.

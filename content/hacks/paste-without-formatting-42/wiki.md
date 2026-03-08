@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Paste Without Formatting is a keyboard editing shortcut for System. Pastes text matching the destination's font/style, ignoring the original format. Clipboard shortcuts are the basic transport layer of everyday Mac work. They are how text, images, files, and small pieces of context move between apps.
-
-## Shortcut
-
-`Cmd + Option + Shift + V`
+Paste Without Formatting is the clean version of Paste. Instead of bringing over the original font, size, color, links, or styling, it asks the destination app to adopt the pasted text into the current document style. On macOS this is often `Cmd + Option + Shift + V`, though some apps label it as "Paste and Match Style."
 
 ## How to use it
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
+1. Copy formatted text from a source.
+2. Click into the destination document or text field.
 3. Press `Cmd + Option + Shift + V`.
-4. Confirm the result: Pastes text matching the destination's font/style, ignoring the original format.
+4. Check that the pasted text matches the destination style instead of the source style.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are working quickly inside notes, documents, chat boxes, code editors, or Finder lists.
-- Use it when you are staying on the keyboard instead of breaking rhythm to use the Edit menu.
-- Use it when you are repeating a tiny action many times in a row without thinking about it.
+This shortcut is one of the easiest ways to keep documents clean. It is especially useful when moving text from websites, emails, slides, PDFs, or rich editors into notes, documents, or CMS fields where imported styling would create a mess.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- Cut is not a universal file-moving shortcut in Finder, so do not assume Windows-style behavior everywhere.
+- Not every Mac app supports the exact same shortcut.
+- It is mainly for text. Images, files, and richer embedded objects do not behave the same way.
+- If the command seems missing, check the Edit menu for "Paste and Match Style" or a similar label.

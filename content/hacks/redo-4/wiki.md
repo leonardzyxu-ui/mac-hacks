@@ -1,26 +1,20 @@
-## What it does
+## Overview
 
-Redo is a keyboard editing shortcut for System. Re-applies an action you just Undid. Undo and redo are what make experimentation cheap. You can try something, inspect the result, and step backward or forward without manually rebuilding your work.
-
-## Shortcut
-
-`Cmd + Shift + Z`
+Redo is the forward half of the undo system. `Cmd + Shift + Z` reapplies an action that you just undid. It is useful when you stepped back too far, changed your mind after undoing, or want to compare before and after states quickly without rebuilding the edit manually.
 
 ## How to use it
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
+1. Undo something with `Cmd + Z`.
+2. Decide that you actually want the undone action back.
 3. Press `Cmd + Shift + Z`.
-4. Confirm the result: Re-applies an action you just Undid.
+4. Repeat if the app supports multiple redo steps.
 
-## Where it earns its keep
+## Why it matters
 
-- Use it when you are editing text, moving files, or changing formatting when you want a fast recovery path.
-- Use it when you are testing an action to see what it changes before you commit to it.
-- Use it when you are walking backward through a short chain of recent actions.
+Redo sounds minor until you start using Undo aggressively. Once Undo becomes normal, Redo becomes the correction for your correction. It keeps the editing loop fluid because you can move backward and forward through recent changes without fear of losing track of what you were testing.
 
-## What to watch for
+## Caveats
 
-- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
-- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
-- Undo history depth is app-specific, so older actions may fall off sooner than you expect.
+- Not every app implements Redo the same way.
+- Some apps use a different shortcut or a different menu label.
+- If you make a new edit after undoing, the redo chain is often cleared.

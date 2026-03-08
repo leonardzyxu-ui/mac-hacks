@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Slow Motion Animation is a system-level keyboard-led action for System. Plays the Genie effect in super slow motion. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+Holding Shift while clicking the yellow minimize button plays the minimize animation in slow motion. This is not a productivity feature so much as a hidden bit of macOS behavior, but it is a memorable example of how much animation tuning Apple hid inside the interface.
 
-## Reference
+## How to use it
 
-`Hold Shift while clicking the yellow Minimize button`
+1. Open a window with the normal traffic-light controls.
+2. Hold Shift.
+3. Click the yellow minimize button.
+4. Watch the animation slow down dramatically.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Use the interaction described by the hack: Hold Shift while clicking the yellow Minimize button.
-4. Confirm the result: Plays the Genie effect in super slow motion.
+Mostly, this is a curiosity. It is useful as a small piece of Mac literacy and as a way to observe how the window animation behaves. It also pairs nicely with demos or screen recordings when you want the motion to be easier to see.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- This is cosmetic, not functional.
+- It does not make minimize safer or more powerful; it just changes the animation timing.
+- If you are moving quickly, the normal minimize action is still the practical one.

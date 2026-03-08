@@ -100,24 +100,19 @@
           <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
-              <a href="#what-the-command-changes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What the command changes</a><a href="#exact-command" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Exact command</a><a href="#safe-way-to-run-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Safe way to run it</a><a href="#what-changes-afterward" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What changes afterward</a><a href="#what-to-watch-for" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What to watch for</a><a href="#undo-or-revert" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or revert</a>
+              <a href="#overview" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Overview</a><a href="#how-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to use it</a><a href="#why-it-matters" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why it matters</a><a href="#caveats" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Caveats</a>
             </nav>
           </div>
         </aside>
       <article class="wiki-content">
-        <h2 id="what-the-command-changes">What the command changes</h2>
-<p>Disable Startup Chime is a Terminal tweak for Terminal. Permanently mutes the iconic Mac startup sound. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.</p>
-<h2 id="exact-command">Exact command</h2>
-<pre><code class="language-sh">sudo nvram SystemAudioVolume=%80</code></pre>
-<h2 id="safe-way-to-run-it">Safe way to run it</h2>
-<ol><li>Open Terminal.</li><li>Paste or type <code>sudo nvram SystemAudioVolume=%80</code>.</li><li>Read the full command one more time before pressing Return.</li><li>Check the outcome described by the hack: Permanently mutes the iconic Mac startup sound.</li></ol>
-<h2 id="what-changes-afterward">What changes afterward</h2>
-<p>This command changes behavior at the system or app level, so the result can outlast the Terminal window you used to trigger it.</p>
-<p>Because this tweak crosses into higher-risk territory, read the full command carefully and know how you would restore the old behavior before you press Return.</p>
-<h2 id="what-to-watch-for">What to watch for</h2>
-<ul><li>If the command includes <code>killall</code>, the named app or service will restart as part of the change.</li><li>Preference tweaks can appear to do nothing until the affected app or service is reopened.</li><li>Do not run a privileged tweak casually just because it is short.</li></ul>
-<h2 id="undo-or-revert">Undo or revert</h2>
-<ul><li>Treat this as something you understand before you run it, because the rollback path may be limited or manual.</li><li>If the hack affects a system preference, reapply the opposite setting or return the system to its previous state as directly as possible.</li></ul>
+        <h2 id="overview">Overview</h2>
+<p>Disabling the startup chime changes the Mac&#39;s boot behavior so it starts silently instead of playing the classic startup sound. This is mostly a comfort and environment tweak rather than a productivity feature.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol><li>Run the NVRAM command with administrator privileges.</li><li>Restart the Mac.</li><li>Listen for the next startup.</li><li>Re-enable the sound later if you change your mind.</li></ol>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>This tweak is useful on shared desks, in quiet rooms, during late-night restarts, or on machines that reboot more often than you want to advertise. It is a small preference, but it can make a Mac feel less noisy in the background of real life.</p>
+<h2 id="caveats">Caveats</h2>
+<ul><li>This changes startup behavior at a low system level.</li><li>NVRAM-related tweaks deserve more care than ordinary app settings.</li><li>On some Macs and OS versions, related startup sound behavior may already be handled differently by the system.</li></ul>
       </article>
     </div>
   </section>

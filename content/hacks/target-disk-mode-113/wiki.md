@@ -1,30 +1,20 @@
-## What it does
+## Overview
 
-Target Disk Mode is an advanced system feature or diagnostic view for System. Boot one holding 'T'. It mounts as an external hard drive on the other. These entries are useful because they surface deeper system information or boot-time behavior that ordinary settings screens do not expose directly.
+Target Disk Mode lets one Mac expose its storage to another Mac over a cable, which is useful for file recovery, migration, or pulling data from a machine that is hard to use normally. On newer Apple silicon systems, the equivalent workflow is often called Share Disk, but the purpose is the same.
 
-## Reference
+## How to use it
 
-`Connect two Macs via USB-C`
+1. Connect the two Macs with a cable that supports both data and the port standard you are using.
+2. On older Intel Macs, start the source Mac while holding `T`.
+3. On newer Apple silicon Macs, enter startup options and use the disk-sharing workflow instead.
+4. Mount the shared disk on the second Mac and copy only what you need.
 
-## Before you use it
+## Why it matters
 
-- Read the full description once before trying it; advanced system workflows are less forgiving than everyday shortcuts.
-- If external hardware or another Mac is involved, set that up first instead of improvising halfway through.
-- If you are troubleshooting, decide what question you are trying to answer before you trigger the feature.
+This is one of the best built-in recovery tools when a Mac will not boot normally but the internal storage is still readable. It is also useful during migrations when direct disk access is faster or simpler than cloud sync, AirDrop, or ad hoc network transfers.
 
-## How it usually works
+## Caveats
 
-1. Start from the relevant system context for System.
-2. Use the documented interaction or entry point: Connect two Macs via USB-C.
-3. Look for the expected result: Boot one holding 'T'. It mounts as an external hard drive on the other.
-4. Exit cleanly once you have the information or behavior you needed.
-
-## Limits and safety
-
-- Advanced system features can vary significantly by Mac model and macOS version.
-- Diagnostic menus often reveal extra data, but they do not automatically fix the underlying problem.
-- Use the extra information to guide the next decision, not just to admire the menu.
-
-## Good to know
-
-Older Macs expose this as Target Disk Mode. Newer Macs can require a different recovery-based flow, so treat this as a hardware- and macOS-version-dependent feature.
+- The exact steps differ between Intel and Apple silicon Macs.
+- Cable quality and protocol support matter more than most people expect.
+- Be deliberate about ejecting the disk cleanly when you are done.

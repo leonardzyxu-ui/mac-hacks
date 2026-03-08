@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Batch Rename is a Finder-side workflow trick for Finder. Find & Replace text or add numbers to all files at once. These are not deep system hacks so much as features hiding in plain sight, and the main win is knowing that Finder can already do more than many people assume.
-
-## Reference
-
-`Select multiple files > Right Click > Rename`
+Finder's Batch Rename tool lets you rename multiple files in one pass. Instead of opening every file name manually, you can replace text, add sequence numbers, or apply a consistent naming pattern across the whole selection.
 
 ## How to use it
 
-1. Open Finder and go to the file or folder context where the feature makes sense.
-2. Use the relevant menu path or interaction: Select multiple files > Right Click > Rename.
-3. Confirm the result: Find & Replace text or add numbers to all files at once.
-4. Repeat it once or twice so you remember where Apple hid it.
+1. Select the group of files in Finder.
+2. Open the Rename command from the contextual menu.
+3. Choose the rename mode that fits the job.
+4. Preview the pattern and confirm it.
 
-## Why it is useful
+## Why it matters
 
-- It keeps more of your file-management workflow inside Finder instead of pushing you to separate utilities.
-- It helps when the same organization or search task comes up repeatedly.
-- It turns a hidden capability into something you can deliberately reach for again later.
+Batch Rename is useful for screenshots, imports from cameras, scanned documents, downloaded assets, and any other file set that arrives with chaotic names. It is one of the easiest ways to make a messy folder usable.
 
-## Limits
+## Caveats
 
-- These features still depend on the current Finder window, selection, or search context.
-- Some Finder tools look obvious only after you have seen them once; until then they are easy to miss.
-- Folder metadata, tags, and smart views are only useful if you keep using them consistently.
+- Naming mistakes scale quickly when you apply them to many files at once.
+- Preview the pattern before confirming.
+- If file order matters, make sure Finder is sorted the way you expect before numbering anything.

@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Switch Apps is a system-level shortcut for System. Hold Cmd and tap Tab to quickly cycle through your open applications. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + Tab` opens the app switcher and cycles through running applications. It is one of the central navigation shortcuts on macOS because it moves at the app level rather than the window level.
 
-## Shortcut
+## How to use it
 
-`Cmd + Tab`
+1. Hold `Cmd`.
+2. Tap `Tab` to move through the app icons.
+3. Release `Cmd` when the app you want is highlighted.
+4. If needed, keep holding `Cmd` and use the arrow keys for more deliberate selection.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Tab`.
-4. Confirm the result: Hold Cmd and tap Tab to quickly cycle through your open applications.
+App switching is faster than mousing to the Dock when your hands are already on the keyboard. It is especially valuable when you are bouncing between a small set of apps repeatedly throughout the day.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- `Cmd + Tab` switches apps, not specific windows inside an app.
+- If an app has no visible windows, it can still appear in the switcher.
+- For multiple windows inside the same app, use the same-app window cycle shortcut instead.

@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Emoji Picker is a system-level shortcut for System. Opens the emoji and symbol picker anywhere you can type text. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Ctrl + Cmd + Space` opens the macOS emoji and symbols picker anywhere text input is supported. It is not just for emoji. It is also a convenient way to insert arrows, accented characters, currency symbols, punctuation variants, and other uncommon glyphs without memorizing character codes.
 
-## Shortcut
+## How to use it
 
-`Ctrl + Cmd + Space`
+1. Place the cursor in a text field.
+2. Press `Ctrl + Cmd + Space`.
+3. Search or browse for the symbol you want.
+4. Click or press Return to insert it.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Press `Ctrl + Cmd + Space`.
-4. Confirm the result: Opens the emoji and symbol picker anywhere you can type text.
+The picker is useful whenever you write in apps that need more than basic ASCII. It saves time in chat, docs, naming, notes, and light design work because you do not have to go hunting through menus or web searches for a single symbol.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- It depends on text focus, so it will not help outside an editable field.
+- Some apps accept symbol input better than others.
+- If you overuse it, the result can feel slower than learning a few high-frequency replacements or text shortcuts.

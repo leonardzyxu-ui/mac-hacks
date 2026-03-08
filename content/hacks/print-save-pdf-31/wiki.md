@@ -1,26 +1,20 @@
-## What it captures
+## Overview
 
-Print / Save PDF is a capture shortcut for System. Opens print dialog. Click the small 'PDF' arrow at the bottom to save as a file. These shortcuts matter because macOS screenshot and print tools are already good; the real trick is learning the exact gesture that gets the right output the first time.
+`Cmd + P` opens the print dialog, but on macOS that dialog is also a document-export tool. The PDF menu inside it lets you save many printable pages as PDFs without needing a separate conversion workflow.
 
-## Shortcut
+## How to use it
 
-`Cmd + P`
+1. Open the page, document, or app view you want to export.
+2. Press `Cmd + P`.
+3. In the print dialog, open the PDF menu near the bottom.
+4. Choose Save as PDF and write the file where you want it.
 
-## Capture flow
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Press `Cmd + P`.
-4. Confirm the result: Opens print dialog. Click the small 'PDF' arrow at the bottom to save as a file.
+This is one of the most useful built-in Mac workflows for archiving receipts, preserving a webpage, exporting a reference document, or sharing something in a stable read-only format. Many apps support it because they already support printing.
 
-## Why it is worth remembering
+## Caveats
 
-- It is faster than opening a separate capture app or moving screenshots around afterward.
-- It helps when you are documenting a bug, sending visual context, or archiving something that is only visible on screen for a moment.
-- It reduces the amount of cleanup needed after the capture because you are choosing the right mode up front.
-
-## Practical caveats
-
-- Make sure you are using the right capture mode before you start dragging or clicking.
-- The save location, file format, and shadow behavior can change if you have already customized macOS screenshot defaults.
-- Timed captures, recording, and PDF export each solve a slightly different problem, so use the mode that matches the output you actually need.
+- The output is only as good as the app's print view.
+- Some interactive or dynamic web content does not print cleanly.
+- If you actually want paper, make sure you do not reflexively save a PDF instead of sending the job to a printer.

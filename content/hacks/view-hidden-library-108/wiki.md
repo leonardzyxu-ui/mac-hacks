@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-View Hidden Library is a Finder-side workflow trick for Finder. The hidden 'Library' folder appears. These are not deep system hacks so much as features hiding in plain sight, and the main win is knowing that Finder can already do more than many people assume.
-
-## Reference
-
-`In Finder, click 'Go' in the menu bar and hold 'Option'`
+Holding Option in Finder's Go menu reveals the hidden Library folder in your home directory. This is one of the classic Mac power-user moves because the Library folder contains application support files, preferences, caches, and other useful but sensitive internals.
 
 ## How to use it
 
-1. Open Finder and go to the file or folder context where the feature makes sense.
-2. Use the relevant menu path or interaction: In Finder, click 'Go' in the menu bar and hold 'Option'.
-3. Confirm the result: The hidden 'Library' folder appears.
-4. Repeat it once or twice so you remember where Apple hid it.
+1. Open Finder.
+2. Click Go in the menu bar.
+3. Hold Option.
+4. Choose Library from the menu when it appears.
 
-## Why it is useful
+## Why it matters
 
-- It keeps more of your file-management workflow inside Finder instead of pushing you to separate utilities.
-- It helps when the same organization or search task comes up repeatedly.
-- It turns a hidden capability into something you can deliberately reach for again later.
+This is useful when troubleshooting an app, editing user-level support files, reaching caches, or following technical instructions that refer to `~/Library` explicitly.
 
-## Limits
+## Caveats
 
-- These features still depend on the current Finder window, selection, or search context.
-- Some Finder tools look obvious only after you have seen them once; until then they are easy to miss.
-- Folder metadata, tags, and smart views are only useful if you keep using them consistently.
+- The Library folder is hidden for good reasons.
+- Many of the files inside are not meant for casual editing.
+- Go there when you have a purpose, not because hidden folders are automatically interesting.

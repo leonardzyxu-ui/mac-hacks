@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Close Window is a system-level shortcut for System. Closes the current window (tabs/documents) but keeps the app running in the dock. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + W` closes the current window, tab, or document in many Mac apps. It is one of the most common shortcuts on the platform, and it is important mainly because it does not usually quit the entire app.
 
-## Shortcut
+## How to use it
 
-`Cmd + W`
+1. Focus the window or tab you want to close.
+2. Press `Cmd + W`.
+3. Save changes if the app prompts you.
+4. Keep the app open for the next task if needed.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + W`.
-4. Confirm the result: Closes the current window (tabs/documents) but keeps the app running in the dock.
+This shortcut is the standard way to dismiss the thing you are done with while keeping the rest of the app alive. In browsers, it closes tabs. In document apps, it closes the current document window. In Finder, it closes the current Finder window.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- It is easy to confuse with `Cmd + Q`, which usually quits the whole app.
+- Unsaved document changes may trigger a save prompt.
+- Some apps interpret window, tab, and document closure slightly differently.

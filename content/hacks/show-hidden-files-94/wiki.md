@@ -1,26 +1,20 @@
-## In Finder
+## Overview
 
-Show Hidden Files is a Finder shortcut for Finder. Toggles visibility of system files (like .gitignore or .DS_Store). The value here is speed inside an already-open file workflow: picking the right item, triggering the command, and moving on without navigating extra menus.
-
-## Shortcut
-
-`Cmd + Shift +`
+`Cmd + Shift + .` toggles hidden files in Finder. That includes dotfiles such as `.gitignore` as well as many system files and folders that macOS normally keeps out of the way. It is a visibility toggle, not a permanent settings change you have to hunt down later.
 
 ## How to use it
 
-1. Open Finder or put focus on the window where you want the action to happen.
-2. Select the text, file, object, or field the shortcut should act on.
-3. Press `Cmd + Shift +`.
-4. Confirm the result: Toggles visibility of system files (like .gitignore or .DS_Store).
+1. Open Finder.
+2. Go to the folder where you want to inspect hidden content.
+3. Press `Cmd + Shift + .`.
+4. Press it again when you want Finder to return to the cleaner default view.
 
-## Why people keep this one
+## Why it matters
 
-- It cuts down on extra clicks in file-heavy workflows.
-- It works well when you already know which file or folder you want to act on.
-- It helps keep Finder feeling like a fast browser for files instead of a slow control panel.
+This shortcut is useful when you need to inspect project files, troubleshoot configuration issues, or reach system-adjacent content that is intentionally hidden from casual browsing. It is much better than leaving hidden files on all the time if you only need them occasionally.
 
-## Things to watch
+## Caveats
 
-- Most Finder shortcuts operate on the currently highlighted item or the currently active Finder window, so selection matters.
-- If you trigger the shortcut from the wrong app, nothing useful will happen because the command is Finder-specific.
-- Hidden files, deep paths, and renamed items can still behave differently from normal visible documents, so verify the target before committing.
+- Hidden files are hidden for a reason. Many of them are not meant to be edited casually.
+- The toggle affects Finder visibility, not the underlying file permissions.
+- If the folder suddenly looks chaotic, that usually means the shortcut worked exactly as intended.

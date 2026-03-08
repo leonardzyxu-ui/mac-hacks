@@ -1,30 +1,20 @@
-## What it does
+## Overview
 
-WiFi Details is an advanced system feature or diagnostic view for System. Shows advanced stats like IP Address, Noise Level, and Router Channel. These entries are useful because they surface deeper system information or boot-time behavior that ordinary settings screens do not expose directly.
+Holding `Option` while clicking the Wi-Fi menu reveals a more technical status view. That panel can show the current network name, channel, security type, IP-related details, RSSI, noise, transmit rate, and other values that help explain whether a connection is merely present or actually healthy.
 
-## Reference
+## How to use it
 
-`Hold Option + Click WiFi Icon`
+1. Join the Wi-Fi network you want to inspect.
+2. Hold `Option`.
+3. Click the Wi-Fi control in the menu bar or Control Center.
+4. Read the extra fields and use them to diagnose the specific issue you are seeing.
 
-## Before you use it
+## Why it matters
 
-- Read the full description once before trying it; advanced system workflows are less forgiving than everyday shortcuts.
-- If external hardware or another Mac is involved, set that up first instead of improvising halfway through.
-- If you are troubleshooting, decide what question you are trying to answer before you trigger the feature.
+This menu is useful when the connection feels slow, unstable, or inconsistent even though the Wi-Fi icon looks normal. A weak signal, noisy channel, poor transmit rate, or bad router choice becomes much easier to spot when you can see the numbers instead of relying on guesswork.
 
-## How it usually works
+## Caveats
 
-1. Start from the relevant system context for System.
-2. Use the documented interaction or entry point: Hold Option + Click WiFi Icon.
-3. Look for the expected result: Shows advanced stats like IP Address, Noise Level, and Router Channel.
-4. Exit cleanly once you have the information or behavior you needed.
-
-## Limits and safety
-
-- Advanced system features can vary significantly by Mac model and macOS version.
-- Diagnostic menus often reveal extra data, but they do not automatically fix the underlying problem.
-- Use the extra information to guide the next decision, not just to admire the menu.
-
-## Good to know
-
-The exact fields shown in the expanded Wi-Fi menu can shift across macOS releases, but the pattern stays the same: Option-click reveals the technical view.
+- The menu gives context, not a verdict. You still need to interpret what the numbers mean.
+- Channel quality and interference can change throughout the day.
+- Exact labels vary across macOS versions and hardware.

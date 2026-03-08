@@ -1,30 +1,19 @@
-## In the browser
+## Overview
 
-Chrome Quit is a browser-focused shortcut for Chrome. Chrome requires a 'slow' quit to prevent accidents. Browser shortcuts are most valuable when you are juggling tabs, links, search terms, and reading context faster than the pointer can keep up.
+Chrome treats quitting differently from many Mac apps. Instead of exiting immediately on a quick `Cmd + Q`, it can require a brief hold or a second press so you do not accidentally close an entire browser session when you only meant to close one tab or one window.
 
-## Shortcut
+## How to use it
 
-`Cmd + Q (or press Q twice)`
+1. Focus Chrome.
+2. Hold `Cmd + Q` long enough for Chrome to accept the quit, or use the app's configured quit-confirmation behavior.
+3. Let Chrome close the full application instead of just the active tab.
 
-## Fast workflow
+## Why it matters
 
-1. Open Chrome or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Q (or press Q twice)`.
-4. Confirm the result: Chrome requires a 'slow' quit to prevent accidents.
+This small bit of friction prevents expensive mistakes. Browser sessions tend to hold a lot of context, and accidentally killing the whole app is far more disruptive than closing a tab. Chrome's slower quit behavior is meant to protect that session.
 
-## Good times to use it
+## Caveats
 
-- when several tabs or windows are open and you want the browser to respond immediately
-- when you are researching, comparing pages, or recovering something you just closed
-- when the browser menu has the action but reaching for it would break your flow
-
-## Limits and gotchas
-
-- Make sure the browser window itself is focused; the same keys can do something else inside web apps or form fields.
-- Some browser shortcuts are shared between Chrome and Safari, but not every tab or window behavior is identical.
-- Chrome intentionally adds friction here, so do not expect an instant quit on the first accidental tap.
-
-## Good to know
-
-Chrome delays quitting on purpose so a stray `Cmd + Q` does not wipe out an entire browsing session while you meant to hit `Cmd + W`.
+- This behavior is Chrome-specific, not a general macOS rule.
+- If session restore is disabled or incomplete, an accidental quit can still be annoying.
+- If you actually want to close only the current tab or window, use `Cmd + W` instead.

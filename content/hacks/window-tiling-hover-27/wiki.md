@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Window Tiling (Hover) is a system workflow trick for System. Choose 'Tile Window to Left/Right' for split screen. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Hover over the green maximize button (top left)`
+Hovering over the green window button exposes macOS tiling options without forcing you to memorize a separate shortcut. It is the easiest built-in way to put two apps side by side for comparison, reference work, or focused multitasking.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for System.
-2. Use the interaction described by the hack: Hover over the green maximize button (top left).
-3. Confirm the result: Choose 'Tile Window to Left/Right' for split screen.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Move the pointer over the green button in the top-left corner of a window.
+2. Wait for the tile options to appear.
+3. Choose the left or right position you want.
+4. Select the second app to fill the remaining space.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+Split layouts are useful for writing against source material, dragging data between two apps, following instructions while working, or keeping chat beside a main task. The hover menu matters because it makes tiling discoverable for people who never remember window-management shortcuts.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- App behavior varies. Some windows or web apps do not tile as cleanly as native document windows.
+- Full-screen style tiling changes the workspace more aggressively than simple manual resizing.
+- If you only need a quick glance, dragging windows manually may still be faster.

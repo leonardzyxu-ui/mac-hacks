@@ -1,31 +1,20 @@
-## What this setting does
+## Overview
 
-Quick Note is a settings-driven feature for System. Move mouse there to instantly create a Note (often links to current website). The value here is persistence: you change the system once, and the new behavior stays available in later sessions until you change it back.
+Quick Note turns a hot corner into a fast note capture tool. The idea is simple: move to the configured corner, and a new note appears without the usual friction of opening Notes manually first.
 
-## Where Apple put it
+## How to use it
 
-`Desktop & Dock → Hot Corners… → Bottom Right: Quick Note`
+1. Assign Quick Note to a Hot Corner in settings.
+2. Move the pointer into that corner when you want to capture something quickly.
+3. Type the note or save the reference.
+4. Return to your previous task without a long context switch.
 
-## How to enable it
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `Desktop & Dock → Hot Corners… → Bottom Right: Quick Note`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Move mouse there to instantly create a Note (often links to current website).
+Quick Note is useful because note capture often fails at the moment of friction. If getting into Notes takes too long, the thought is gone. This feature lowers that barrier and makes short-lived ideas easier to save.
 
-## When it is worth turning on
+## Caveats
 
-- when you want the behavior often enough that a one-time settings change beats a repeated manual workaround
-- when the feature matches how you actually use the Mac rather than how Apple expects a default user to work
-- when you are willing to live with the new behavior as an ongoing preference instead of a one-off experiment
-
-## What to keep in mind
-
-- Settings locations can shift across macOS releases even when the feature survives.
-- Persistent toggles are easy to forget later, so it helps to remember the panel where you enabled them.
-- If the feature interacts with nearby devices, accounts, or continuity services, those surrounding conditions still matter.
-
-## Compatibility notes
-
-- Minimum version noted by the repo: macOS 12.0.
-- Quick Note is available in macOS Monterey (12) or later. On macOS 12, the path is typically Desktop & Screen Saver → Hot Corners…; on macOS 13+, it is Desktop & Dock → Hot Corners…
+- It depends on Hot Corner behavior, so accidental triggers are possible.
+- The feature is only valuable if you actually revisit the captured notes later.
+- Availability and exact settings path can vary by macOS version.

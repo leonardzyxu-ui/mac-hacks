@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Tags is a Finder-side workflow trick for Finder. You can then search for 'Red' to find them all. These are not deep system hacks so much as features hiding in plain sight, and the main win is knowing that Finder can already do more than many people assume.
-
-## Reference
-
-`Right-click files to assign colored tags (Red, Blue)`
+Finder tags add lightweight metadata to files and folders so you can group them by meaning instead of only by location. That makes tags a different kind of organization tool from folders: the same file can stay where it belongs physically while also being marked conceptually.
 
 ## How to use it
 
-1. Open Finder and go to the file or folder context where the feature makes sense.
-2. Use the relevant menu path or interaction: Right-click files to assign colored tags (Red, Blue).
-3. Confirm the result: You can then search for 'Red' to find them all.
-4. Repeat it once or twice so you remember where Apple hid it.
+1. Select a file or folder in Finder.
+2. Apply one or more tags from the contextual menu or Finder controls.
+3. Search or browse by tag later.
+4. Reuse the same small tag vocabulary consistently.
 
-## Why it is useful
+## Why it matters
 
-- It keeps more of your file-management workflow inside Finder instead of pushing you to separate utilities.
-- It helps when the same organization or search task comes up repeatedly.
-- It turns a hidden capability into something you can deliberately reach for again later.
+Tags are useful for cross-cutting groups such as "urgent," "to review," "client," or "archive candidate." They help when one strict folder hierarchy is not enough to express how you think about the files.
 
-## Limits
+## Caveats
 
-- These features still depend on the current Finder window, selection, or search context.
-- Some Finder tools look obvious only after you have seen them once; until then they are easy to miss.
-- Folder metadata, tags, and smart views are only useful if you keep using them consistently.
+- Tags only pay off if you use them consistently.
+- Too many tags become noise quickly.
+- A small, deliberate system works better than tagging everything impulsively.

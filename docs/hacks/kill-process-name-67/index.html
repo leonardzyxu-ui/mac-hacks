@@ -91,23 +91,19 @@
           <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
-              <a href="#what-it-does" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What it does</a><a href="#exact-command" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Exact command</a><a href="#running-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Running it</a><a href="#why-it-is-useful" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why it is useful</a><a href="#read-the-result-carefully" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Read the result carefully</a><a href="#undo-or-exit" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or exit</a>
+              <a href="#overview" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Overview</a><a href="#how-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to use it</a><a href="#why-it-matters" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why it matters</a><a href="#caveats" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Caveats</a>
             </nav>
           </div>
         </aside>
       <article class="wiki-content">
-        <h2 id="what-it-does">What it does</h2>
-<p>Kill Process Name is a Terminal utility command for Terminal. Instantly force closes the specified application. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.</p>
-<h2 id="exact-command">Exact command</h2>
-<pre><code class="language-sh">pkill [App Name]</code></pre>
-<h2 id="running-it">Running it</h2>
-<ol><li>Open Terminal.</li><li>Paste or type <code>pkill [App Name]</code>.</li><li>Press Return to run it.</li><li>Check the outcome described by the hack: Instantly force closes the specified application.</li></ol>
-<h2 id="why-it-is-useful">Why it is useful</h2>
-<ul><li>It is often faster than clicking through multiple panels to get the same answer or result.</li><li>It gives you an exact command you can repeat later, document, or paste into notes for the same task.</li><li>It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.</li></ul>
-<h2 id="read-the-result-carefully">Read the result carefully</h2>
-<ul><li>Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.</li><li>If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.</li><li>If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.</li></ul>
-<h2 id="undo-or-exit">Undo or exit</h2>
-<ul><li>If the command changes a preference, revert the same preference directly.</li><li>If it only runs for the current session, stop the process or close Terminal when you are done.</li></ul>
+        <h2 id="overview">Overview</h2>
+<p><code>pkill</code> lets you terminate a process by name instead of hunting for its process ID first. It is the fast command-line way to stop a stuck or misbehaving app when you already know what the process is called.</p>
+<h2 id="how-to-use-it">How to use it</h2>
+<ol><li>Open Terminal.</li><li>Run <code>pkill</code> with the exact process or app name.</li><li>Confirm that the app or process exits.</li><li>Reopen the app if you were using this as a reset.</li></ol>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>This is faster than browsing a long process list when the target is obvious. It is useful for restarting stubborn apps, clearing background helpers, or quickly ending a process during troubleshooting.</p>
+<h2 id="caveats">Caveats</h2>
+<ul><li>Process names must match what the system expects.</li><li>Killing the wrong process can interrupt more than you intended.</li><li>Unsaved app state can be lost if you use it as a forced exit path.</li></ul>
       </article>
     </div>
   </section>

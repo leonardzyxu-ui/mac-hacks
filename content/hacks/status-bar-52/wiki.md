@@ -1,25 +1,20 @@
-## What this changes in Finder
+## Overview
 
-Status Bar is a Finder presentation setting for Finder. Displays item count and remaining disk space at the bottom. These settings are small, but they matter because Finder is an always-open part of the system; one useful visibility tweak pays off every time you browse files afterward.
+The Finder Status Bar shows lightweight information such as item counts and available disk space at the bottom of the window. It is a small interface detail, but it adds useful feedback without forcing you to open Get Info repeatedly.
 
-## Where Apple put it
+## How to use it
 
-`Finder > View > Show Status Bar`
+1. Open Finder.
+2. Enable the Status Bar from the View menu.
+3. Look at the bottom edge of the window for item counts and storage information.
+4. Leave it on if that context helps your day-to-day file work.
 
-## Turn it on
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `Finder > View > Show Status Bar`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Displays item count and remaining disk space at the bottom.
+The Status Bar is useful when sorting folders, checking whether a selection actually grabbed the right number of items, or keeping a light eye on available storage while moving files around.
 
-## Why people keep it enabled
+## Caveats
 
-- It makes file navigation more legible without changing your folder structure.
-- It reduces the amount of guessing while browsing nested folders or checking available space.
-- It is the sort of Finder tweak that becomes invisible in the best way once it is on.
-
-## When to turn it back off
-
-- If you prefer a cleaner Finder window with less footer information, this is easy to undo.
-- If the extra interface chrome feels noisy on a small display, that is a reasonable reason to disable it again.
+- The information is intentionally lightweight, not a full inspector panel.
+- It takes up a little vertical space in the Finder window.
+- If you almost never care about counts or free space, it may not justify the visual clutter.

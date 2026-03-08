@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Volume Fine Tuning is a system-level shortcut for System. Adjusts volume in tiny 1/4 increments for perfect audio control. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Option + Shift` with the volume keys adjusts output in smaller steps than the normal volume controls. On a Mac, that is the difference between "roughly right" and "actually right," especially when the normal volume jumps feel too coarse.
 
-## Shortcut
+## How to use it
 
-`Option + Shift + Volume Keys`
+1. Hold `Option + Shift`.
+2. Press the volume up or down key.
+3. Watch or listen for the smaller adjustment step.
+4. Repeat until the level feels right.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Option + Shift + Volume Keys`.
-4. Confirm the result: Adjusts volume in tiny 1/4 increments for perfect audio control.
+Fine-grained volume control is useful with headphones, quiet rooms, low-level background audio, and situations where one normal volume notch is too much. It gives you a little more control without opening Sound settings.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- The exact feedback depends on your keyboard and current macOS audio setup.
+- External audio devices may have their own volume behavior.
+- If the output level is being controlled elsewhere, the Mac-level adjustment may not be the whole story.

@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Change Screenshot Type is a Terminal tweak for Terminal. Saves screenshots as smaller JPGs instead of PNGs. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+This command changes the default screenshot file type, for example from PNG to JPG. That is mostly a tradeoff between quality and convenience: PNG is cleaner for text and UI, while JPG is usually smaller and easier to move around casually.
 
-## Exact command
+## How to use it
 
-```sh
-defaults write com.apple.screencapture type jpg
-```
+1. Run the screenshot-type command in Terminal.
+2. Restart the relevant screenshot service if the command requires it.
+3. Take a new screenshot.
+4. Confirm that the file extension and quality match the new default.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `defaults write com.apple.screencapture type jpg`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Saves screenshots as smaller JPGs instead of PNGs.
+File format changes are useful when your screenshots are mostly for quick sharing rather than archival quality. Smaller files can be easier to upload, attach, and store when you generate a lot of them.
 
-## What changes afterward
+## Caveats
 
-Commands built around `defaults write` usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.
-
-Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- JPG is smaller, but it is lossy.
+- PNG is usually better for interface screenshots with sharp edges and text.
+- If you switch formats and forget, later screenshots may not match the assumptions of your workflow.

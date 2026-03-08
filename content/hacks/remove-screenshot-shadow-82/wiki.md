@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Remove Screenshot Shadow is a Terminal tweak for Terminal. Removes the drop shadow from window captures. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+Removing screenshot shadows strips the default drop shadow from future window captures. It is effectively the same idea as disabling window shadows for screenshots: cleaner edges, flatter assets, and less post-processing when you use screenshots in designed materials.
 
-## Exact command
+## How to use it
 
-```sh
-defaults write com.apple.screencapture disable-shadow -bool TRUE
-```
+1. Run the relevant screenshot-shadow command in Terminal.
+2. Restart the screenshot service if required.
+3. Capture a window screenshot.
+4. Compare the result with the old shadowed style.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `defaults write com.apple.screencapture disable-shadow -bool TRUE`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Removes the drop shadow from window captures.
+This tweak is useful when screenshots are part of polished documentation, product pages, tutorials, or image composites where the default shadow makes elements look misaligned or too "floating."
 
-## What changes afterward
+## Caveats
 
-Commands built around `defaults write` usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.
-
-Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- This is a style preference, not a functional improvement.
+- It only affects future captures.
+- If you like the standard macOS look, the default shadow may actually be the better choice.

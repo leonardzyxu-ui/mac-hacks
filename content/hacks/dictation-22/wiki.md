@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Dictation is a system-level shortcut for System. Starts the microphone so you can type with your voice. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+Dictation starts voice input so your speech is turned into text. On a Mac this is useful both as an accessibility feature and as a practical speed tool when typing is inconvenient, repetitive, or physically tiring.
 
-## Shortcut
+## How to use it
 
-`Fn + F5)`
+1. Place the cursor in a text field.
+2. Trigger Dictation with your configured key, such as `F5` or `Fn + F5`.
+3. Speak clearly and pause naturally.
+4. Stop dictation when you are done and edit the result.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Fn + F5)`.
-4. Confirm the result: Starts the microphone so you can type with your voice.
+Dictation is good for rough drafting, quick note capture, filling long fields, and reducing the amount of typing required for repetitive text. It is often faster to speak a first pass and then edit than to type the whole thing from scratch.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- Good microphone quality and a quiet environment help a lot.
+- Proper nouns, punctuation, and technical vocabulary may need cleanup.
+- Dictation depends on the correct text field being active before you start.

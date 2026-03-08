@@ -1,25 +1,20 @@
-## In the browser
+## Overview
 
-Chrome History is a browser-focused shortcut for Chrome. Instantly opens your Chrome browsing history page. History shortcuts are less about nostalgia and more about recovery: finding a page you saw earlier, retracing research, or reopening something you forgot to bookmark.
+`Cmd + Y` jumps straight to Chrome's History page. That page is the browser's memory: where you were, what you opened earlier, and what you might need to recover when a tab is gone and Reopen Closed Tab is no longer enough.
 
-## Shortcut
+## How to use it
 
-`Cmd + Y`
+1. Focus Google Chrome.
+2. Press `Cmd + Y`.
+3. Search or scroll through the history list.
+4. Reopen the page you were trying to find.
 
-## Fast workflow
+## Why it matters
 
-1. Open Chrome or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Y`.
-4. Confirm the result: Instantly opens your Chrome browsing history page.
+History becomes useful whenever the browsing session is larger than your immediate memory. It is good for finding a page from earlier in the day, retracing research, or recovering something you forgot to bookmark.
 
-## Good times to use it
+## Caveats
 
-- when several tabs or windows are open and you want the browser to respond immediately
-- when you are researching, comparing pages, or recovering something you just closed
-- when the browser menu has the action but reaching for it would break your flow
-
-## Limits and gotchas
-
-- Make sure the browser window itself is focused; the same keys can do something else inside web apps or form fields.
-- Some browser shortcuts are shared between Chrome and Safari, but not every tab or window behavior is identical.
+- This is Chrome-specific. Safari uses a different history view and workflow.
+- History is only as complete as your browsing mode allows. Incognito windows do not feed it the same way.
+- If you are signed into synced Chrome, history can include more than the current window or session.

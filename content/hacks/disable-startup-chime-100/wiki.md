@@ -1,33 +1,20 @@
-## What the command changes
+## Overview
 
-Disable Startup Chime is a Terminal tweak for Terminal. Permanently mutes the iconic Mac startup sound. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.
+Disabling the startup chime changes the Mac's boot behavior so it starts silently instead of playing the classic startup sound. This is mostly a comfort and environment tweak rather than a productivity feature.
 
-## Exact command
+## How to use it
 
-```sh
-sudo nvram SystemAudioVolume=%80
-```
+1. Run the NVRAM command with administrator privileges.
+2. Restart the Mac.
+3. Listen for the next startup.
+4. Re-enable the sound later if you change your mind.
 
-## Safe way to run it
+## Why it matters
 
-1. Open Terminal.
-2. Paste or type `sudo nvram SystemAudioVolume=%80`.
-3. Read the full command one more time before pressing Return.
-4. Check the outcome described by the hack: Permanently mutes the iconic Mac startup sound.
+This tweak is useful on shared desks, in quiet rooms, during late-night restarts, or on machines that reboot more often than you want to advertise. It is a small preference, but it can make a Mac feel less noisy in the background of real life.
 
-## What changes afterward
+## Caveats
 
-This command changes behavior at the system or app level, so the result can outlast the Terminal window you used to trigger it.
-
-Because this tweak crosses into higher-risk territory, read the full command carefully and know how you would restore the old behavior before you press Return.
-
-## What to watch for
-
-- If the command includes `killall`, the named app or service will restart as part of the change.
-- Preference tweaks can appear to do nothing until the affected app or service is reopened.
-- Do not run a privileged tweak casually just because it is short.
-
-## Undo or revert
-
-- Treat this as something you understand before you run it, because the rollback path may be limited or manual.
-- If the hack affects a system preference, reapply the opposite setting or return the system to its previous state as directly as possible.
+- This changes startup behavior at a low system level.
+- NVRAM-related tweaks deserve more care than ordinary app settings.
+- On some Macs and OS versions, related startup sound behavior may already be handled differently by the system.

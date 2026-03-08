@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Minimize All Windows is a system-level shortcut for System. Minimizes ALL windows of the current app. (Hold Shift to see it in slow motion!). Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + Option + M` minimizes all windows for the current app. This is different from hiding the app entirely and different from minimizing just one window. It is the "clear this app off the desktop for now" command.
 
-## Shortcut
+## How to use it
 
-`Cmd + Option + M`
+1. Focus the app whose windows you want to send away.
+2. Press `Cmd + Option + M`.
+3. Look in the Dock for the minimized windows.
+4. Bring them back later by restoring the windows you need.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Option + M`.
-4. Confirm the result: Minimizes ALL windows of the current app. (Hold Shift to see it in slow motion!).
+This is useful when one app has exploded across the screen and you want visual breathing room without quitting it or closing documents. It is a quick decluttering move during multitasking.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- Minimized windows are still open; they are just parked in the Dock.
+- This affects the current app, not everything on the Mac.
+- If you only need one window gone, `Cmd + M` or the yellow minimize button may be the better fit.

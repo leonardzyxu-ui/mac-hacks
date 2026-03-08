@@ -1,33 +1,20 @@
-## What it does
+## Overview
 
-Check File Size is a Terminal utility command for Terminal. Calculates and displays the total size of a specific folder. Unlike a persistent tweak, the point here is usually to inspect something, run a one-off action, or create a result on demand and then move on.
+Using `du -sh` in Terminal gives you a quick human-readable size total for a folder or file path. It is one of the fastest ways to answer "how big is this thing really?" without opening Inspector windows or manually adding up contents.
 
-## Exact command
-
-```sh
-du -sh [folder path]
-```
-
-## Running it
+## How to use it
 
 1. Open Terminal.
-2. Paste or type `du -sh [folder path]`.
-3. Press Return to run it.
-4. Check the outcome described by the hack: Calculates and displays the total size of a specific folder.
+2. Run the size command with the folder or file path you care about.
+3. Read the summarized output.
+4. Compare multiple folders if you are trying to find the space hog.
 
-## Why it is useful
+## Why it matters
 
-- It is often faster than clicking through multiple panels to get the same answer or result.
-- It gives you an exact command you can repeat later, document, or paste into notes for the same task.
-- It is a good fit for diagnostics, quick exports, simple downloads, or targeted process control.
+This is useful when cleaning storage, checking whether a project directory is too large, understanding why a backup is slow, or verifying whether a media folder is bigger than expected.
 
-## Read the result carefully
+## Caveats
 
-- Terminal commands usually tell you what happened in plain output, so read the response instead of guessing.
-- If the hack is only meant for the current session, closing the process or stopping the command is part of normal use.
-- If nothing seems to change, confirm you ran the command in the intended directory, shell, or context.
-
-## Undo or exit
-
-- If the command changes a preference, revert the same preference directly.
-- If it only runs for the current session, stop the process or close Terminal when you are done.
+- The command only knows the path you give it.
+- Deep or large folders can take a moment to calculate.
+- A summarized size is convenient, but if you need file-by-file detail, a different command is better.

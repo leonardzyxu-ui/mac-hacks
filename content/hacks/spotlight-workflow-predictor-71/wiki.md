@@ -1,30 +1,20 @@
-## What it controls
+## Overview
 
-Spotlight Workflow Predictor is a system-level keyboard-led action for Spotlight. Spotlight AI sets up your window layout and playlists. (Tahoe Exclusive). Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+This Tahoe-specific Spotlight feature is described in the repo as an AI workflow trigger: type a phrase such as `Work` or `Relax`, and Spotlight prepares a matching setup such as windows and playlists. If your build of macOS includes it, the idea is not just search but environment setup.
 
-## Reference
+## How to use it
 
-`Type 'Work' or 'Relax'`
+1. Open Spotlight.
+2. Type the workflow phrase your Mac recognizes, such as `Work` or `Relax`.
+3. Review the suggested setup before confirming it.
+4. Let Spotlight apply the layout or associated actions if the result matches what you wanted.
 
-## How to trigger it
+## Why it matters
 
-1. Open Spotlight or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Type 'Work' or 'Relax'.
-4. Confirm the result: Spotlight AI sets up your window layout and playlists. (Tahoe Exclusive).
+If it works the way the feature intends, it turns Spotlight from a launcher into a context switcher. That is useful when the same clusters of apps, windows, and media repeat often enough that setting them up by hand becomes tedious.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
-
-## Compatibility notes
-
-- This entry is marked as Tahoe-specific, so do not expect it on older macOS releases.
+- This appears to be Tahoe-only behavior, so do not expect it on older macOS versions.
+- AI-driven setup features are only useful if the suggested arrangement is actually predictable.
+- Treat it as an accelerator for repeated routines, not as a replacement for understanding your own window layout.

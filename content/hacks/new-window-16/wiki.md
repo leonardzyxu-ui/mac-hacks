@@ -1,25 +1,20 @@
-## In the browser
+## Overview
 
-New Window is a browser-focused shortcut for Chrome, Safari, Finder. Opens a completely new window instance for the active application. Browser shortcuts are most valuable when you are juggling tabs, links, search terms, and reading context faster than the pointer can keep up.
+`Cmd + N` opens a completely new window for the active app. In browsers that means a separate browsing window. In Finder it means a new file-browsing window. The difference from New Tab is important: a new window gives you a second top-level workspace that can be moved to another monitor, another desktop space, or another side of the screen.
 
-## Shortcut
+## How to use it
 
-`Cmd + N`
+1. Focus the app you want another window for.
+2. Press `Cmd + N`.
+3. Arrange the new window wherever it is useful.
+4. Use the two windows independently.
 
-## Fast workflow
+## Why it matters
 
-1. Open Chrome, Safari, Finder or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + N`.
-4. Confirm the result: Opens a completely new window instance for the active application.
+New Window is what you use when tabbing is not enough. It is useful for comparison work, dragging between Finder locations, keeping one browser window clean for one task and another for something messy, or splitting contexts across monitors.
 
-## Good times to use it
+## Caveats
 
-- when several tabs or windows are open and you want the browser to respond immediately
-- when you are researching, comparing pages, or recovering something you just closed
-- when the browser menu has the action but reaching for it would break your flow
-
-## Limits and gotchas
-
-- Make sure the browser window itself is focused; the same keys can do something else inside web apps or form fields.
-- Some browser shortcuts are shared between Chrome and Safari, but not every tab or window behavior is identical.
+- More windows also means more clutter, so use tabs instead if separation is not important.
+- Some apps overload `Cmd + N` for a new document rather than a blank window.
+- In Finder, the new window usually opens in your default folder, not necessarily the exact place you were just browsing.

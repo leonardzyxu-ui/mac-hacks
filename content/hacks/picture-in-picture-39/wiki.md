@@ -1,26 +1,20 @@
-## What it is
+## Overview
 
-Picture in Picture is a system workflow trick for Safari. Select 'Picture in Picture' to float the video while you work. The power here is usually in knowing where the feature lives and when it is faster than the obvious click-heavy path.
-
-## Reference
-
-`Right-click a YouTube video TWICE`
+Picture in Picture lets a video float in a small always-on-top window while you work in other apps. On sites like YouTube, the trick is often that the first right-click belongs to the website and the second right-click exposes the browser-level video menu.
 
 ## How to use it
 
-1. Go to the relevant app, window, menu, or desktop context for Safari.
-2. Use the interaction described by the hack: Right-click a YouTube video TWICE.
-3. Confirm the result: Select 'Picture in Picture' to float the video while you work.
-4. Repeat the flow once so the feature is easier to find again later.
+1. Start the video in Safari.
+2. Right-click the video once if the site intercepts the menu.
+3. Right-click again and choose `Picture in Picture`.
+4. Move or resize the floating window while you continue working elsewhere.
 
-## Why people use it
+## Why it matters
 
-- It saves time by avoiding a longer trip through Settings or menus.
-- It exposes a built-in feature many people never notice until someone points it out.
-- It makes a specific repeated task feel more native and less improvised.
+This is useful for tutorials, meetings, commentary videos, sports, or background watching that does not deserve an entire main window. The floating window keeps the content accessible without forcing you to keep a browser tab visible all the time.
 
 ## Caveats
 
-- UI-driven tricks can move around a little between macOS releases even when the feature survives.
-- These hacks depend heavily on being in the right context before you try them.
-- If the feature is not where you expect, search the menu bar or the relevant settings panel before assuming it was removed.
+- Site behavior varies, so the exact interaction is not identical everywhere.
+- A floating video still takes attention, even if it takes less screen space.
+- If the video controls disappear, click the floating window again rather than reopening the whole page.

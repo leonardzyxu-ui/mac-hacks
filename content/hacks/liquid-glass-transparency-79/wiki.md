@@ -1,30 +1,20 @@
-## What this setting does
+## Overview
 
-Liquid Glass Transparency is a settings-driven feature for System. Toggles the advanced 'Tahoe' depth blur effect on window sidebars. The value here is persistence: you change the system once, and the new behavior stays available in later sessions until you change it back.
+This appearance setting controls an advanced transparency or depth-blur style in the newer Tahoe visual language. It is a presentation preference more than a workflow feature, but appearance settings still matter because they change how the system feels all day.
 
-## Where Apple put it
+## How to use it
 
-`Settings > Appearance`
+1. Open Appearance settings.
+2. Find the transparency or depth effect option tied to the Tahoe look.
+3. Toggle it on or off.
+4. Look at sidebars and layered surfaces to decide which version you prefer.
 
-## How to enable it
+## Why it matters
 
-1. Open System Settings.
-2. Navigate to `Settings > Appearance`, or use Settings search to jump there faster.
-3. Change the option deliberately and note the original value first if you might want to revert it later.
-4. Check that the behavior now matches the hack: Toggles the advanced 'Tahoe' depth blur effect on window sidebars.
+Interface feel is subjective. Some people like richer depth and translucency. Others prefer flatter, calmer surfaces. A small appearance toggle can make the system feel either more alive or more readable depending on your taste.
 
-## When it is worth turning on
+## Caveats
 
-- when you want the behavior often enough that a one-time settings change beats a repeated manual workaround
-- when the feature matches how you actually use the Mac rather than how Apple expects a default user to work
-- when you are willing to live with the new behavior as an ongoing preference instead of a one-off experiment
-
-## What to keep in mind
-
-- Settings locations can shift across macOS releases even when the feature survives.
-- Persistent toggles are easy to forget later, so it helps to remember the panel where you enabled them.
-- If the feature interacts with nearby devices, accounts, or continuity services, those surrounding conditions still matter.
-
-## Compatibility notes
-
-- This entry is marked as Tahoe-specific, so do not expect it on older macOS releases.
+- This is cosmetic, not functional.
+- It may only exist on certain macOS versions.
+- Heavy visual effects can sometimes feel distracting even if they look impressive at first.

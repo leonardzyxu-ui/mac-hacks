@@ -1,26 +1,20 @@
-## What it controls
+## Overview
 
-Scroll to Top/Bottom is a system-level shortcut for System. Instantly jumps to the very top or bottom of a document or webpage. Unlike a document-editing shortcut, this kind of command usually changes focus, window state, or a macOS control surface right away, so you feel the result immediately.
+`Cmd + Up Arrow` and `Cmd + Down Arrow` jump to the top or bottom of many documents, pages, and lists on macOS. It is the navigation shortcut for skipping distance instantly instead of scrolling your way there.
 
-## Shortcut
+## How to use it
 
-`Cmd + Up/Down Arrow`
+1. Click into the document, note, page, or list you want to navigate.
+2. Press `Cmd + Up Arrow` to jump to the top.
+3. Press `Cmd + Down Arrow` to jump to the bottom.
+4. Use the line or word movement shortcuts for smaller adjustments after the jump.
 
-## How to trigger it
+## Why it matters
 
-1. Open System or put focus on the window where you want the action to happen.
-2. Make sure the right window or control is focused before pressing the keys.
-3. Press `Cmd + Up/Down Arrow`.
-4. Confirm the result: Instantly jumps to the very top or bottom of a document or webpage.
+This is useful in long webpages, long notes, code files, chat logs, and Finder lists where the exact top or bottom matters more than the material in the middle. It saves time whenever you already know the destination edge.
 
-## When it helps
+## Caveats
 
-- when you want a system action immediately and do not want to search for it with the pointer
-- when you are switching contexts quickly between apps, windows, or built-in macOS controls
-- when the command is easy to forget, but very effective once it becomes muscle memory
-
-## Things to know
-
-- Function-key-based shortcuts can behave differently if your keyboard is set to prefer media keys, which is why some Macs need `Fn` in the mix.
-- Window-management shortcuts depend on the focused app and the currently active window, so context still matters.
-- If nothing happens, verify focus first; most failures here are about context, not broken keys.
+- Exact behavior can vary by app.
+- In some contexts, Page Up and Page Down or trackpad gestures may still be better for partial movement.
+- Make sure the content area itself has focus or the shortcut may be intercepted elsewhere.

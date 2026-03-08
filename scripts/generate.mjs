@@ -12,6 +12,10 @@ const CONTENT_HACKS_DIR = path.join(repoRoot, 'content', 'hacks');
 const OUTPUT_DIR = path.join(repoRoot, 'docs');
 const OUTPUT_ASSETS_DIR = path.join(OUTPUT_DIR, 'assets');
 const OUTPUT_HACKS_DIR = path.join(OUTPUT_DIR, 'hacks');
+const LEGACY_ROOT_INDEX = path.join(repoRoot, 'index.html');
+const LEGACY_ROOT_404 = path.join(repoRoot, '404.html');
+const LEGACY_ROOT_NOJEKYLL = path.join(repoRoot, '.nojekyll');
+const LEGACY_ROOT_HACKS_DIR = path.join(repoRoot, 'hacks');
 
 const CLIENT_FIELDS = [
   'id',
@@ -1222,6 +1226,105 @@ async function loadHackSources() {
   return hacks.sort((a, b) => a.id - b.id);
 }
 
+function renderRedirectPage({ title, description, destination }) {
+  const safeTitle = escapeHtml(title);
+  const safeDescription = escapeHtml(description);
+  const safeDestination = escapeHtml(destination);
+  const destinationJson = JSON.stringify(destination);
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${safeTitle}</title>
+  <meta name="description" content="${safeDescription}" />
+  <meta http-equiv="refresh" content="0; url=${safeDestination}" />
+  <script>
+    const destination = new URL(${destinationJson}, window.location.href);
+    destination.search = window.location.search;
+    destination.hash = window.location.hash;
+    window.location.replace(destination.href);
+  </script>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #020617;
+      color: #e2e8f0;
+    }
+    main {
+      max-width: 42rem;
+      background: rgba(15, 23, 42, 0.82);
+      border: 1px solid rgba(148, 163, 184, 0.2);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+    a {
+      color: #7dd3fc;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>${safeTitle}</h1>
+    <p>${safeDescription}</p>
+    <p><a href="${safeDestination}">Continue to the static site</a></p>
+  </main>
+</body>
+</html>
+`;
+}
+
+async function writeLegacyPagesShims(hacks) {
+  await fs.rm(LEGACY_ROOT_HACKS_DIR, { recursive: true, force: true });
+  await fs.mkdir(LEGACY_ROOT_HACKS_DIR, { recursive: true });
+
+  await fs.writeFile(
+    LEGACY_ROOT_INDEX,
+    renderRedirectPage({
+      title: 'Mac Hacks Dictionary',
+      description:
+        'Redirecting to the generated static site in docs/. This keeps the GitHub Pages root-source deployment working.',
+      destination: './docs/',
+    }),
+    'utf8',
+  );
+
+  await fs.writeFile(
+    LEGACY_ROOT_404,
+    renderRedirectPage({
+      title: 'Mac Hacks Dictionary',
+      description:
+        'This path now lives under docs/. Redirecting you to the generated static site homepage.',
+      destination: './docs/',
+    }),
+    'utf8',
+  );
+
+  await fs.writeFile(LEGACY_ROOT_NOJEKYLL, '', 'utf8');
+
+  await Promise.all(
+    hacks.map((hack) =>
+      fs.writeFile(
+        path.join(LEGACY_ROOT_HACKS_DIR, `${hack.slug}.html`),
+        renderRedirectPage({
+          title: `${hack.title} - Redirect`,
+          description: `Redirecting to the generated static page for ${hack.title}.`,
+          destination: `../docs/hacks/${hack.slug}/`,
+        }),
+        'utf8',
+      ),
+    ),
+  );
+}
+
 async function main() {
   const hacks = await loadHackSources();
 
@@ -1243,6 +1346,8 @@ async function main() {
       await fs.writeFile(path.join(outDir, 'index.html'), renderHackPage(hack, hacks), 'utf8');
     }),
   );
+
+  await writeLegacyPagesShims(hacks);
 
   console.log(`Built static site with ${hacks.length} hack pages in docs/`);
 }

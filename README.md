@@ -34,10 +34,18 @@ This rebuilds `docs/` from:
 
 ## GitHub Pages
 
-Deploy the `docs/` directory. The generated site is fully static:
+The generated site is fully static:
 
 - homepage: `docs/index.html`
 - one page per hack: `docs/hacks/<slug>/index.html`
+
+Recommended setup:
+
+- GitHub Pages source: `main` branch, `/docs` folder
+
+Compatibility fallback:
+
+- If you only have write access and cannot change the repo's Pages settings, `npm run build` also writes root-level redirect shims (`index.html`, `404.html`, and `hacks/*.html`) that forward the current `main:/` Pages configuration into `docs/`.
 
 ## Legacy seed data
 

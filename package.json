@@ -3,7 +3,6 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "fill:wikis": "node scripts/fill-wikis.mjs",
     "build": "node scripts/generate.mjs"
   }
 }

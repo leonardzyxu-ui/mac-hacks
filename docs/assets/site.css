@@ -3,10 +3,29 @@
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 .dark ::-webkit-scrollbar-thumb { background: #334155; }
 
+.wiki-page-shell {
+  max-width: 88rem;
+}
+
+.wiki-detail-layout {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.wiki-sidebar {
+  min-width: 0;
+}
+
+.wiki-sidebar-card {
+  position: static;
+}
+
 .wiki-content {
   color: #334155;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 1.03rem;
+  min-width: 0;
 }
 
 .dark .wiki-content {
@@ -121,4 +140,20 @@
 
 .dark .wiki-content strong {
   color: #f8fafc;
+}
+
+@media (min-width: 1100px) {
+  .wiki-detail-layout {
+    grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .wiki-sidebar-card {
+    position: sticky;
+    top: 1.5rem;
+  }
+
+  .wiki-content {
+    font-size: 1.06rem;
+  }
 }

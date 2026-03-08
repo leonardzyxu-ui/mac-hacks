@@ -1,73 +1,26 @@
-## What this hack does
+## What it is
 
-Batch Rename is a ui-driven macOS hack for Finder. Find & Replace text or add numbers to all files at once. In isolation that may sound small, but this kind of action is exactly the sort of thing that shapes how smooth or clumsy a normal day on a Mac feels.
+Batch Rename is a Finder-side workflow trick for Finder. Find & Replace text or add numbers to all files at once. These are not deep system hacks so much as features hiding in plain sight, and the main win is knowing that Finder can already do more than many people assume.
 
-This hack is tagged Medium and low risk. The risk here is generally low, which shifts the emphasis away from safety and toward consistency. The biggest gain comes from practicing the habit until it becomes the default way you handle that task. File-management tricks matter because they save time every time you sort, rename, move, preview, or recover something in Finder. Batch Rename belongs to the Finder & Files area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.
+## Reference
 
-## Interaction to remember
+`Select multiple files > Right Click > Rename`
 
-The important interaction is: Select multiple files > Right Click > Rename. Keeping that phrasing in mind makes the trick easier to find again later.
+## How to use it
 
-## When to use it
+1. Open Finder and go to the file or folder context where the feature makes sense.
+2. Use the relevant menu path or interaction: Select multiple files > Right Click > Rename.
+3. Confirm the result: Find & Replace text or add numbers to all files at once.
+4. Repeat it once or twice so you remember where Apple hid it.
 
-- Use it when you are sorting, renaming, or previewing files faster in Finder.
-- Use it when you are cleaning up folders without opening extra windows.
-- Use it when you are moving through file-heavy workflows with less clicking.
+## Why it is useful
 
-## Before you start
+- It keeps more of your file-management workflow inside Finder instead of pushing you to separate utilities.
+- It helps when the same organization or search task comes up repeatedly.
+- It turns a hidden capability into something you can deliberately reach for again later.
 
-Before you use Batch Rename, think about the context around it instead of only the action itself. The right window, the right selection, the right permissions, and the right macOS version all matter more than most people expect. That is true for beginner-friendly tricks just as much as it is for professional ones, because the difference between a smooth result and a confusing one is often just a missing assumption.
+## Limits
 
-- No special setup is usually required beyond being in the right app or context.
-
-## Step-by-step
-
-1. Select multiple files > Right Click > Rename
-2. Find & Replace text or add numbers to all files at once.
-3. Watch for the expected behavior change.
-4. Repeat the sequence once or twice until it feels predictable.
-
-If you treat the steps above as a repeatable sequence rather than a one-off experiment, the hack becomes much easier to trust. Repetition matters here: the first success teaches the mechanic, but the second and third uses are what turn it into a real workflow habit.
-
-## Why this helps
-
-UI-driven hacks like this one are easy to underestimate because they often look like small clicks or hover gestures. In practice, though, the value comes from recognizing that macOS hides a lot of power in plain sight, and learning where that interaction lives means you stop re-discovering it from scratch every time you need it.
-
-File-management tricks matter because they save time every time you sort, rename, move, preview, or recover something in Finder. Batch Rename belongs to the Finder & Files area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.
-
-## Common mistakes
-
-Most problems with Batch Rename come from context, not complexity. People usually either trigger it in the wrong place, expect a different result than the feature was designed to give, or forget that macOS can vary a bit between apps and versions.
-
-- Trying the interaction in the wrong app or part of the system.
-- Expecting the UI to look identical in every macOS release.
-- Skipping the final check and assuming the action worked.
-
-## How to verify
-
-Verification is important because it keeps this from becoming cargo-cult behavior. Rather than assuming the hack worked, use a quick check so you know whether the expected result actually happened.
-
-- You should see the exact UI result described by the hack.
-
-## Undo or recovery
-
-Undo is part of the workflow, not an afterthought. Even if you expect to keep the change, it is worth knowing how you would back out of it before you rely on it heavily.
-
-- Reverse the same action manually if you no longer want the result.
-
-## Practical examples
-
-- A good real-world moment for this hack is sorting, renaming, or previewing files faster in Finder.
-- A good real-world moment for this hack is cleaning up folders without opening extra windows.
-- A good real-world moment for this hack is moving through file-heavy workflows with less clicking.
-- A good real-world moment for this hack is while organizing folders or cleaning up downloads.
-
-The broader point is that Batch Rename becomes more valuable the moment it shows up in a real task you already do. When you can connect the trick to your own workflow, it stops being trivia and starts being leverage.
-
-## Troubleshooting notes
-
-If the hack does not behave the way you expect, avoid random retries. A short, methodical check is usually enough to tell you whether the issue is focus, permissions, version differences, or simply a misunderstood expectation.
-
-- Repeat the steps slowly once from the beginning.
-- Check whether the feature depends on a specific app, selection, or system state.
-- If the behavior still feels wrong, restart the relevant app and test again.
+- These features still depend on the current Finder window, selection, or search context.
+- Some Finder tools look obvious only after you have seen them once; until then they are easy to miss.
+- Folder metadata, tags, and smart views are only useful if you keep using them consistently.

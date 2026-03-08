@@ -1,8 +1,6 @@
-## What this hack does
+## What this command does
 
-Password Protected Zip is a terminal-driven macOS hack for Terminal. Creates a secure zip file that requires a password to open. In isolation that may sound small, but this kind of action is exactly the sort of thing that shapes how smooth or clumsy a normal day on a Mac feels.
-
-This hack is tagged High and medium risk. This is not usually the kind of hack that damages a machine by itself, but it can still affect how macOS behaves in ways that surprise you later. A short pause before you confirm the change is usually enough to keep it productive instead of distracting. Security-oriented changes deserve more explanation because the convenience gain is only worth it when you understand the tradeoff. Password Protected Zip belongs to the Security & Privacy area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.
+Password Protected Zip is a higher-risk Terminal hack for Terminal. Creates a secure zip file that requires a password to open. The convenience can be real, but the main question here is not "can I run it?" so much as "do I fully understand why I am running it and how I will back out afterward?"
 
 ## Exact command
 
@@ -10,71 +8,26 @@ This hack is tagged High and medium risk. This is not usually the kind of hack t
 zip -er archive.zip [folder]
 ```
 
-Treat the command above as the canonical version for this hack. If you are copying it from the page, paste it into Terminal, read it once, and only then execute it.
+## Before you run it
 
-## When to use it
+1. Open Terminal in an admin-capable account if the command needs elevated privileges.
+2. Read `zip -er archive.zip [folder]` from left to right and make sure every flag still matches your intent.
+3. Know what success looks like before you press Return.
+4. Know what the rollback step is before you rely on the result.
 
-- Use it when you are tightening or loosening a security control for a specific reason.
-- Use it when you are handling a trust-sensitive task more deliberately.
-- Use it when you are understanding the tradeoff between convenience and protection.
-- Use it when you are making a system-level change faster than digging through the interface.
+## When it is actually justified
 
-## Before you start
+- when the built-in macOS UI does not expose the behavior you need directly
+- when you have a concrete reason for the change rather than vague curiosity
+- when you are comfortable restoring the old state immediately after the special case is over
 
-Before you use Password Protected Zip, think about the context around it instead of only the action itself. The right window, the right selection, the right permissions, and the right macOS version all matter more than most people expect. That is true for beginner-friendly tricks just as much as it is for professional ones, because the difference between a smooth result and a confusing one is often just a missing assumption.
+## Main risks
 
-- Open Terminal and read the command fully before running it.
+- Security-sensitive or destructive commands are easy to run faster than you can think through their consequences.
+- A short command can still alter system-wide behavior in ways that outlive the immediate task.
+- Compatibility matters more here than on ordinary shortcuts, because Apple changes or removes some of these behaviors across releases.
 
-## Step-by-step
+## Undo or exit
 
-1. Open Terminal.
-2. Paste or type `zip -er archive.zip [folder]`.
-3. Review the command one more time before pressing Return.
-4. If the command changes a setting, reopen the affected app or service if needed.
-5. Confirm the result before you move on to other work.
-
-If you treat the steps above as a repeatable sequence rather than a one-off experiment, the hack becomes much easier to trust. Repetition matters here: the first success teaches the mechanic, but the second and third uses are what turn it into a real workflow habit.
-
-## Why this helps
-
-Terminal hacks reward precision. Unlike a graphical toggle, the command is explicit, repeatable, and easy to document, but it also means you are responsible for reading every flag and every path before you press Return. That is especially important here because the reference command is `zip -er archive.zip [folder]`, and changes at this layer can outlive the app session that triggered them.
-
-Security-oriented changes deserve more explanation because the convenience gain is only worth it when you understand the tradeoff. Password Protected Zip belongs to the Security & Privacy area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.
-
-## Common mistakes
-
-Most problems with Password Protected Zip come from context, not complexity. People usually either trigger it in the wrong place, expect a different result than the feature was designed to give, or forget that macOS can vary a bit between apps and versions.
-
-- Running the command before reading it carefully.
-- Expecting an instant visual change without reopening the affected app or service.
-- Using `sudo` casually instead of treating it as a privileged action.
-
-## How to verify
-
-Verification is important because it keeps this from becoming cargo-cult behavior. Rather than assuming the hack worked, use a quick check so you know whether the expected result actually happened.
-
-- The command should finish without an obvious error message.
-- The affected app or service should reflect the change afterward.
-
-## Undo or recovery
-
-Undo is part of the workflow, not an afterthought. Even if you expect to keep the change, it is worth knowing how you would back out of it before you rely on it heavily.
-
-- Reverse the same action manually if you no longer want the result.
-
-## Practical examples
-
-- A good real-world moment for this hack is tightening or loosening a security control for a specific reason.
-- A good real-world moment for this hack is handling a trust-sensitive task more deliberately.
-- A good real-world moment for this hack is understanding the tradeoff between convenience and protection.
-- A good real-world moment for this hack is making a system-level change faster than digging through the interface.
-
-The broader point is that Password Protected Zip becomes more valuable the moment it shows up in a real task you already do. When you can connect the trick to your own workflow, it stops being trivia and starts being leverage.
-
-## Troubleshooting notes
-
-If the hack does not behave the way you expect, avoid random retries. A short, methodical check is usually enough to tell you whether the issue is focus, permissions, version differences, or simply a misunderstood expectation.
-
-- Read the terminal output carefully instead of guessing what failed.
-- If the command needs admin rights, confirm you are using the correct account.
-- If the setting seems unchanged, reopen the relevant app or service and test again.
+- If the command changes a preference, revert the same preference directly.
+- If it only runs for the current session, stop the process or close Terminal when you are done.

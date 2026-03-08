@@ -725,8 +725,8 @@ function renderWikiSection(wikiMarkdown) {
 
   const toc =
     headings.length > 1
-      ? `<aside class="lg:col-span-1">
-          <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4 sticky top-6">
+      ? `<aside class="wiki-sidebar">
+          <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
               ${headings
@@ -749,9 +749,9 @@ function renderWikiSection(wikiMarkdown) {
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Long-form wiki content authored per hack in Markdown.</p>
       </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+    <div class="wiki-detail-layout">
       ${toc}
-      <article class="wiki-content ${toc ? 'lg:col-span-2' : 'lg:col-span-3'}">
+      <article class="wiki-content">
         ${html}
       </article>
     </div>
@@ -763,12 +763,7 @@ function renderHackPage(hack, allHacks) {
   const combo = hack.shortcut || extractKeyCombo(hack.desc) || extractKeyCombo(lead);
   const command = hack.command || extractTerminalCommand(hack.desc);
   const steps = buildSteps(hack);
-  const tips = buildTips(hack);
-  const troubleshooting = buildTroubleshooting(hack);
-  const useCases = buildUseCases(hack);
-  const overview = buildOverview(hack);
   const prerequisites = buildPrerequisites(hack);
-  const verify = buildVerify(hack);
   const compatibility = buildCompatibility(hack);
   const related = findRelated(allHacks, hack, 8);
   const undo = findUndoHack(allHacks, hack);
@@ -797,9 +792,6 @@ function renderHackPage(hack, allHacks) {
 
   const topicsHtml = (hack.topics || [])
     .map((topic) => renderChip(topic, 'blue', `../../index.html?topic=${encodeURIComponent(topic)}`))
-    .join('');
-  const keywordsHtml = (hack.keywords || [])
-    .map((keyword) => renderChip(keyword, 'slate', `../../index.html?q=${encodeURIComponent(keyword)}`))
     .join('');
 
   const quickRefLabel =
@@ -855,16 +847,6 @@ function renderHackPage(hack, allHacks) {
         </div>`
       : '';
 
-  const verifyHtml =
-    verify.length > 0
-      ? `<div class="p-4 rounded-2xl bg-green-500/10 dark:bg-green-500/10 border border-green-500/20">
-          <div class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">How to verify</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            ${verify.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
-          </ul>
-        </div>`
-      : '';
-
   const compatibilityHtml = compatibility
     ? `<div class="p-4 rounded-2xl bg-blue-500/10 dark:bg-blue-500/10 border border-blue-500/20">
         <div class="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-2">Compatibility</div>
@@ -885,6 +867,20 @@ function renderHackPage(hack, allHacks) {
           </ul>
         </div>`
       : '';
+
+  const hasSpecificUndo =
+    !!undo ||
+    undoSteps.some((item) => item !== 'Reverse the steps above or use the linked inverse hack if available');
+
+  const undoPanel = hasSpecificUndo
+    ? `<div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Undo or revert</div>
+          <div class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">${undoHtml}</div>
+          ${undoStepsHtml}
+        </div>`
+    : '';
+
+  const setupPanels = [prerequisitesHtml, compatibilityHtml, undoPanel].filter(Boolean).join('');
 
   const relatedHtml =
     related.length > 0
@@ -926,7 +922,7 @@ function renderHackPage(hack, allHacks) {
   <link rel="stylesheet" href="../../assets/site.css" />
 </head>
 <body data-hack-id="${hack.id}" data-hack-command="${escapeHtml(command || '')}" class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
-  <div class="max-w-5xl mx-auto px-6 pt-10">
+  <div class="wiki-page-shell mx-auto px-6 pt-10">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-10">
       <div class="flex items-center gap-2">
         <a href="../../index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
@@ -960,22 +956,6 @@ function renderHackPage(hack, allHacks) {
 
     <div class="flex flex-wrap gap-2 mb-10">${atAGlance}</div>
 
-    <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl mb-6">
-      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Overview</h2>
-      <div class="space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed">
-        ${overview.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-        ${prerequisitesHtml}
-        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Common uses</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            ${useCases.map((item) => `<li>${escapeHtml(item)}</li>`).join('') || '<li>Use whenever it saves you time.</li>'}
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
         <div class="flex items-center justify-between gap-3 mb-4">
@@ -998,45 +978,18 @@ function renderHackPage(hack, allHacks) {
       </div>
     </div>
 
+    ${
+      setupPanels
+        ? `<div class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Before You Try It</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        ${setupPanels}
+      </div>
+    </div>`
+        : ''
+    }
+
     ${wikiSection}
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-      ${verifyHtml ? `<div class="space-y-4">${verifyHtml}${compatibilityHtml || ''}</div>` : ''}
-      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
-        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Troubleshooting</h2>
-        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
-          ${troubleshooting.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
-        </ul>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
-        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Classifications</h2>
-        <div class="space-y-4">
-          <div>
-            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Topics</div>
-            <div class="mt-2 flex flex-wrap gap-2">${topicsHtml || '<span class="text-slate-500">-</span>'}</div>
-          </div>
-          <div>
-            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Keywords</div>
-            <div class="mt-2 flex flex-wrap gap-2">${keywordsHtml || '<span class="text-slate-500">-</span>'}</div>
-          </div>
-          <div>
-            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Undo or revert</div>
-            <div class="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed">${undoHtml}</div>
-            ${undoStepsHtml}
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
-        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Tips</h2>
-        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
-          ${tips.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}
-        </ul>
-      </div>
-    </div>
 
     <div class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
       <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Related hacks</h2>
@@ -1071,10 +1024,29 @@ function renderSiteCss() {
 ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 .dark ::-webkit-scrollbar-thumb { background: #334155; }
 
+.wiki-page-shell {
+  max-width: 88rem;
+}
+
+.wiki-detail-layout {
+  display: grid;
+  gap: 1.75rem;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.wiki-sidebar {
+  min-width: 0;
+}
+
+.wiki-sidebar-card {
+  position: static;
+}
+
 .wiki-content {
   color: #334155;
   line-height: 1.8;
-  font-size: 1rem;
+  font-size: 1.03rem;
+  min-width: 0;
 }
 
 .dark .wiki-content {
@@ -1189,6 +1161,22 @@ function renderSiteCss() {
 
 .dark .wiki-content strong {
   color: #f8fafc;
+}
+
+@media (min-width: 1100px) {
+  .wiki-detail-layout {
+    grid-template-columns: minmax(14rem, 16rem) minmax(0, 1fr);
+    align-items: start;
+  }
+
+  .wiki-sidebar-card {
+    position: sticky;
+    top: 1.5rem;
+  }
+
+  .wiki-content {
+    font-size: 1.06rem;
+  }
 }
 `;
 }

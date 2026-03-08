@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../../assets/site.css" />
 </head>
 <body data-hack-id="81" data-hack-command="defaults write com.apple.screencapture type jpg" class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-200 min-h-screen font-sans selection:bg-tahoe-500 selection:text-white pb-20 transition-colors duration-300">
-  <div class="max-w-5xl mx-auto px-6 pt-10">
+  <div class="wiki-page-shell mx-auto px-6 pt-10">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-10">
       <div class="flex items-center gap-2">
         <a href="../../index.html" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 shadow-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
@@ -49,27 +49,6 @@
 
     <div class="flex flex-wrap gap-2 mb-10"><a href="../../index.html?app=Terminal" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">Terminal</a><a href="../../index.html?type=Terminal%20Hacks" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">Terminal Hacks</a><span class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10">Level: High</span><a href="../../index.html?method=Terminal" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Method: Terminal</a><a href="../../index.html?risk=Medium" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-amber-500/10 dark:bg-amber-500/20 text-amber-700 dark:text-amber-300 border-amber-500/20 hover:opacity-90 transition-opacity">Risk: Medium</a></div>
 
-    <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl mb-6">
-      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">Overview</h2>
-      <div class="space-y-3 text-slate-700 dark:text-slate-300 leading-relaxed">
-        <p>This hack is a Terminal command for Terminal.</p><p>Saves screenshots as smaller JPGs instead of PNGs.</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Prerequisites</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            <li>Terminal app (built into macOS)</li>
-          </ul>
-        </div>
-        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Common uses</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            <li>Capture a region or window for notes</li><li>Record quick tutorials or bug reports</li><li>Advanced customization and power-user tweaks</li><li>Troubleshoot system behavior with commands</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
         <div class="flex items-center justify-between gap-3 mb-4">
@@ -88,6 +67,27 @@
       </div>
     </div>
 
+    <div class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
+      <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Before You Try It</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Prerequisites</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>Terminal app (built into macOS)</li>
+          </ul>
+        </div><div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Undo or revert</div>
+          <div class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span class="text-slate-600 dark:text-slate-300">Return to the same place and switch the setting back, or use the inverse action if available.</span></div>
+          <div class="mt-4">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Undo steps</div>
+          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
+            <li>To revert, use `defaults delete` with the same domain and key</li><li>Then restart the affected app or run the related `killall` command</li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </div>
+
     <section class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
     <div class="flex flex-wrap items-center justify-between gap-3 mb-6">
       <div>
@@ -95,99 +95,32 @@
         <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Long-form wiki content authored per hack in Markdown.</p>
       </div>
     </div>
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-      <aside class="lg:col-span-1">
-          <div class="rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4 sticky top-6">
+    <div class="wiki-detail-layout">
+      <aside class="wiki-sidebar">
+          <div class="wiki-sidebar-card rounded-2xl bg-slate-50 dark:bg-slate-950 border border-slate-200 dark:border-slate-800 p-4">
             <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">On this page</div>
             <nav class="wiki-toc flex flex-col gap-2 text-sm">
-              <a href="#what-this-hack-does" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What this hack does</a><a href="#exact-command" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Exact command</a><a href="#when-to-use-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">When to use it</a><a href="#before-you-start" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Before you start</a><a href="#step-by-step" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Step-by-step</a><a href="#why-this-helps" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Why this helps</a><a href="#common-mistakes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Common mistakes</a><a href="#how-to-verify" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">How to verify</a><a href="#undo-or-recovery" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or recovery</a><a href="#practical-examples" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Practical examples</a><a href="#troubleshooting-notes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Troubleshooting notes</a>
+              <a href="#what-the-command-changes" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What the command changes</a><a href="#exact-command" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Exact command</a><a href="#safe-way-to-run-it" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Safe way to run it</a><a href="#what-changes-afterward" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What changes afterward</a><a href="#what-to-watch-for" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">What to watch for</a><a href="#undo-or-exit" class="text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white">Undo or exit</a>
             </nav>
           </div>
         </aside>
-      <article class="wiki-content lg:col-span-2">
-        <h2 id="what-this-hack-does">What this hack does</h2>
-<p>Change Screenshot Type is a terminal-driven macOS hack for Terminal. Saves screenshots as smaller JPGs instead of PNGs. In isolation that may sound small, but this kind of action is exactly the sort of thing that shapes how smooth or clumsy a normal day on a Mac feels.</p>
-<p>This hack is tagged High and medium risk. This is not usually the kind of hack that damages a machine by itself, but it can still affect how macOS behaves in ways that surprise you later. A short pause before you confirm the change is usually enough to keep it productive instead of distracting. Media and capture tricks are useful because visual communication usually benefits from speed, precision, and repeatability. Change Screenshot Type belongs to the Screenshots &amp; Media area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.</p>
+      <article class="wiki-content">
+        <h2 id="what-the-command-changes">What the command changes</h2>
+<p>Change Screenshot Type is a Terminal tweak for Terminal. Saves screenshots as smaller JPGs instead of PNGs. This family of commands is useful because it changes a preference or system behavior directly, without requiring you to hunt for a visible toggle in the interface.</p>
 <h2 id="exact-command">Exact command</h2>
 <pre><code class="language-sh">defaults write com.apple.screencapture type jpg</code></pre>
-<p>Treat the command above as the canonical version for this hack. If you are copying it from the page, paste it into Terminal, read it once, and only then execute it.</p>
-<h2 id="when-to-use-it">When to use it</h2>
-<ul><li>Use it when you are capturing visual context for notes, bug reports, or tutorials.</li><li>Use it when you are sharing exactly what is on screen without extra editing.</li><li>Use it when you are working with screenshots, recordings, or media previews more deliberately.</li><li>Use it when you are making a system-level change faster than digging through the interface.</li></ul>
-<h2 id="before-you-start">Before you start</h2>
-<p>Before you use Change Screenshot Type, think about the context around it instead of only the action itself. The right window, the right selection, the right permissions, and the right macOS version all matter more than most people expect. That is true for beginner-friendly tricks just as much as it is for professional ones, because the difference between a smooth result and a confusing one is often just a missing assumption.</p>
-<ul><li>Open Terminal and read the command fully before running it.</li></ul>
-<h2 id="step-by-step">Step-by-step</h2>
-<ol><li>Open Terminal.</li><li>Paste or type <code>defaults write com.apple.screencapture type jpg</code>.</li><li>Review the command one more time before pressing Return.</li><li>If the command changes a setting, reopen the affected app or service if needed.</li><li>Confirm the result before you move on to other work.</li></ol>
-<p>If you treat the steps above as a repeatable sequence rather than a one-off experiment, the hack becomes much easier to trust. Repetition matters here: the first success teaches the mechanic, but the second and third uses are what turn it into a real workflow habit.</p>
-<h2 id="why-this-helps">Why this helps</h2>
-<p>Terminal hacks reward precision. Unlike a graphical toggle, the command is explicit, repeatable, and easy to document, but it also means you are responsible for reading every flag and every path before you press Return. That is especially important here because the reference command is <code>defaults write com.apple.screencapture type jpg</code>, and changes at this layer can outlive the app session that triggered them.</p>
-<p>Media and capture tricks are useful because visual communication usually benefits from speed, precision, and repeatability. Change Screenshot Type belongs to the Screenshots &amp; Media area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.</p>
-<h2 id="common-mistakes">Common mistakes</h2>
-<p>Most problems with Change Screenshot Type come from context, not complexity. People usually either trigger it in the wrong place, expect a different result than the feature was designed to give, or forget that macOS can vary a bit between apps and versions.</p>
-<ul><li>Running the command before reading it carefully.</li><li>Expecting an instant visual change without reopening the affected app or service.</li><li>Using <code>sudo</code> casually instead of treating it as a privileged action.</li></ul>
-<h2 id="how-to-verify">How to verify</h2>
-<p>Verification is important because it keeps this from becoming cargo-cult behavior. Rather than assuming the hack worked, use a quick check so you know whether the expected result actually happened.</p>
-<ul><li>The command should finish without an obvious error message.</li><li>The affected app or service should reflect the change afterward.</li></ul>
-<h2 id="undo-or-recovery">Undo or recovery</h2>
-<p>Undo is part of the workflow, not an afterthought. Even if you expect to keep the change, it is worth knowing how you would back out of it before you rely on it heavily.</p>
-<ul><li>Use the matching <code>defaults delete</code> or opposite <code>defaults write</code> command.</li><li>Restart the affected app or service after reverting the setting.</li></ul>
-<h2 id="practical-examples">Practical examples</h2>
-<ul><li>A good real-world moment for this hack is capturing visual context for notes, bug reports, or tutorials.</li><li>A good real-world moment for this hack is sharing exactly what is on screen without extra editing.</li><li>A good real-world moment for this hack is working with screenshots, recordings, or media previews more deliberately.</li><li>A good real-world moment for this hack is making a system-level change faster than digging through the interface.</li></ul>
-<p>The broader point is that Change Screenshot Type becomes more valuable the moment it shows up in a real task you already do. When you can connect the trick to your own workflow, it stops being trivia and starts being leverage.</p>
-<h2 id="troubleshooting-notes">Troubleshooting notes</h2>
-<p>If the hack does not behave the way you expect, avoid random retries. A short, methodical check is usually enough to tell you whether the issue is focus, permissions, version differences, or simply a misunderstood expectation.</p>
-<ul><li>Read the terminal output carefully instead of guessing what failed.</li><li>If the command needs admin rights, confirm you are using the correct account.</li><li>If the setting seems unchanged, reopen the relevant app or service and test again.</li></ul>
+<h2 id="safe-way-to-run-it">Safe way to run it</h2>
+<ol><li>Open Terminal.</li><li>Paste or type <code>defaults write com.apple.screencapture type jpg</code>.</li><li>Press Return to run it.</li><li>Check the outcome described by the hack: Saves screenshots as smaller JPGs instead of PNGs.</li></ol>
+<h2 id="what-changes-afterward">What changes afterward</h2>
+<p>Commands built around <code>defaults write</code> usually change a stored preference. That means the effect can persist across app relaunches and future sessions until you reverse it.</p>
+<p>Most of these tweaks are not dangerous by themselves, but they are easy to forget later, which is why it helps to keep the undo path close by.</p>
+<h2 id="what-to-watch-for">What to watch for</h2>
+<ul><li>If the command includes <code>killall</code>, the named app or service will restart as part of the change.</li><li>Preference tweaks can appear to do nothing until the affected app or service is reopened.</li><li>Small cosmetic or workflow tweaks can still be confusing later if you forget that you changed the default.</li></ul>
+<h2 id="undo-or-exit">Undo or exit</h2>
+<ul><li>If the command changes a preference, revert the same preference directly.</li><li>If it only runs for the current session, stop the process or close Terminal when you are done.</li></ul>
       </article>
     </div>
   </section>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-      <div class="space-y-4"><div class="p-4 rounded-2xl bg-green-500/10 dark:bg-green-500/10 border border-green-500/20">
-          <div class="text-xs font-semibold uppercase tracking-wider text-green-600 dark:text-green-400 mb-2">How to verify</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            <li>The command should complete without error messages</li>
-          </ul>
-        </div></div>
-      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
-        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Troubleshooting</h2>
-        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
-          <li>If you see “permission denied”, you may need admin rights or a different command.</li><li>Read the command fully before running it; avoid `sudo` unless necessary.</li><li>If nothing changes, you may need to quit and reopen the relevant app.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
-        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Classifications</h2>
-        <div class="space-y-4">
-          <div>
-            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Topics</div>
-            <div class="mt-2 flex flex-wrap gap-2"><a href="../../index.html?topic=Screenshots%20%26%20Media" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Screenshots &amp; Media</a><a href="../../index.html?topic=Terminal" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-blue-500/10 dark:bg-blue-500/20 text-blue-700 dark:text-blue-300 border-blue-500/20 hover:opacity-90 transition-opacity">Terminal</a></div>
-          </div>
-          <div>
-            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Keywords</div>
-            <div class="mt-2 flex flex-wrap gap-2"><a href="../../index.html?q=format" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">format</a><a href="../../index.html?q=jpg" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">jpg</a><a href="../../index.html?q=png" class="px-2 py-1 rounded-lg text-xs font-semibold border bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-300 border-slate-200 dark:border-white/10 hover:opacity-90 transition-opacity">png</a></div>
-          </div>
-          <div>
-            <div class="text-xs font-semibold uppercase tracking-wider text-slate-400">Undo or revert</div>
-            <div class="mt-2 text-sm text-slate-700 dark:text-slate-300 leading-relaxed"><span class="text-slate-600 dark:text-slate-300">Return to the same place and switch the setting back, or use the inverse action if available.</span></div>
-            <div class="mt-4">
-          <div class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">Undo steps</div>
-          <ul class="list-disc ml-5 space-y-1 text-sm text-slate-700 dark:text-slate-300">
-            <li>To revert, use `defaults delete` with the same domain and key</li><li>Then restart the affected app or run the related `killall` command</li>
-          </ul>
-        </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
-        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Tips</h2>
-        <ul class="list-disc ml-5 space-y-2 text-slate-700 dark:text-slate-300 leading-relaxed">
-          <li>Prefer copy and paste for commands and read them fully before running.</li><li>Use `man &lt;command&gt;` or `--help` to understand what a command does.</li>
-        </ul>
-      </div>
-    </div>
 
     <div class="mt-6 bg-white/80 dark:bg-slate-900/60 border border-slate-200 dark:border-white/10 rounded-3xl p-6 shadow-xl">
       <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-4">Related hacks</h2>

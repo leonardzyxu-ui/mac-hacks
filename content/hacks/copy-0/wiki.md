@@ -1,78 +1,26 @@
-## What this hack does
+## What it does
 
-Copy is a shortcut-driven macOS hack for System. Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere. In isolation that may sound small, but this kind of action is exactly the sort of thing that shapes how smooth or clumsy a normal day on a Mac feels.
+Copy is a keyboard editing shortcut for System. Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere. Clipboard shortcuts are the basic transport layer of everyday Mac work. They are how text, images, files, and small pieces of context move between apps.
 
-This hack is tagged Simple and low risk. The risk here is generally low, which shifts the emphasis away from safety and toward consistency. The biggest gain comes from practicing the habit until it becomes the default way you handle that task. Clipboard actions compound over time because copying and pasting sit in the middle of writing, research, file management, and communication. Copy belongs to the Clipboard area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.
+## Shortcut
 
-## Shortcut to remember
+`Cmd + C`
 
-The core shortcut is `Cmd + C`. Once you have the right app or selection focused, the whole point is that the action should feel immediate and repeatable.
+## How to use it
 
-## When to use it
-
-- Use it when you are moving text between notes, chat, mail, and documents without breaking your flow.
-- Use it when you are duplicating files or snippets before making edits.
-- Use it when you are collecting research from multiple windows into one place.
-- Use it when you are keeping your hands on the keyboard instead of reaching for menus.
-
-## Before you start
-
-Before you use Copy, think about the context around it instead of only the action itself. The right window, the right selection, the right permissions, and the right macOS version all matter more than most people expect. That is true for beginner-friendly tricks just as much as it is for professional ones, because the difference between a smooth result and a confusing one is often just a missing assumption.
-
-- Make sure the correct app, window, or field is focused first.
-- Have the right text, file, or item selected before pressing the shortcut.
-
-## Step-by-step
-
-1. Open the app or window where you want the action to happen.
-2. Select the text, file, or object the shortcut should act on.
+1. Open System or put focus on the window where you want the action to happen.
+2. Select the text, file, object, or field the shortcut should act on.
 3. Press `Cmd + C`.
-4. Look for the expected result: Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere.
-5. Repeat it a few times so the motion becomes automatic.
+4. Confirm the result: Copies the selected text, image, or file to your clipboard, ready to be pasted elsewhere.
 
-If you treat the steps above as a repeatable sequence rather than a one-off experiment, the hack becomes much easier to trust. Repetition matters here: the first success teaches the mechanic, but the second and third uses are what turn it into a real workflow habit.
+## Where it earns its keep
 
-## Why this helps
+- Use it when you are working quickly inside notes, documents, chat boxes, code editors, or Finder lists.
+- Use it when you are staying on the keyboard instead of breaking rhythm to use the Edit menu.
+- Use it when you are repeating a tiny action many times in a row without thinking about it.
 
-The important thing to understand about a shortcut like Copy is context. The keyboard combination `Cmd + C` is fast because it bypasses the menu bar, but it still acts on whatever is currently focused. That means the most reliable way to use it is to slow down for one second, confirm that the right app or selection is active, and then press the keys as one deliberate motion.
+## What to watch for
 
-Clipboard actions compound over time because copying and pasting sit in the middle of writing, research, file management, and communication. Copy belongs to the Clipboard area, so its real value is not just the isolated trick itself; it is the fact that it turns a repeated task into something more predictable, easier to explain, and easier to trust when you are moving quickly.
-
-## Common mistakes
-
-Most problems with Copy come from context, not complexity. People usually either trigger it in the wrong place, expect a different result than the feature was designed to give, or forget that macOS can vary a bit between apps and versions.
-
-- Pressing the shortcut while the wrong window is focused.
-- Forgetting to select the text, file, or object first when the action needs a target.
-- Assuming every app handles the shortcut identically.
-
-## How to verify
-
-Verification is important because it keeps this from becoming cargo-cult behavior. Rather than assuming the hack worked, use a quick check so you know whether the expected result actually happened.
-
-- The action should happen immediately when you press the shortcut.
-- If nothing happens, check focus and selection first.
-
-## Undo or recovery
-
-Undo is part of the workflow, not an afterthought. Even if you expect to keep the change, it is worth knowing how you would back out of it before you rely on it heavily.
-
-- Repeat the opposite action if one exists, or use the app's normal Undo command.
-- If the shortcut only reveals a view or menu, dismiss it and continue working.
-
-## Practical examples
-
-- A good real-world moment for this hack is moving text between notes, chat, mail, and documents without breaking your flow.
-- A good real-world moment for this hack is duplicating files or snippets before making edits.
-- A good real-world moment for this hack is collecting research from multiple windows into one place.
-- A good real-world moment for this hack is keeping your hands on the keyboard instead of reaching for menus.
-
-The broader point is that Copy becomes more valuable the moment it shows up in a real task you already do. When you can connect the trick to your own workflow, it stops being trivia and starts being leverage.
-
-## Troubleshooting notes
-
-If the hack does not behave the way you expect, avoid random retries. A short, methodical check is usually enough to tell you whether the issue is focus, permissions, version differences, or simply a misunderstood expectation.
-
-- Check the app menu to confirm the shortcut and the exact action name.
-- Try the same shortcut in another app to rule out an app-specific override.
-- If the action depends on a selection, recreate the selection and try again.
+- If the wrong thing is selected, the shortcut will act on the wrong thing immediately.
+- The exact behavior can still vary a bit across apps, especially for rich text, files, and custom editors.
+- Cut is not a universal file-moving shortcut in Finder, so do not assume Windows-style behavior everywhere.
